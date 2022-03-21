@@ -1,5 +1,8 @@
-sửa lỗi How to fix 500 server error after cloning laravel app/project from github.
-chạy lệnh trên cmd
+sửa lỗi  500 server không chạy được 
+
+chạy lệnh trên cmd :
+
+
 composer install 
 mv .env.example .env 
 php artisan cache:clear 
