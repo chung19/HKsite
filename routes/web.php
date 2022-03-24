@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/articleList', function () {
+    return view('articleList');
+});
+Route::get('/footer', function () {
+    return view('footer');
+});
