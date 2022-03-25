@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function details(){
+    public function indexService(){
         return view('servicedetails');
     }
 }

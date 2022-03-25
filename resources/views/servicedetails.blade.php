@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{{asset('./frontend/css/servicedetails.css')}}">
     <link rel="stylesheet" href="{{asset('./frontend/css/home.css')}}">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -356,10 +355,9 @@
                             <h2 class="allServices__textTitle">Digital Marketing</h2>
                             <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
                         </div>
-                        <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
+                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
