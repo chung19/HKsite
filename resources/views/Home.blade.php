@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
-<!-- bootstrap5 css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- bootstrap5 css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"el="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" el="stylesheet">
   <!-- vendor -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
@@ -43,8 +44,7 @@
               e-mail us
             </a>
             <div class="dropdown">
-              <a class="text-reset text-reset-right me-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="text-reset text-reset-right me-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 <img class="nav-icon" src="./frontend/images/index-img/icons/flag.png" alt="icon">
                 ENGLISH
               </a>
@@ -62,49 +62,44 @@
   </section>
   <!-- end <section> topbar ============================-->
   <!---------------------------------------------------------- header--------------------------------------------------------- -->
-
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 d-block"
-    data-navbar-on-scroll="data-navbar-on-scroll">
-    <div class="container"><a class="navbar-brand" href="index.html"><img src="./frontend/images/index-img/logo.png" height="45"
-          alt="logo" /></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-          class="navbar-toggler-icon"> </span></button>
-      <div class="collapse navbar-collapse  border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-          <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="index.html">Home+</a></li>
-          <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing.html">Services+</a></li>
-          <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
-          </li>
-          <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
-          <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
-          <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">About Us</a>
-          </li>
-          <form class="d-flex my-3 d-block d-lg-none">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-primary" type="submit">Search</button>
-          </form>
-          <div class="dropdown d-none d-lg-block">
-            <div class="dropdown">
-              <button class="btn btn-outline-light ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><input class="form-control" type="search" placeholder="Search" aria-label="Search" /></li>
-              </ul>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container"><a class="navbar-brand" href="index.html"><img src="./frontend/images/index-img/logo.png" height="45" alt="logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+        <div class="collapse navbar-collapse  border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+            <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="index.html">Home+</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing.html">Services+</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
+            </li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">About Us</a>
+            </li>
+            <form class="d-flex my-3 d-block d-lg-none">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+            <div class="dropdown d-none d-lg-block">
+              <div class="dropdown">
+                <button class="btn btn-outline-light ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><input class="form-control" type="search" placeholder="Search" aria-label="Search" /></li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page"
-              href="user-research.html"><img src="./frontend/images/index-img/icons/mess.png" alt="icon"></a></li>
-          <div class="row navbar-contact ">
-            <div class="col-lg-6 text-color-above">Do you need help?</div>
-            <div class="col-lg-6 text-color-last">CONTACT ME</div>
-          </div>
-        </ul>
+            <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page" href="user-research.html"><img src="./frontend/images/index-img/icons/mess.png" alt="icon"></a></li>
+            <div class="row navbar-contact ">
+              <div class="col-lg-6 text-color-above">Do you need help?</div>
+              <div class="col-lg-6 text-color-last">CONTACT ME</div>
+            </div>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-
+    </nav>
+  </section>
   <!---------------------------------------------------------- end header--------------------------------------------------------- -->
 
   <!--------------------------------------------------------- banner ----------------------------------------------------------->
@@ -119,10 +114,8 @@
             <h4 class="mb-3 children_body_m3">Dynamically exploit resource leveling catalysts for change predominate
               focused
               infrastructures vis a vis efficient is our main focus but everybody is</h4>
-            <a><button type="button" class="btn btn-learnMore">LEARN MORE &ensp;<i class="fa fa-arrow-right"
-                  aria-hidden="true"></i></button></a>
-            <a><button type="button" class="btn btn-getIn">GET IN TOUCH &ensp;<i class="fa fa-arrow-right"
-                  aria-hidden="true"></i></button></a>
+            <a><button type="button" class="btn btn-learnMore">LEARN MORE &ensp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
+            <a><button type="button" class="btn btn-getIn">GET IN TOUCH &ensp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button></a>
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-6 banner-right">
@@ -198,7 +191,7 @@
   <section class="card-about">
     <div class="container-fluid card-servicer">
       <div class="row ">
-        <div class="col-12 col-lg-6 col-xl-6 card-about-left">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 card-about-left">
           <img class="parent-about-left" src="./frontend/images/index-img/about/bg_about_left.png" alt="bg_left_about1" />
           <div class="border-about-left">
             <div class="row child-about-left1">
@@ -208,19 +201,17 @@
           </div>
           <div class="child-about-left2">
             <!-- Button trigger modal -->
-            <button type="button" class="glightbox play-btn video-btn" onmouseup="btnVideAbout()"></button>
+            <a href="https://www.youtube.com/watch?v=4sosXZsdy-s" class="glightbox3 play-btn video-btn"></a>
           </div>
         </div>
-        <div class="col-12 col-lg-6 col-xl-6 card-about-right">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6 card-about-right">
           <div class="row">
             <p class="about-right-first">About BigFox </p>
             <p class="about-right-adjacent">About</p>
             <div class="body-card-about">
               <div class="row">
-                <div class="col-1"><img class="card-about-biggest" src="./frontend/images/index-img/about/exclamation_about.png"
-                    alt="icon exclamation_about" /></div>
-                <div class="col-11 card-about-biggest1"><span> We deal with the aspects of professional <a
-                      class="color-Textbig">IT Services</a></span></div>
+                <div class="col-1"><img class="card-about-biggest" src="./frontend/images/index-img/about/exclamation_about.png" alt="icon exclamation_about" /></div>
+                <div class="col-11 card-about-biggest1"><span> We deal with the aspects of professional <a class="color-Textbig">IT Services</a></span></div>
               </div>
               <div class="row content-card-about">
                 <span class="color-Textsmall"> We listen. We advise. We design, together. Happy customers and ongoing
@@ -284,10 +275,8 @@
             <p class="chooseUs-right-adjacent">CHOOSE</p>
             <div class="body-card-about">
               <div class="row">
-                <div class="col-1"><img class="card-about-biggest"
-                    src="./frontend/images/index-img/why_choose_us/exclamation_choose.png" alt="icon exclamation_about" /></div>
-                <div class="col-11 card-chooseUs-biggest1"><span> We deal with the aspects of professional <a
-                      class="color-Textbig-chooseUs">IT Services</a></span></div>
+                <div class="col-1"><img class="card-about-biggest" src="./frontend/images/index-img/why_choose_us/exclamation_choose.png" alt="icon exclamation_about" /></div>
+                <div class="col-11 card-chooseUs-biggest1"><span> We deal with the aspects of professional <a class="color-Textbig-chooseUs">IT Services</a></span></div>
               </div>
               <div class="row content-card-about">
                 <span class="color-Textsmall-chooseUs"> We listen. We advise. We design, together. Happy customers and
@@ -511,11 +500,10 @@
             </div>
           </div>
           <div class="col-md-12 col-lg-6 card-counter-right">
-            <img src="./frontend/images/index-img/counter/bg_right_counter.png" class="img-fluid img-right-counter"
-              alt="Responsive image">
+            <img src="./frontend/images/index-img/counter/bg_right_counter.png" class="img-fluid img-right-counter" alt="Responsive image">
             <div class="btn-play-counter">
               <!-- Button trigger modal -->
-              <button onmouseup="btnVideCounter()" type="button" class="glightbox play-btn video-btn"></button>
+              <a href="https://www.youtube.com/watch?v=qgY134PA4d8" class="glightbox3 play-btn video-btn"></a>
             </div>
           </div>
         </div>
@@ -641,37 +629,31 @@
       <div class="team-boxed">
         <div class="container">
           <div class="row people">
-            <div class="col-md-6 col-lg-4 item">
+            <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
               <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review1.png">
                 <h3 class="name">Anjelina Santha</h3>
                 <p class="title"> Graphic Designer</p>
                 <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
                   incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i
-                    class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i
-                    class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
+                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4 item">
+            <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
               <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review2.png">
                 <h3 class="name">Anjelina Santha</h3>
                 <p class="title"> Graphic Designer</p>
                 <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
                   incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i
-                    class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i
-                    class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
+                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4 item">
+            <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
               <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review3.png">
                 <h3 class="name">Anjelina Santha</h3>
                 <p class="title"> Graphic Designer</p>
                 <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
                   incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i
-                    class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i
-                    class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
+                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
               </div>
             </div>
           </div>
@@ -692,7 +674,7 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
-        <div class="col col-md-12 col-lg-4 col-xl-4">
+        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
           <!-- Bootstrap 5 card box -->
           <div class="card-box-blog">
             <div class="card-thumbnail-blog item">
@@ -711,7 +693,7 @@
           </div>
         </div>
 
-        <div class="col col-md-12 col-lg-4 col-xl-4">
+        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
           <!-- Bootstrap 5 card box -->
           <div class="card-box-blog">
             <div class="card-thumbnail-blog item">
@@ -730,7 +712,7 @@
           </div>
         </div>
 
-        <div class="col col-md-12 col-lg-4 col-xl-4">
+        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
           <!-- Bootstrap 5 card box -->
           <div class="card-box-blog">
             <div class="card-thumbnail-blog item">
@@ -750,18 +732,49 @@
         </div>
         <div class="col-md-12 col-lg-12" id="btn-moveBlog">
           <!-- Bootstrap 5 button Bloge-->
-          <div class="text-center"><button type="button" class="btn btn-moveBlog"><i class="fa fa-arrow-right"
-                aria-hidden="true"></i></button></div>
+          <div class="text-center"><button type="button" class="btn btn-moveBlog"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
         </div>
         <div class="col-md-12 col-lg-12">
           <!-- Bootstrap 5 button Bloge-->
-          <div class="text-center"><button type="button" class="btn btn-blog">VIEW ALL NEWS <i class="fa fa-arrow-right"
-                aria-hidden="true"></i></button></div>
+          <div class="text-center"><button type="button" class="btn btn-blog">VIEW ALL NEWS <i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
         </div>
       </div>
     </div>
   </section>
   <!--  end <section> blog ============================-->
+
+  <!--  <section> newsletter ============================-->
+  <section class="newsletter">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
+            <span class="newsletter-title">Subscribe Our Newsletter
+              <span class="newsletter-description">Please Subscribe our news letter and and get update.</span>
+            </span>
+
+          </div>
+          <div class="col-12 col-md-2 col-lg-2 col-xl-2">
+            <div class="circle1 circle-newsLetter">
+              <div class="circle2 ">
+                <div class="circle3"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
+            <div class="input-group input-group-newsletter">
+              <input type="email" class="form-control from-control-newsletter" placeholder="Enter your email">
+              <span class="input-group-btn">
+                <button class="btn btn-newsletter" type="submit">Subscribe</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--  <section> newsletter ============================-->
 
   <!--  <section> footer ============================-->
   <section>
@@ -770,37 +783,36 @@
         <div class="container footer_top">
           <div class="row">
             <div class="col-12 col-md-6 col-lg-3">
-              <a class="footer_top-logo-link" href=""><img src="./assets/image/logo.png" alt="logo"
-                  class="footer_top-contact-logo" /></a>
+              <a class="footer_top-logo-link" href=""><img src="./frontend/images/footer/logo.png" alt="logo" class="footer_top-contact-logo" /></a>
               <span class="footer_top-contact-desc">Our Company has been developing high-quality and reliable
                 software for corporate nees since 2008. We are renowned
                 professionals of software develeopmnent.</span>
               <div class="footer_icon">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fa-brands fa-linkedin-in"></i>
-                <i class="fa-brands fa-instagram-square"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3 pdl-30 mt60">
               <h5 class="footer_top-posts-title">Quick Links</h5>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_top-posts-place"><i class="fa-solid fa-angles-right"></i> About Us</a>
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About Us</a>
               </div>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_topt-posts-place"><i class="fa-solid fa-angles-right"></i> Our Services</a>
+                <a href="#" class="footer_topt-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Our Services</a>
               </div>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_top-posts-place"><i class="fa-solid fa-angles-right"></i> Pricing Plan</a>
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Pricing Plan</a>
               </div>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_top-posts-place"><i class="fa-solid fa-angles-right"></i> Blog Classic</a>
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Blog Classic</a>
               </div>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_top-posts-place"><i class="fa-solid fa-angles-right"></i> Contact Us</a>
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact Us</a>
               </div>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_top-posts-place"><i class="fa-solid fa-angles-right"></i> Faqs</a>
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Faqs</a>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3 mt60">
@@ -809,7 +821,7 @@
                 <div class="popular_posts_content">
                   <div class="popular_posts_content_item">
                     <div class="popular_posts_content_img">
-                      <img src="./assets/image/anh_16.png" alt="" />
+                      <img src="./frontend/images/footer/anh_16.png" alt="" />
                     </div>
                     <div class="popular_posts_contentinformation">
                       <div class="contentinformation_heading_popular_post fontcolor">
@@ -820,7 +832,7 @@
                   </div>
                   <div class="popular_posts_content_item">
                     <div class="popular_posts_content_img">
-                      <img src="./assets/image/anh_16.png" alt="" />
+                      <img src="./frontend/images/footer/anh_16.png" alt="" />
                     </div>
                     <div class="popular_posts_contentinformation">
                       <div class="contentinformation_heading_popular_post fontcolor">
@@ -837,7 +849,7 @@
               <div class="our_contact_content">
                 <div class="our_contact_content_item">
                   <div class="our_contact_content_img">
-                    <img src="./assets/image/icon-address.png" alt="" />
+                    <img src="./frontend/images/footer/icon-address.png" alt="" />
                   </div>
                   <div class="our_contact_contentinformation">
                     <div class="contentinformation_heading_our_contact">
@@ -850,7 +862,7 @@
                 </div>
                 <div class="our_contact_content_item">
                   <div class="our_contact_content_img">
-                    <img src="./assets/image/icon-phone.png" alt="" />
+                    <img src="./frontend/images/footer/icon-phone.png" alt="" />
                   </div>
                   <div class="our_contact_contentinformation">
                     <div class="contentinformation_heading_our_contact">
@@ -861,7 +873,7 @@
                 </div>
                 <div class="our_contact_content_item">
                   <div class="our_contact_content_img">
-                    <img src="./assets/image/icon-email.png" alt="" />
+                    <img src="./frontend/images/footer/icon-email.png" alt="" />
                   </div>
                   <div class="our_contact_contentinformation">
                     <div class="contentinformation_heading_our_contact">
@@ -876,29 +888,29 @@
         </div>
       </div>
       <div class="footer_bottom">
-        <div class="footer_left">
-          <p>
-            &COPY; Copyright 2021. All Rights Reserved. Design by
-            <span> <a href="#">Dream IT</a></span>
-          </p>
-        </div>
-        <div class="footer_right">
-          <p>
-            Powered by
-            <span> <a href="#">Wordpress</a></span>
-          </p>
+        <div class="row container body-footer-bottom">
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <p>
+              &COPY; Copyright 2021. All Rights Reserved. Design by
+              <span> <a class="footer_bottom_text" href="#">Dream IT</a></span>
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="footer_right">
+              <p class="text-bottom-right">
+                Powered by
+                <span> <a class="footer_bottom_text" href="#">Wordpress</a></span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   </section>
   <!--    JavaScripts-->
   <!-- ===============================================-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <script src="./frontend/js/btnPlay.js"></script>
 </body>
 </html>
