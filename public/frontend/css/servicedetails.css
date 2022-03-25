@@ -1,0 +1,436 @@
+*{
+    font-family: Sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: 'Istok Web', sans-serif;
+}
+.inforService{
+    text-align: center;
+}
+
+.inforService__content{
+    width: 1170px;
+    display: inline-block;
+}
+
+.inforService__banner{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.inforService__title{
+    margin-top: 95px;
+    margin-bottom: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inforService__text {
+    margin-top: 30px;
+    line-height: 26px;
+    text-align: left;
+}
+
+.inforService__featuresTitle{
+    font-weight: bold;
+    margin-top: 60px;
+    text-align: left;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inforService__features img {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    margin-left: -8px;
+}
+
+.inforService__features{
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+@media (max-width: 1200px){
+
+    /* inforService */
+
+    .inforService__title{
+        width: 100vw;
+        text-align: center;
+    }
+
+    .inforService{
+        width: 100%;
+    }
+
+    .inforService__content{
+        width: 90vw;
+        font-family: Sans-serif;
+        text-align: start;
+    }
+
+    .inforService__banner{
+        width: 90vw;
+        border-radius: 7px;
+    }
+
+    .inforService__text {
+        width: 90vw;
+    }
+
+    .inforService__featuresTitle{
+        width: 90vw;
+    }
+
+    .inforService__features{
+        width: 90vw;
+    }
+
+
+    /* pricingPlan */
+
+    .pricingPlan__type{
+        display: inline-block !important;
+        width: 370px !important;
+    }
+
+    .pricingPlan__card{
+        margin: 25px 0 !important;
+    }
+
+    /* allServices */
+
+    .allServices__row{
+        display: block !important;
+        width: 370px !important;
+        justify-content: start !important;
+    }
+
+    .allServices__content{
+        width: 370px !important;
+    }
+
+    .allServices__container{
+        margin: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Pricing Plan */
+
+.pricingPlan{
+    height: auto;
+    margin-top: 80px;
+    background-color: #f0f4f8;
+    padding-bottom: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+.pricingPlan-title{
+    padding-top: 95px;
+    padding-bottom: 72px;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricingPlan__type{
+    display: flex;
+    justify-content:center;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.pricingPlan__cardHeader{
+    background-image: linear-gradient(#0d92f5, #02b9fe);
+    text-align: center;
+    border-radius: 18px 18px 0 0;
+    color: #ffffff;
+    height: 140px;
+    position: relative;
+    z-index: 1;
+    width: 370px;
+}
+
+.pricingPlan__cardBody{
+    background-color: #ffffff;
+    border-radius: 0 0 14px 14px;
+    position: relative;
+    padding-top: 100px;
+    width: 370px;
+    height: 403px;
+}
+
+.pricingPlan__card{
+    width: 370px;
+    margin: 15px;
+    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    border-radius: 1px solid #fff;
+    background: inherit;
+}
+
+.pricingPlan__cardTitleContainer{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.pricingPlan__card:hover{
+    transform: translate(0px , -20px);
+}
+
+.pricingPlan__card:hover .pricingPlan__cardBtnBuy{
+    background-image: linear-gradient(#0d92f5, #02b9fe);
+    color: #ffffff;
+}
+
+.pricingPlan__cardNameTag{
+    font-size: 9px;
+    color: #9ad6fc;
+    margin-bottom: 20px;
+}
+
+.pricingPlan__cardTitle{
+    font-size: 20px;
+    color: #fefeff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricingPlan__cardPrice{
+    color: #000;
+    width: 167px;
+    height: 95px;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 38px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px 0.1px rgba(0, 0, 0, .2);
+
+}
+
+.pricingPlan__cardBody-price{
+    font-size: 25px;
+    padding-top: 20px;
+    display: inline-flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.pricingPlan__cardBody-price p{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-right: 2px;
+}
+
+.pricingPlan__cardBody-durationType{
+    font-size: 10px;
+    color: #888787;
+}
+
+.pricingPlan__cardBody-checked{
+    width: 30px;
+    height: 30px;
+    background-color: #0a9af7;
+    border-radius: 50%;
+    margin-left: 38px;
+}
+
+.pricingPlan__cardBody-checked img{
+    width: 26px;
+    height: 26px;
+}
+
+.pricingPlan__cardBody-use{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: auto;
+    padding-bottom: auto;
+
+}
+
+.pricingPlan__cardBody-used{
+    display: flex;
+    align-items: center;
+    margin: 7px;
+}
+
+.pricingPlan__cardBtnBuy{
+    margin-top: 27px;
+    height: 45px;
+    width: 140px;
+    border-radius: 45px;
+    background-color: #ffffff;
+    border: 1px solid #04b0fc;
+    color: #04b0fc;
+    transition-duration: 0.4s;
+}
+
+hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.pricingPlan__cardLine{
+    width: 96%;
+    bottom: 0px;
+    margin-top: 35px;
+    border-top: 3px solid #04b0fc;
+    margin-left: 2%;
+    opacity: 1;
+}
+
+
+/* All Service */
+
+.allServices{
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.allServices__content{
+    width: 1170px;
+    display: inline-block;
+}
+
+.allServices__title{
+    margin-bottom: 45px;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.allServices__container img{
+    width: 370px;
+    height: 283px;
+    border-radius: 8px;
+}
+
+.allServices__textTitle{
+    margin-top: 60px;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.allServices__container {
+    position: relative;
+    float: left;
+    height: 283px;
+  }
+
+.allServices__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 370px;
+    height: 283px;
+    opacity: 0;
+    transition: .5s ease;
+    background-image: linear-gradient(#0d92f5, #02b9fe);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+.allServices__container:hover .allServices__overlay {
+    opacity: 1;
+  }
+
+.allServices__text {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    width: 282px;
+
+  }
+
+.allServices__text p{
+    line-height: 26px;
+}
+
+.allServices__textContent{
+    font-size: 14px;
+    height: 70px;
+    width: auto;
+}
+
+.allServices__btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    color: #0c93f6;
+    border: none;
+    position: absolute;
+    top: calc(80%);
+    left: calc(44% + 2.3px);
+    background-color: #ffffff;
+}
+
+.allServices__btn img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 26%;
+    left: 28%;
+}
+
+.allServices__row{
+    width: 1170px;
+    height: 283px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.test{
+    display: block;
+}
+
+/* .allServices{
+    position: relative;
+}
+
+.allServices__content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* text */
+

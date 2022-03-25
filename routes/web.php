@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Home');
 });
-Route::get('/Home', function () {
-    return view('Home');
+
+Route::get('/service-details', function () {
+    return view('servicedetails');
 });
+Route::get('/service-details', 'ServiceController@details');
+
