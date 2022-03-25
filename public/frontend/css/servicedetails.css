@@ -4,7 +4,6 @@
     margin: 0;
     font-family: 'Istok Web', sans-serif;
 }
-
 .inforService{
     text-align: center;
 }
@@ -167,7 +166,7 @@
     position: relative;
     padding-top: 100px;
     width: 370px;
-    height: 303px;
+    height: 403px;
 }
 
 .pricingPlan__card{

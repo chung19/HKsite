@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/servicedetails', function () {
+Route::get('/service-details', function () {
     return view('servicedetails');
 });
+Route::get('/service-details', 'ServiceController@details');
 
