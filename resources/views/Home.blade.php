@@ -17,6 +17,7 @@
   <link href="./frontend/css/style.css" rel="stylesheet" />
   <link href="./frontend/css/responsive.css" rel="stylesheet" />
 </head>
+
 <body>
   <!-- <section> topbar ============================-->
   <section class="topbar py-2 d-none d-sm-block">
@@ -64,12 +65,12 @@
   <!---------------------------------------------------------- header--------------------------------------------------------- -->
   <section>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-      <div class="container"><a class="navbar-brand" href="index.html"><img src="./frontend/images/index-img/logo.png" height="45" alt="logo" /></a>
+      <div class="container"><a class="navbar-brand" href="{{'home'}}"><img src="./frontend/images/index-img/logo.png" height="45" alt="logo" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
         <div class="collapse navbar-collapse  border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-            <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="index.html">Home+</a></li>
-            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing.html">Services+</a></li>
+            <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="{{'home'}}">Home+</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{{'service-details'}}">Services+</a></li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
             </li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
@@ -783,7 +784,7 @@
         <div class="container footer_top">
           <div class="row">
             <div class="col-12 col-md-6 col-lg-3">
-              <a class="footer_top-logo-link" href=""><img src="./frontend/images/footer/logo.png" alt="logo" class="footer_top-contact-logo" /></a>
+              <a class="footer_top-logo-link" href="{{'home'}}"><img src="./frontend/images/footer/logo.png" alt="logo" class="footer_top-contact-logo" /></a>
               <span class="footer_top-contact-desc">Our Company has been developing high-quality and reliable
                 software for corporate nees since 2008. We are renowned
                 professionals of software develeopmnent.</span>
@@ -913,4 +914,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <script src="./frontend/js/btnPlay.js"></script>
 </body>
+
 </html>
