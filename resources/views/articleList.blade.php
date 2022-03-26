@@ -38,6 +38,88 @@
     <link rel="stylesheet" href="{{asset('./assets/css/responsive.css')}}">
   </head>
   <body>
+  <section class="topbar py-2 d-none d-sm-block">
+        <nav class="navbar container">
+          <div class="row body-topbar">
+            <div class="col-5">
+              <div class="nav-item">
+                <a class="text-reset me-3" href="#">
+                  <img class="nav-icon" src="./frontend/images/index-img/icons/clock.png" alt="icon">
+                  Mon-Fri: 09.00 am-06:00 pm</a>
+              </div>
+            </div>
+            <div class="col-7">
+              <!-- Collapsible wrapper -->
+
+              <!-- Right elements -->
+              <div class="d-flex align-items-center">
+                <!-- Icon -->
+                <a class="text-reset me-3" href="#">
+                  <img class="nav-icon" src="./frontend/images/index-img/icons/call.png" alt="icon">
+                  Call Us +156984538
+                </a>
+                <a class="text-reset text-reset-right me-3" href="#">
+                  <img class="nav-icon" src="./frontend/images/index-img/icons/mail.png" alt="icon">
+                  e-mail us
+                </a>
+                <div class="dropdown">
+                  <a class="text-reset text-reset-right me-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img class="nav-icon" src="./frontend/images/index-img/icons/flag.png" alt="icon">
+                    ENGLISH
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!-- end <section> topbar ============================-->
+      <!---------------------------------------------------------- header--------------------------------------------------------- -->
+      <section>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+          <div class="container"><a class="navbar-brand" href="index.html"><img src="./frontend/images/index-img/logo.png" height="45" alt="logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+            <div class="collapse navbar-collapse  border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="index.html">Home+</a></li>
+                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing.html">Services+</a></li>
+                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
+                </li>
+                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
+                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
+                <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">About Us</a>
+                </li>
+                <form class="d-flex my-3 d-block d-lg-none">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                  <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+                <div class="dropdown d-none d-lg-block">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-light ms-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><input class="form-control" type="search" placeholder="Search" aria-label="Search" /></li>
+                    </ul>
+                  </div>
+                </div>
+                <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page" href="user-research.html"><img src="./frontend/images/index-img/icons/mess.png" alt="icon"></a></li>
+                <div class="row navbar-contact ">
+                  <div class="col-lg-6 text-color-above">Do you need help?</div>
+                  <div class="col-lg-6 text-color-last">CONTACT ME</div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!---------------------------------------------------------- end header--------------------------------------------------------- -->
     <section>
       <div class="articles_list">
         <div class="articles_list_content container">
@@ -530,5 +612,135 @@
         </div>
       </div>
     </section>
+    <section>
+    <footer class="footer">
+      <div class="container-fluid footer__wrapper-content">
+        <div class="container footer_top">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+              <a class="footer_top-logo-link" href=""><img src="./frontend/images/footer/logo.png" alt="logo" class="footer_top-contact-logo" /></a>
+              <span class="footer_top-contact-desc">Our Company has been developing high-quality and reliable
+                software for corporate nees since 2008. We are renowned
+                professionals of software develeopmnent.</span>
+              <div class="footer_icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 pdl-30 mt60">
+              <h5 class="footer_top-posts-title">Quick Links</h5>
+              <div class="footer_top-posts-info">
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About Us</a>
+              </div>
+              <div class="footer_top-posts-info">
+                <a href="#" class="footer_topt-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Our Services</a>
+              </div>
+              <div class="footer_top-posts-info">
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Pricing Plan</a>
+              </div>
+              <div class="footer_top-posts-info">
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Blog Classic</a>
+              </div>
+              <div class="footer_top-posts-info">
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact Us</a>
+              </div>
+              <div class="footer_top-posts-info">
+                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Faqs</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mt60">
+              <h5 class="footer_top-posts-title">Popular Post</h5>
+              <div class="content_right_our_contact">
+                <div class="popular_posts_content">
+                  <div class="popular_posts_content_item">
+                    <div class="popular_posts_content_img">
+                      <img src="./frontend/images/footer/anh_16.png" alt="" />
+                    </div>
+                    <div class="popular_posts_contentinformation">
+                      <div class="contentinformation_heading_popular_post fontcolor">
+                        Android Application Program-2021
+                      </div>
+                      <p class="contentinformation_time">August 24, 2021</p>
+                    </div>
+                  </div>
+                  <div class="popular_posts_content_item">
+                    <div class="popular_posts_content_img">
+                      <img src="./frontend/images/footer/anh_16.png" alt="" />
+                    </div>
+                    <div class="popular_posts_contentinformation">
+                      <div class="contentinformation_heading_popular_post fontcolor">
+                        Android Application Program-2021
+                      </div>
+                      <p class="contentinformation_time">August 24, 2021</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 pdl-30 mt60">
+              <h5 class="footer_top-posts-title">Our Contacts</h5>
+              <div class="our_contact_content">
+                <div class="our_contact_content_item">
+                  <div class="our_contact_content_img">
+                    <img src="./frontend/images/footer/icon-address.png" alt="" />
+                  </div>
+                  <div class="our_contact_contentinformation">
+                    <div class="contentinformation_heading_our_contact">
+                      Address
+                    </div>
+                    <p class="contentinformation_contact">
+                      125, Suitland Street, USA
+                    </p>
+                  </div>
+                </div>
+                <div class="our_contact_content_item">
+                  <div class="our_contact_content_img">
+                    <img src="./frontend/images/footer/icon-phone.png" alt="" />
+                  </div>
+                  <div class="our_contact_contentinformation">
+                    <div class="contentinformation_heading_our_contact">
+                      Phone
+                    </div>
+                    <p class="contentinformation_contact">+ 786 875 864 75</p>
+                  </div>
+                </div>
+                <div class="our_contact_content_item">
+                  <div class="our_contact_content_img">
+                    <img src="./frontend/images/footer/icon-email.png" alt="" />
+                  </div>
+                  <div class="our_contact_contentinformation">
+                    <div class="contentinformation_heading_our_contact">
+                      E-Mail
+                    </div>
+                    <p class="contentinformation_contact">support@bigfox.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="row container body-footer-bottom">
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <p>
+              &COPY; Copyright 2021. All Rights Reserved. Design by
+              <span> <a class="footer_bottom_text" href="#">Dream IT</a></span>
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="footer_right">
+              <p class="text-bottom-right">
+                Powered by
+                <span> <a class="footer_bottom_text" href="#">Wordpress</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
   </body>
 </html>

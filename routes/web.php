@@ -19,6 +19,4 @@ Route::get('/', function () {
 Route::get('/articleList', function () {
     return view('articleList');
 });
-Route::get('/footer', function () {
-    return view('footer');
-});
+
