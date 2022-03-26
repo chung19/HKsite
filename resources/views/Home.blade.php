@@ -23,14 +23,14 @@
   <section class="topbar py-2 d-none d-sm-block">
     <nav class="navbar container">
       <div class="row body-topbar">
-        <div class="col-5">
+        <div class="col-5 topbar-left">
           <div class="nav-item">
             <a class="text-reset me-3" href="#">
               <img class="nav-icon" src="./frontend/images/index-img/icons/clock.png" alt="icon">
               Mon-Fri: 09.00 am-06:00 pm</a>
           </div>
         </div>
-        <div class="col-7">
+        <div class="col-7 topbar-right">
           <!-- Collapsible wrapper -->
 
           <!-- Right elements -->
@@ -75,7 +75,7 @@
             </li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
-            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">About Us</a>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{{'about'}}">About Us</a>
             </li>
             <form class="d-flex my-3 d-block d-lg-none">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

@@ -1,0 +1,97 @@
+body {
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Rubik", sans-serif;
+}
+i {
+    text-decoration: none;
+    color: #a0a0a0;
+}
+/* HEADER */
+.header {
+    line-height: 55px;
+    background-color: #f0f3f8;
+    font-weight: 500;
+}
+.header .contact-us {
+    text-align: left;
+}
+.header .menu-contact-us {
+    text-align: right;
+}
+/* CONTACT WITH US */
+.contact-with-us .our-contact-info {
+    text-align: center;
+    color: #0a8bfa;
+    font-weight: 500;
+    font-size: smaller;
+}
+.contact-with-us .contact-with-us {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+.body-contact{
+ margin: 0;
+}
+.row-body-contact{
+    width:1170px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.contact-with-us .map iframe {
+    border-radius: 15px;
+    width: 735px;
+    height: 433px;
+}
+.col-8.map.me-5 {
+    margin-right: 0px !important;
+}
+.map{
+    margin-left: 0;
+    padding-left: 0;
+}
+.contact-with-us .info {
+    box-shadow: 0px 0px 14px rgb(197 197 197);
+    border-radius: 15px;
+    width: 325px;
+    height: 400px;
+    padding: 40px;
+}
+.contact-with-us .info-label {
+    color: #818185;
+    margin-bottom: 3px !important;
+}
+.contact-with-us .info-text {
+    margin-top: 0 !important;
+    font-weight: 600;
+}
+/* GET IN TOUCH */
+.get-in-touch {
+    background-color: #f0f4f8;
+}
+.title-get-in-touch {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+.form-get-in-touch {
+    width: 200px;
+}
+.form-control {
+    border: none;
+    border-radius: 2px;
+}
+input.form-control,
+select.form-select {
+    height: 50px;
+}
+input.form-control::-webkit-input-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 3;
+}
+textarea.form-control::-webkit-input-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+}

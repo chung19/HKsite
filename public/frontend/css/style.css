@@ -49,6 +49,17 @@
 
 .body-topbar {
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.topbar-left {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.topbar-right {
+    margin-right: -120px;
 }
 
 .d-flex.align-items-center {
@@ -84,7 +95,9 @@ nav.navbar.navbar-expand-lg.navbar-light.sticky-top.py-3.d-block {
 .navbar-light .navbar-brand {
     margin-left: 0;
 }
-
+.font-base{
+    margin-right: 0 !important;
+}
 ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base {
     align-items: center;
 }
