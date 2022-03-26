@@ -24,7 +24,7 @@
                 <div class="col-5">
                     <div class="nav-item">
                         <a class="text-reset me-3" href="#">
-                            <img class="nav-icon" src="./frontend/images/servicedetails/index-img/icons/clock.png" alt="icon">
+                            <img class="nav-icon" src="./frontend/images/index-img/icons/clock.png" alt="icon">
                             Mon-Fri: 09.00 am-06:00 pm</a>
                     </div>
                 </div>
@@ -35,16 +35,16 @@
                     <div class="d-flex align-items-center">
                         <!-- Icon -->
                         <a class="text-reset me-3" href="#">
-                            <img class="nav-icon" src="./frontend/images/servicedetails/index-img/icons/call.png" alt="icon">
+                            <img class="nav-icon" src="./frontend/images/index-img/icons/call.png" alt="icon">
                             Call Us +156984538
                         </a>
                         <a class="text-reset text-reset-right me-3" href="#">
-                            <img class="nav-icon" src="./frontend/images/servicedetails/index-img/icons/mail.png" alt="icon">
+                            <img class="nav-icon" src="./frontend/images/index-img/icons/mail.png" alt="icon">
                             e-mail us
                         </a>
                         <div class="dropdown">
                             <a class="text-reset text-reset-right me-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img class="nav-icon" src="./frontend/images/servicedetails/index-img/icons/flag.png" alt="icon">
+                                <img class="nav-icon" src="./frontend/images/index-img/icons/flag.png" alt="icon">
                                 ENGLISH
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -63,7 +63,7 @@
     <!---------------------------------------------------------- header--------------------------------------------------------- -->
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="./frontend/images/servicedetails/index-img/logo.png" height="45" alt="logo" /></a>
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="./frontend/images/index-img/logo.png" height="45" alt="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
             <div class="collapse navbar-collapse  border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
@@ -89,7 +89,7 @@
                             </ul>
                         </div>
                     </div>
-                    <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page" href="user-research.html"><img src="./frontend/images/servicedetails/index-img/icons/mess.png" alt="icon"></a></li>
+                    <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page" href="user-research.html"><img src="./frontend/images/index-img/icons/mess.png" alt="icon"></a></li>
                     <div class="row navbar-contact ">
                         <div class="col-lg-6 text-color-above">Do you need help?</div>
                         <div class="col-lg-6 text-color-last">CONTACT ME</div>

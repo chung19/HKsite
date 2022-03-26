@@ -22,6 +22,7 @@
     margin-top: 95px;
     margin-bottom: 70px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .inforService__text {
@@ -49,6 +50,10 @@
     display: flex;
     align-items: center;
     margin: 8px;
+}
+
+.inforService__feature{
+    margin-left: 0;
 }
 
 @media (max-width: 1200px){
@@ -254,6 +259,7 @@
     background-color: #0a9af7;
     border-radius: 50%;
     margin-left: 38px;
+    margin-right: 0;
 }
 
 .pricingPlan__cardBody-checked img{
@@ -266,7 +272,7 @@
     padding-left: 10px;
     padding-top: auto;
     padding-bottom: auto;
-
+    margin-left: 0;
 }
 
 .pricingPlan__cardBody-used{
@@ -332,6 +338,8 @@ hr{
     margin-top: 60px;
     margin-bottom: 25px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .allServices__container {
@@ -372,7 +380,7 @@ hr{
 }
 
 .allServices__textContent{
-    font-size: 14px;
+    font-size: 16px;
     height: 70px;
     width: auto;
 }
