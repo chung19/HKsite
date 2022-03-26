@@ -1,0 +1,68 @@
+@media screen and (max-width: 512px) {
+    section {
+        overflow: hidden !important;
+    }
+    .articles_list_content_left_title h6 {
+        font-size: 14px;
+    }
+    .articles_list_content_left_title h1 {
+        font-size: 35px;
+    }
+    .item {
+        padding: 10px 29px;
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+    }
+    .articles_list_text_title h3 {
+        font-size: 20px;
+    }
+    .popular_galary_content_item {
+        width: 105px;
+        height: 105px;
+    }
+    .articles_list_text_date {
+        font-size: 12px;
+    }
+    .articles_list_text_sub {
+        font-size: 14px;
+    }
+    .submit a {
+        font-size: 14px;
+    }
+    .button-loadMore {
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    /* Recent Post */
+    .contentinformation_heading {
+        font-size: 14px;
+    }
+    .contentinformation_time {
+        font-size: 14px;
+    }
+
+    /* Catagory List */
+    .popular_catagory_content_item {
+        font-size: 14px;
+    }
+
+    /* Archives */
+    .popular_archives_content_item {
+        font-size: 14px;
+    }
+
+    /* Follow Us */
+    .popular_followUs_content_list_icon i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    /* Tag */
+    .testButton {
+        font-size: 12px;
+    }
+}

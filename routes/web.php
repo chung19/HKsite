@@ -23,4 +23,6 @@ Route::get('/service-details', function () {
     return view('servicedetails');
 });
 // Route::get('/service-details', 'ServiceController@details');
-
+Route::get('/articleList', function () {
+    return view('articleList');
+});
