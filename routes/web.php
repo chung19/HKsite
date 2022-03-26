@@ -14,11 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('home');
 });
-
-Route::get('/service-details', function () {
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/servicedetails', function () {
     return view('servicedetails');
 });
-Route::get('/service-details', 'ServiceController@details');
 
