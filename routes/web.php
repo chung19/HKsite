@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
-Route::get('/servicedetails', function () {
+Route::get('/', function () {
     return view('servicedetails');
 });
+
+Route::get('/service-details', function () {
+    return view('servicedetails');
+});
+// Route::get('/service-details', 'ServiceController@details');
 
