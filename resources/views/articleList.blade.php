@@ -17,25 +17,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome -->
-  <!-- <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css" /> -->
   <!-- CSS -->
   <link rel="stylesheet" href="{{asset('./assets/css/style.css')}}">
   <link rel="stylesheet" href="{{asset('./assets/css/responsive.css')}}">
 </head>
 
 <body>
+  <!-- <section> topbar ============================-->
   <section class="topbar py-2 d-none d-sm-block">
     <nav class="navbar container">
       <div class="row body-topbar">
-        <div class="col-5">
+        <div class="col-5 topbar-left">
           <div class="nav-item">
             <a class="text-reset me-3" href="#">
               <img class="nav-icon" src="./frontend/images/index-img/icons/clock.png" alt="icon">
               Mon-Fri: 09.00 am-06:00 pm</a>
           </div>
         </div>
-        <div class="col-7">
+        <div class="col-7 topbar-right">
           <!-- Collapsible wrapper -->
 
           <!-- Right elements -->
@@ -99,7 +98,7 @@
             <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page" href="user-research.html"><img src="./frontend/images/index-img/icons/mess.png" alt="icon"></a></li>
             <div class="row navbar-contact ">
               <div class="col-lg-6 text-color-above">Do you need help?</div>
-              <div class="col-lg-6 text-color-last">CONTACT ME</div>
+              <div class="col-lg-6 text-color-last"><a class="nav-link" href="{{'contact-me'}}">CONTACT ME</a></div>
             </div>
           </ul>
         </div>
@@ -655,6 +654,11 @@
       </div>
     </footer>
   </section>
+  <!--    JavaScripts-->
+  <!-- ===============================================-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <script src="./frontend/js/btnPlay.js"></script>
 </body>
 
 </html>

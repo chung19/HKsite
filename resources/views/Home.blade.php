@@ -94,7 +94,7 @@
             <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page" href="user-research.html"><img src="./frontend/images/index-img/icons/mess.png" alt="icon"></a></li>
             <div class="row navbar-contact ">
               <div class="col-lg-6 text-color-above">Do you need help?</div>
-              <div class="col-lg-6 text-color-last">CONTACT ME</div>
+              <div class="col-lg-6 text-color-last"><a class="nav-link" href="{{'contact-me'}}">CONTACT ME</a></div>
             </div>
           </ul>
         </div>

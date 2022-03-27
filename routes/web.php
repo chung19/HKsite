@@ -26,6 +26,6 @@ Route::get('/service-details', function () {
 Route::get('/articleList', function () {
     return view('articleList');
 });
-Route::get('/about', function () {
-    return view('about');
+Route::get('/contact-me', function () {
+    return view('contact');
 });

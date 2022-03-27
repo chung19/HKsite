@@ -99,7 +99,7 @@
             <li class="nav-item nav-item-vertical px-2"><a class="nav-link" aria-current="page" href="user-research.html"><img src="./frontend/images/index-img/icons/mess.png" alt="icon"></a></li>
             <div class="row navbar-contact ">
               <div class="col-lg-6 text-color-above">Do you need help?</div>
-              <div class="col-lg-6 text-color-last">CONTACT ME</div>
+              <div class="col-lg-6 text-color-last"><a class="nav-link" href="{{'contact-me'}}">CONTACT ME</a></div>
             </div>
           </ul>
         </div>
@@ -113,7 +113,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6 contact-us">
-                        <i class="fas fa-circle" style="color: #0a8bfa; font-size: smaller"></i>
+                    <i class="fa fa-circle" aria-hidden="true"style="color: #0a8bfa; font-size: smaller"></i>
                         <b>
                             Contact Us
                         </b>
@@ -121,7 +121,7 @@
                     <div class="col-6 menu-contact-us">
                         Home
                         <a href="#" style="text-decoration: none">
-                            <i class="fa-solid fa-angle-right" style="font-size: 13px; color: #0d6efd"></i>
+                        <i class="fa fa-arrow-right" aria-hidden="true"style="font-size: 13px; color: #0d6efd"></i>
                             Contact Us
                         </a>
                     </div>
@@ -173,13 +173,13 @@
                             support121@yahoo.com
 
                         </p>
-
+                      
                         <p class="info-label">Social</p>
                         <p class="info-label">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>&ensp;&ensp;
-                            <a href="#"><i class="fab fa-twitter"></i></a>&ensp;&ensp;
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>&ensp;&ensp;
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>&ensp;&ensp;
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>&ensp;&ensp;
+                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&ensp;&ensp;
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </p>
                     </div>
 
