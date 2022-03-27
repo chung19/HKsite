@@ -49,6 +49,17 @@
 
 .body-topbar {
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.topbar-left {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.topbar-right {
+    margin-right: -120px;
 }
 
 .d-flex.align-items-center {
@@ -84,7 +95,9 @@ nav.navbar.navbar-expand-lg.navbar-light.sticky-top.py-3.d-block {
 .navbar-light .navbar-brand {
     margin-left: 0;
 }
-
+.font-base{
+    margin-right: 0 !important;
+}
 ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base {
     align-items: center;
 }
@@ -108,16 +121,25 @@ form.d-flex.my-3.d-block.d-lg-none {
 .active {
     color: #2d4a8a !important;
 }
-
+.dropdown.d-none.d-lg-block {
+    right: 11px;
+}
 .text-color-above {
     font-size: 9px;
     color: #868491;
+    margin-top: 10px;
 }
-
-.text-color-last {
-    color: #2d4a8a;
+.text-color-last{
+  padding-left: 0;
+  padding-right: 0;
 }
-
+.text-color-last a {
+    color: #2d4a8a !important;
+    font-weight: 500;
+    text-decoration: none;
+    padding-top: 0px;
+    padding-left: 0px;
+}
 .btn-outline-light {
     border-radius: 50%;
     background-color: #f3f7fd;
@@ -1235,27 +1257,27 @@ span.footer_top-contact-desc {
     background-color: #028bfe;
 }
 
-i.fa.fa-facebook {
+.footer_icon i.fa.fa-facebook {
     background-color: #0281ff;
     border-color: #0281ff;
 }
 
-i.fa.fa-twitter {
+.footer_icon i.fa.fa-twitter {
     background-color: #0ad5e7;
     border-color: #0ad5e7;
 }
 
-i.fa.fa-linkedin {
+.footer_icon i.fa.fa-linkedin {
     background-color: #0f66bf;
     border-color: #0f66bf;
 }
 
-i.fa.fa-instagram {
+.footer_icon i.fa.fa-instagram {
     background-color: #e50daa;
     border-color: #e50daa;
 }
 
-.footer_icon i:hover {
+.footer_icon i.fa:hover {
     background-color: #000;
     border: 1px solid #fff;
 }

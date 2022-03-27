@@ -331,12 +331,6 @@ html {
 .popular_followUs_content_list_icon .fa-google-plus-g {
     background-color: #db4437;
 }
-.popular_posts_content {
-    font-family: "Istok Web", sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    width: 370px;
-}
 .popular_tags_content_item {
     margin-right: 10px;
     margin-left: 0;
