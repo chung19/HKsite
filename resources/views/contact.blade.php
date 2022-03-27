@@ -111,7 +111,7 @@
           <!-- HEADER -->
           <div class="container-fluid header">
             <div class="container">
-                <div class="row">
+                <div class="row" style="height: 80px;">
                     <div class="col-6 contact-us">
                     <i class="fa fa-circle" aria-hidden="true"style="color: #0a8bfa; font-size: smaller"></i>
                         <b>
@@ -173,7 +173,7 @@
                             support121@yahoo.com
 
                         </p>
-                      
+
                         <p class="info-label">Social</p>
                         <p class="info-label" style="margin-top: 7px;">
                             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>&ensp;&ensp;
@@ -248,10 +248,10 @@
                 </form>
             </div>
         </div>
-  </section>   
-  
-  
-  
+  </section>
+
+
+
 
 
   <!--  <section> footer ============================-->

@@ -20,10 +20,13 @@ i.fa.fa-angle-right {
     line-height: 55px;
     background-color: #f0f3f8;
     font-weight: 500;
+    height: 80px;
 }
 
 .header .contact-us {
     text-align: left;
+    font-size: 20px;
+    margin: auto;
 }
 
 .col-6.contact-us b {
@@ -37,6 +40,7 @@ i.fa.fa-angle-right {
 .header .menu-contact-us {
     text-align: right;
     color: #707070;
+    margin: auto;
 }
 
 /* CONTACT WITH US */
