@@ -11,14 +11,14 @@
   <link rel="stylesheet" href="./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css">
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300@400@500&family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300@400@500&family=Rubik:wght@500&display=swap" rel="stylesheet">
   <!--Stylesheets-->
   <link href="./frontend/css/style.css" rel="stylesheet" />
-  <link href="./frontend/css/about.css" rel="stylesheet" />
+  <link href="./frontend/css/contact.css" rel="stylesheet" />
   <link href="./frontend/css/responsive.css" rel="stylesheet" />
 
 </head>
@@ -79,7 +79,7 @@
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
             </li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
-            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{{'articleList'}}">News</a></li>
             <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="{{'about'}}">About Us</a>
             </li>
             <form class="d-flex my-3 d-block d-lg-none">
@@ -108,131 +108,128 @@
   </section>
   <!---------------------------------------------------------- end header--------------------------------------------------------- -->
   <section>
-          <!-- HEADER -->
-          <div class="container-fluid header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6 contact-us">
-                    <i class="fa fa-circle" aria-hidden="true"style="color: #0a8bfa; font-size: smaller"></i>
-                        <b>
-                            Contact Us
-                        </b>
-                    </div>
-                    <div class="col-6 menu-contact-us">
-                        Home
-                        <a href="#" style="text-decoration: none">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            Contact Us
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- HEADER -->
+    <div class="container-fluid header">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 contact-us">
+            <i class="fa fa-circle" aria-hidden="true" style="color: #0a8bfa; font-size: smaller"></i>
+            <b>
+              Contact Us
+            </b>
+          </div>
+          <div class="col-6 menu-contact-us">
+            Home
+            <a href="#" style="text-decoration: none">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              Contact Us
+            </a>
+          </div>
         </div>
-        <!-- CONTACT WITH US -->
-        <div class="container contact-with-us mt-5 mb-5">
-            <div class="row">
-                <div class="col-12 our-contact-info">OUR CONTACT INFO</div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-12 contact-with-us">Contact with Us</div>
-            </div>
-            <div class="body-contact">
-                <div class="row row-body-contact">
-                    <!-- MAP -->
-                    <div class="col-8 map me-5">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377213.7506651207!2d77.09716780735864!3d28.552991686641374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2zTml1IMSQw6otbGksIERlbGhpLCDhuqRuIMSQ4buZ!5e0!3m2!1svi!2s!4v1646802623139!5m2!1svi!2s"
-                            width="80%" height="443" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <!-- INFO -->
-                    <div class="col-4 info">
+      </div>
+    </div>
+    <!-- CONTACT WITH US -->
+    <div class="container contact-with-us mt-5 mb-5">
+      <div class="row">
+        <div class="col-12 our-contact-info">OUR CONTACT INFO</div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12 contact-with-us">Contact with Us</div>
+      </div>
+      <div class="body-contact">
+        <div class="row row-body-contact">
+          <!-- MAP -->
+          <div class="col-8 map me-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377213.7506651207!2d77.09716780735864!3d28.552991686641374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2zTml1IMSQw6otbGksIERlbGhpLCDhuqRuIMSQ4buZ!5e0!3m2!1svi!2s!4v1646802623139!5m2!1svi!2s" width="80%" height="443" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <!-- INFO -->
+          <div class="col-4 info">
 
-                        <p class="info-label">Address</p>
-                        <p class="info-text">
-                            132 BaiPail Street, Sandigo
-                            <br>
-                            California, USA
-                        </p>
-
-                        <p class="info-label">Phone
-
-                            <br>
-                        <p class="info-text">
-                            +880 321 569 098
-                            <br>+880 321 569 098
-
-                        </p>
-
-                        <p class="info-label">Email
-
-                            <br>
-                        <p class="info-text">
-                            bigfox@gmail.com
-
-                            <br>
-                            support121@yahoo.com
-
-                        </p>
-                      
-                        <p class="info-label">Social</p>
-                        <p class="info-label" style="margin-top: 7px;">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>&ensp;&ensp;
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>&ensp;&ensp;
-                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&ensp;&ensp;
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- GET IN TOUCH -->
-        <div class="container-fluid get-in-touch pt-5 pb-5">
-            <p class="title-get-in-touch">Get in Touch</p>
-            <p class="text-center" style="font-size: smaller; color: #a0a0a0 ;margin-bottom:40px;">
-                Interactively seize focused methodologies for extensive <br />
-                growth strategies. Professionally
+            <p class="info-label">Address</p>
+            <p class="info-text">
+              132 BaiPail Street, Sandigo
+              <br>
+              California, USA
             </p>
-            <!-- FORM -->
-            <div class="container">
-                <form class="form-info">
-                    <div class="container-fluid" style="width: 60%; height: auto">
-                        <div class="row">
-                            <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Your Name" /><br />
-                            </div>
-                            <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Your Email" /><br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Phone" /><br />
-                            </div>
-                            <div class="col-6">
-                                <select class="form-select">
-                                    <option selected>---</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                </select><br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <input type="text" class="form-control setting-padding" placeholder="Subject" /><br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <textarea class="form-control setting-padding " placeholder="You Message: "
-                                    style="height: 140px; padding-top:22px;"></textarea><br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <button class="btn  form-control" style="
+
+            <p class="info-label">Phone
+
+              <br>
+            <p class="info-text">
+              +880 321 569 098
+              <br>+880 321 569 098
+
+            </p>
+
+            <p class="info-label">Email
+
+              <br>
+            <p class="info-text">
+              bigfox@gmail.com
+
+              <br>
+              support121@yahoo.com
+
+            </p>
+
+            <p class="info-label">Social</p>
+            <p class="info-label" style="margin-top: 7px;">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>&ensp;&ensp;
+              <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>&ensp;&ensp;
+              <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&ensp;&ensp;
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- GET IN TOUCH -->
+    <div class="container-fluid get-in-touch pt-5 pb-5">
+      <p class="title-get-in-touch">Get in Touch</p>
+      <p class="text-center" style="font-size: smaller; color: #a0a0a0 ;margin-bottom:40px;">
+        Interactively seize focused methodologies for extensive <br />
+        growth strategies. Professionally
+      </p>
+      <!-- FORM -->
+      <div class="container">
+        <form class="form-info">
+          <div class="container-fluid" style="width: 60%; height: auto">
+            <div class="row">
+              <div class="col-6">
+                <input type="text" class="form-control setting-padding" placeholder="Your Name" /><br />
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control setting-padding" placeholder="Your Email" /><br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <input type="text" class="form-control setting-padding" placeholder="Phone" /><br />
+              </div>
+              <div class="col-6">
+                <select class="form-select">
+                  <option selected>---</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                  <option>Option 4</option>
+                </select><br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <input type="text" class="form-control setting-padding" placeholder="Subject" /><br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <textarea class="form-control setting-padding " placeholder="You Message: " style="height: 140px; padding-top:22px;"></textarea><br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button class="btn  form-control" style="
                                         background: linear-gradient(to right, #0397fd , #01affc)!important;
                                         border: #61bafb;
                                         font-weight: 300;
@@ -240,18 +237,18 @@
                                         font-size: 13px;
                                         height: 40px;
                                     ">
-                                    SEND MESSAGE
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                  SEND MESSAGE
+                </button>
+              </div>
             </div>
-        </div>
-  </section>   
-  
-  
-  
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
 
 
   <!--  <section> footer ============================-->
