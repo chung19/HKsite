@@ -74,8 +74,13 @@
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
             </li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
+<<<<<<< HEAD
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{{'about'}}">About Us</a>
+=======
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{{'articleList'}}">News</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">About Us</a>
+>>>>>>> origin/ArticleList
             </li>
             <form class="d-flex my-3 d-block d-lg-none">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
