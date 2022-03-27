@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{asset('./assets/css/articleList.css')}}">
+  <link rel="stylesheet" href="{{asset('./assets/css/style.css')}}">
   <link rel="stylesheet" href="{{asset('./assets/css/responsive.css')}}">
 </head>
 
@@ -38,7 +38,7 @@
           <!-- Collapsible wrapper -->
 
           <!-- Right elements -->
-          <div class="d-flex ">
+          <div class="d-flex align-items-center">
             <!-- Icon -->
             <a class="text-reset me-3" href="#">
               <img class="nav-icon" src="./frontend/images/index-img/icons/call.png" alt="icon">
@@ -78,7 +78,7 @@
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
             </li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
-            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{{'articleList'}}">News</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">About Us</a>
             </li>
             <form class="d-flex my-3 d-block d-lg-none">
@@ -117,7 +117,7 @@
                   <h6>UPDATE NEWS</h6>
                   <h1>Latest News</h1>
                 </div>
-                <div class="item d-flex ">
+                <div class="item d-flex align-items-center">
                   <div class="image">
                     <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
                   </div>
@@ -144,13 +144,12 @@
                     </div>
                     <div class="submit">
                       <a href="#">READ MORE
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
+                        <i class="fa-solid fa-right-long"></i>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="item d-flex ">
+                <div class="item d-flex align-items-center">
                   <div class="image">
                     <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
                   </div>
@@ -177,13 +176,12 @@
                     </div>
                     <div class="submit">
                       <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
+                        <i class="fa-solid fa-right-long"></i>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="item d-flex ">
+                <div class="item d-flex align-items-center">
                   <div class="image">
                     <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
                   </div>
@@ -210,13 +208,12 @@
                     </div>
                     <div class="submit">
                       <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
+                        <i class="fa-solid fa-right-long"></i>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="item d-flex">
+                <div class="item d-flex align-items-center">
                   <div class="image">
                     <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
                   </div>
@@ -243,13 +240,12 @@
                     </div>
                     <div class="submit">
                       <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
+                        <i class="fa-solid fa-right-long"></i>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="item d-flex ">
+                <div class="item d-flex align-items-center">
                   <div class="image">
                     <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
                   </div>
@@ -276,13 +272,12 @@
                     </div>
                     <div class="submit">
                       <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
+                        <i class="fa-solid fa-right-long"></i>
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="item d-flex ">
+                <div class="item d-flex align-items-center">
                   <div class="image">
                     <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
                   </div>
@@ -309,8 +304,7 @@
                     </div>
                     <div class="submit">
                       <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
+                        <i class="fa-solid fa-right-long"></i>
                       </a>
                     </div>
                   </div>
@@ -328,7 +322,7 @@
                     <div class="input-group-append bg-white">
                       <button class="btn border-0" type="button">
                         <div class="search_icon">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                          <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                       </button>
                     </div>
@@ -362,7 +356,7 @@
                             Participate in staff meet ingness manage dedicated
                           </p>
                         </div>
-                        <p class="recect_contentinformation_time">
+                        <p class="contentinformation_time">
                           <span class="recent_post_icon">
                             <img src="./assets/image/icon-clock.png" alt="" />
                           </span>
@@ -381,7 +375,7 @@
                             extensive back compatiple
                           </p>
                         </div>
-                        <p class="recect_contentinformation_time">
+                        <p class="contentinformation_time">
                           <span class="recent_post_icon">
                             <img src="./assets/image/icon-clock.png" alt="" />
                           </span>
@@ -399,7 +393,7 @@
                             Participate in staff meet ingness manage dedicated
                           </p>
                         </div>
-                        <p class="recect_contentinformation_time">
+                        <p class="contentinformation_time">
                           <span class="recent_post_icon">
                             <img src="./assets/image/icon-clock.png" alt="" />
                           </span>
@@ -495,7 +489,7 @@
                 </div>
                 <div class="content_right_tags_posts">
                   <h4 class="popular_tags_heading">Tags</h4>
-                  <div class="popular_tags_content">
+                  <div class="popular_posts_content">
                     <div class="popular_tags_content_item">
                       <p class="testButton">Fashion</p>
                     </div>

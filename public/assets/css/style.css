@@ -3,7 +3,6 @@
     margin: auto;
     max-width: 1920px;
     box-sizing: inherit;
-    font-family: "Istok Web", sans-serif;
 }
 html {
     box-sizing: border-box;
@@ -18,9 +17,6 @@ html {
 .articles_list {
     padding: 100px 0 100px;
     margin: auto;
-}
-.articles_list_content_left {
-    margin-right: 8px;
 }
 .articles_list_content_left_title h6 {
     color: #028bfe;
@@ -39,7 +35,6 @@ html {
     cursor: pointer;
     box-shadow: 0px 0px 10px #efefef;
     border-radius: 5px;
-    width: 100%;
 }
 .item:hover {
     box-shadow: 0px 0px 15px rgb(182 182 182);
@@ -79,8 +74,7 @@ html {
     color: #028bfe;
 }
 .articles_list_text_date {
-    font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     font-family: "Istok Web", sans-serif;
 }
 .articles_list_text_date a {
@@ -108,7 +102,6 @@ html {
     font-family: "Istok Web", sans-serif;
 }
 .button-loadMore {
-    font-family: "Montserrat", sans-serif;
     height: 50px;
     width: 250px;
     margin-left: 50%;
@@ -222,14 +215,14 @@ html {
     margin-bottom: 25px;
 }
 .recent_posts_contentinformation {
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 25px;
 }
-.contentinformation_heading p {
-    font-family: "Montserrat", sans-serif;
+.contentinformation_heading {
     font-size: 16px;
     font-weight: 600;
 }
@@ -240,7 +233,7 @@ html {
 .fontcolor {
     color: white;
 }
-.recect_contentinformation_time {
+.contentinformation_time {
     font-family: "Istok Web", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -323,30 +316,24 @@ html {
     transition: all 0.5s;
     background-color: #028bfe;
 }
-.popular_followUs_content_list_icon .fa-facebook {
+.popular_followUs_content_list_icon .fa-facebook-f {
     background-color: #3b5998;
 }
 .popular_followUs_content_list_icon .fa-twitter {
     background-color: #1da1f2;
 }
-.popular_followUs_content_list_icon .fa-linkedin {
+.popular_followUs_content_list_icon .fa-linkedin-in {
     background-color: #0077b5;
 }
-.popular_followUs_content_list_icon .fa-pinterest-p {
+.popular_followUs_content_list_icon .fa-pinterset {
     background-color: #bd081c;
 }
-.popular_followUs_content_list_icon .fa-google-plus {
+.popular_followUs_content_list_icon .fa-google-plus-g {
     background-color: #db4437;
 }
 .popular_tags_content_item {
     margin-right: 10px;
     margin-left: 0;
-}
-.popular_tags_content {
-    font-family: "Istok Web", sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    width: 370px;
 }
 .testButton {
     text-align: center;

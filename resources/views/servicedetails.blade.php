@@ -72,7 +72,7 @@
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Pages +</a>
             </li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">Shop +</a></li>
-            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{{'articleList'}}">News</a></li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">News</a></li>
             <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">About Us</a>
             </li>
             <form class="d-flex my-3 d-block d-lg-none">

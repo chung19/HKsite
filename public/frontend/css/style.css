@@ -1,6 +1,6 @@
 /* ----------------------------------------- all ------------------------ */
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: auto;
     max-width: 1920px;
     margin: auto;
@@ -180,7 +180,7 @@ form.d-flex.my-3.d-block.d-lg-none {
 
 .body-color-last {
     color: #2d4a8a;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .btn-learnMore {
@@ -337,10 +337,7 @@ form.d-flex.my-3.d-block.d-lg-none {
 .play-btn {
     width: 50px;
     height: 50px;
-    background: radial-gradient(
-        rgba(45, 74, 138, 0.8) 60%,
-        rgba(255, 255, 255, 1) 62%
-    );
+    background: radial-gradient(rgba(45, 74, 138, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
     border-radius: 50%;
     position: relative;
     display: block;
@@ -389,7 +386,7 @@ form.d-flex.my-3.d-block.d-lg-none {
     animation-timing-function: steps;
     opacity: 1;
     border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.75);
+    border: 5px solid rgba(255, 255, 255, .75);
     top: -30%;
     left: -30%;
     background: rgba(198, 16, 0, 0);
@@ -400,8 +397,7 @@ form.d-flex.my-3.d-block.d-lg-none {
         -webkit-transform: scale(0.6);
         transform: scale(0.6);
         opacity: 1;
-        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
-            0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
     }
 
     100% {
@@ -409,6 +405,7 @@ form.d-flex.my-3.d-block.d-lg-none {
         transform: scale(1);
         opacity: 0;
         box-shadow: none;
+
     }
 }
 
@@ -417,8 +414,7 @@ form.d-flex.my-3.d-block.d-lg-none {
         -webkit-transform: scale(0.6);
         transform: scale(0.6);
         opacity: 1;
-        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75),
-            0px 0px 25px 10px rgba(255, 255, 255, 0.75);
+        box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
     }
 
     100% {
@@ -426,6 +422,7 @@ form.d-flex.my-3.d-block.d-lg-none {
         transform: scale(1);
         opacity: 0;
         box-shadow: none;
+
     }
 }
 
@@ -630,7 +627,7 @@ iframe#video {
 
 .box:hover {
     padding: 30px 30px 70px 30px;
-    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.20);
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1030,7 +1027,7 @@ h4 {
 }
 
 .rating-color {
-    color: #2d4a8a !important;
+    color: #2d4a8a !important
 }
 
 /*------------------------------------------------------ <section> blog ----------------------- */
@@ -1132,7 +1129,7 @@ img.box-img-blog {
     opacity: 0;
     padding-top: 80px;
     color: #fff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
 }
 
 .card-box-blog:hover .cover {
@@ -1148,7 +1145,7 @@ img.box-img-blog {
     height: 180px;
     background-color: #1c376e;
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .beside-newsletter {
@@ -1260,38 +1257,22 @@ span.footer_top-contact-desc {
     background-color: #028bfe;
 }
 
-<<<<<<< HEAD
 .footer_icon i.fa.fa-facebook {
-=======
-.fa.fa-facebook {
->>>>>>> origin/ArticleList
     background-color: #0281ff;
     border-color: #0281ff;
 }
 
-<<<<<<< HEAD
 .footer_icon i.fa.fa-twitter {
-=======
-.fa.fa-twitter {
->>>>>>> origin/ArticleList
     background-color: #0ad5e7;
     border-color: #0ad5e7;
 }
 
-<<<<<<< HEAD
 .footer_icon i.fa.fa-linkedin {
-=======
-.fa.fa-linkedin {
->>>>>>> origin/ArticleList
     background-color: #0f66bf;
     border-color: #0f66bf;
 }
 
-<<<<<<< HEAD
 .footer_icon i.fa.fa-instagram {
-=======
-.fa.fa-instagram {
->>>>>>> origin/ArticleList
     background-color: #e50daa;
     border-color: #e50daa;
 }
@@ -1392,7 +1373,6 @@ span.footer_top-contact-desc {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 25px;
-    margin-top: -5px;
 }
 
 .contentinformation_heading_popular_post {
@@ -1404,12 +1384,8 @@ span.footer_top-contact-desc {
 }
 
 p.contentinformation_time {
-    color: #989899;
+    color: #aaadb2;
     margin: 0;
-    font-size: 14px;
-    font-family: "Istok Web", sans-serif;
-    font-weight: 500;
-    color: #7b7d7e;
 }
 
 /* Our Contact */
