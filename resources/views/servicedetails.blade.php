@@ -13,7 +13,7 @@
     <!--Stylesheets-->
     <link href="./frontend/css/style.css" rel="stylesheet" />
     <link href="./frontend/css/responsive.css" rel="stylesheet" />
-    <link href="./frontend/css/about.css" rel="stylesheet" />
+    <link href="./frontend/css/contact.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('./frontend/css/servicedetails.css')}}">
 </head>
 
@@ -124,38 +124,40 @@
                 </div>
             </div>
         </div>
-    </div>
+      </div>
+    </nav>
+  </section>
+  <!-- end <section> topbar ============================-->
 
     <div class="inforService">
         <div class="inforService__content">
-            <h1 class="inforService__title">Mobile Apps Development</h1>
-            <img class="inforService__banner" src="./frontend/images/servicedetails/bannerMAD.png">
-            <p class="inforService__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
-                porttitor volutpat. Collaboration and idea-sharing after vertical. <br> <br> <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet
-            </p>
-            <h2 class="inforService__featuresTitle">Key features</h2>
-            <div class="inforService__features">
-                <img src="./frontend/images/servicedetails/check_features.png">
-                <div class="inforService__feature">Custom Installation Process</div>
-            </div>
-            <div class="inforService__features">
-                <img src="./frontend/images/servicedetails/check_features.png">
-                <div class="inforService__feature">Customizable Interface</div>
-            </div>
-            <div class="inforService__features">
-                <img src="./frontend/images/servicedetails/check_features.png">
-                <div class="inforService__feature">Improved All Performance</div>
-            </div>
-            <div class="inforService__features">
-                <img src="./frontend/images/servicedetails/check_features.png">
-                <div class="inforService__feature">High Usablility</div>
-            </div>
+        <h1 class="inforService__title">Mobile Apps Development</h1>
+        <img class="inforService__banner" src="./frontend/images/servicedetails/bannerMAD.png">
+        <p class="inforService__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
+            Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
+            porttitor volutpat. Collaboration and idea-sharing after vertical. <br> <br> <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
+            Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet
+        </p>
+        <h2 class="inforService__featuresTitle">Key features</h2>
+        <div class="inforService__features">
+            <img src="./frontend/images/servicedetails/check_features.png">
+            <div class="inforService__feature">Custom Installation Process</div>
         </div>
-
+        <div class="inforService__features">
+            <img src="./frontend/images/servicedetails/check_features.png">
+            <div class="inforService__feature">Customizable Interface</div>
+        </div>
+        <div class="inforService__features">
+            <img src="./frontend/images/servicedetails/check_features.png">
+            <div class="inforService__feature">Improved All Performance</div>
+        </div>
+        <div class="inforService__features">
+            <img src="./frontend/images/servicedetails/check_features.png">
+            <div class="inforService__feature">High Usablility</div>
+        </div>
+        </div>
     </div>
 
     <div class="pricingPlan">
