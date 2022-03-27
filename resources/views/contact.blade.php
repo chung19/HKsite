@@ -121,7 +121,7 @@
                     <div class="col-6 menu-contact-us">
                         Home
                         <a href="#" style="text-decoration: none">
-                        <i class="fa fa-arrow-right" aria-hidden="true"style="font-size: 13px; color: #0d6efd"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
                             Contact Us
                         </a>
                     </div>
@@ -142,7 +142,7 @@
                     <div class="col-8 map me-5">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377213.7506651207!2d77.09716780735864!3d28.552991686641374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2zTml1IMSQw6otbGksIERlbGhpLCDhuqRuIMSQ4buZ!5e0!3m2!1svi!2s!4v1646802623139!5m2!1svi!2s"
-                            width="80%" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                            width="80%" height="443" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                     <!-- INFO -->
                     <div class="col-4 info">
@@ -175,7 +175,7 @@
                         </p>
                       
                         <p class="info-label">Social</p>
-                        <p class="info-label">
+                        <p class="info-label" style="margin-top: 7px;">
                             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>&ensp;&ensp;
                             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>&ensp;&ensp;
                             <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>&ensp;&ensp;
@@ -199,15 +199,15 @@
                     <div class="container-fluid" style="width: 60%; height: auto">
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control" placeholder="Your Name" /><br />
+                                <input type="text" class="form-control setting-padding" placeholder="Your Name" /><br />
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control" placeholder="Your Email" /><br />
+                                <input type="text" class="form-control setting-padding" placeholder="Your Email" /><br />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control" placeholder="Phone" /><br />
+                                <input type="text" class="form-control setting-padding" placeholder="Phone" /><br />
                             </div>
                             <div class="col-6">
                                 <select class="form-select">
@@ -221,13 +221,13 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Subject" /><br />
+                                <input type="text" class="form-control setting-padding" placeholder="Subject" /><br />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <textarea class="form-control" placeholder="You Message: "
-                                    style="height: 100px"></textarea><br />
+                                <textarea class="form-control setting-padding " placeholder="You Message: "
+                                    style="height: 140px; padding-top:22px;"></textarea><br />
                             </div>
                         </div>
                         <div class="row">
