@@ -1,0 +1,129 @@
+* {
+    width: auto;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.container {
+    margin: auto;
+    box-sizing: border-box;
+    width: auto;
+    max-width: 1170px;
+    padding-left: 0;
+    padding-right: 0;
+}
+/* <section> topbar */
+.topbar {
+    background-color: #263045 !important;
+    color: #9297a2;
+}
+
+.body-topbar {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.topbar-left {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.topbar-right {
+    margin-right: -120px;
+}
+
+.d-flex.align-items-center {
+    width: 79%;
+}
+
+.text-reset {
+    text-decoration: none;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.text-reset-right {
+    border-left: 1px solid #3c4558;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dropdown-menu.show {
+    z-index: 2000;
+}
+
+/* header */
+nav.navbar.navbar-expand-lg.navbar-light.sticky-top.py-3.d-block {
+    background-color: white;
+}
+
+.nav-item-vertical {
+    border-left: 1px solid #ccc;
+    margin-left: 20px;
+}
+
+.navbar-light .navbar-brand {
+    margin-left: 0;
+}
+.font-base{
+    margin-right: 0 !important;
+}
+ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base {
+    align-items: center;
+}
+
+li.nav-item.px-2 {
+    margin: 0;
+}
+
+form.d-flex.my-3.d-block.d-lg-none {
+    margin: 0;
+}
+
+.navbar-contact {
+    display: block;
+}
+
+.navbar-contact .col-lg-6 {
+    width: auto;
+}
+
+.active {
+    color: #2d4a8a !important;
+}
+.dropdown.d-none.d-lg-block {
+    right: 11px;
+}
+.text-color-above {
+    font-size: 9px;
+    color: #868491;
+    margin-top: 10px;
+}
+.text-color-last{
+  padding-left: 0;
+  padding-right: 0;
+}
+.text-color-last a {
+    color: #2d4a8a !important;
+    font-weight: 500;
+    text-decoration: none;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+.btn-outline-light {
+    border-radius: 50%;
+    background-color: #f3f7fd;
+    color: #59595e;
+}
+/* responsive header */
+@media(max-width: 992px) {
+    section {
+        overflow: hidden !important;
+    }
+
+    /* header */
+    ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base {
+        align-items: initial;
+    }
+}

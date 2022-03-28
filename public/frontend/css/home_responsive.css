@@ -2,12 +2,6 @@
     section {
         overflow: hidden !important;
     }
-
-    /* header */
-    ul.navbar-nav.ms-auto.pt-2.pt-lg-0.font-base {
-        align-items: initial;
-    }
-
     /* banner */
     .banner {
         height: 450px;
