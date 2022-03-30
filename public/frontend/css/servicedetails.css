@@ -1,7 +1,6 @@
 *{
     font-family: Sans-serif;
     padding: 0;
-    margin: 0;
     font-family: 'Istok Web', sans-serif;
 }
 .inforService{
@@ -52,6 +51,10 @@
     margin: 8px;
 }
 
+.inforService__feature{
+    margin-left: 0;
+}
+
 @media (max-width: 1200px){
 
     /* inforService */
@@ -86,10 +89,6 @@
 
     .inforService__features{
         width: 90vw;
-    }
-
-    .inforService__feature{
-        margin-left: 0;
     }
 
 
