@@ -210,28 +210,6 @@
     .input-group-newsletter {
         width: 100%;
     }
-    /* footer */
-    .footer_top {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    .footer_icon {
-        padding-top: 20px;
-    }
-    h5.footer_top-posts-title {
-        margin-top: 20px;
-    }
-    .popular_posts_content_img {
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-    }
-    .our_contact_content_img img {
-        width: 85%;
-    }
-    p.text-bottom-right{
-        margin-top: -15%;
-    }
 }
 
 /* @media( min-width: 1320px){

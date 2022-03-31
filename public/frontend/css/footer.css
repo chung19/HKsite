@@ -273,6 +273,10 @@ p.contentinformation_time {
     section {
         overflow: hidden !important;
     }
+    .container-fluid.footer__wrapper-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
     /* footer */
     .footer_top {
         margin-left: 5%;
