@@ -273,6 +273,9 @@ p.contentinformation_time {
         overflow: hidden !important;
     }
     /* footer */
+    .footer_top-logo-link img {
+        margin-top: -70px;
+    }
     .footer_top {
         margin-left: 5%;
         margin-right: 5%;
@@ -282,6 +285,10 @@ p.contentinformation_time {
     }
     h5.footer_top-posts-title {
         margin-top: 20px;
+        font-size: 22px;
+    }
+    .footer_top-contact-desc {
+        font-size: 14px;
     }
     .popular_posts_content_img {
         margin-left: 0px;
@@ -291,7 +298,25 @@ p.contentinformation_time {
     .our_contact_content_img img {
         width: 85%;
     }
+    .footer_top-posts-info {
+        font-size: 14px;
+    }
+    .contentinformation_heading_popular_post {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    p.text-top-left {
+        font-size: 12px;
+    }
     p.text-bottom-right {
-        margin-top: -15%;
+        margin-top: -8%;
+        font-size: 12px;
+        text-align: center;
+    }
+    .contentinformation_heading_our_contact {
+        font-size: 14px;
+    }
+    .contentinformation_contact {
+        font-size: 14px;
     }
 }
