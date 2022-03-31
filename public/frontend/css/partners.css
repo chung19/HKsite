@@ -1,0 +1,285 @@
+@import url(https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;800&display=swap);
+@import url(http://fonts.cdnfonts.com/css/myriad-pro);
+/* reset css */
+:root {
+  --font-family1: "Montserrat", sans-serif;
+  --font-family2: "Istok Web", sans-serif;
+  --font-family3: "Myriad Pro", sans-serif;
+  --text-content-color-head: #ffffff;
+  --sub-color-heading: #303132;
+  --tittle-color-heading: #0281ff;
+}
+/* reset css */
+
+* {
+  margin: auto;
+  padding: 0px;
+  border: 0; 
+ width:auto; 
+ max-width: 1920px;
+  font-size: 100%; 
+
+  /* reset css */
+}
+
+
+
+/*  */
+
+
+/* background main partner */
+
+.main-partners{
+  height:auto;
+max-height:1400px;
+}
+.bg-img-head-partner {
+  background: url('/frontend/img/background1.jpg') top center/cover no-repeat;
+  /* position:fixed; */
+  color: #ffffff;
+height:360px;
+text-align: center;
+ display: flex;  
+ align-items: center;
+justify-content:center;
+flex-direction: column;   
+}
+.text-content-head-partner {
+  height: 100%;
+  padding-top: 7%; 
+}
+.text-heading-heading-partner {
+font-size: 38px; 
+ font-weight: bold;
+  font-family: var(--font-family1); 
+}
+.text-description-head-partner {
+   font-family: "Myriad Pro Regular", sans-serif;
+  font-size: 20px; 
+}
+/* background main partner */
+.customer-area-heading-head-partner {
+  margin: top 580px;
+}
+.bg-slide-main-partners {
+  background: #e3eef8;
+height: 574px;
+top: 130px;
+position: relative;
+  /* margin-bottom: 30rem; */
+  /* min-height: 574px; */
+  /* min-height: 1000px; */
+}
+/* box-iteam-partner */
+.item-customer-partner {
+  height:auto;
+  width: auto;
+ max-width: 1170px;
+  max-height: 290px;
+  margin-top: 44px;
+}
+/* css no-gutter item  */
+.row-no-gutterss {
+  margin-right: 0.3%;
+  margin-left: 0.3%;
+}
+/* css no-gutter item */
+.box-item-partner {
+  width: 284px;
+  height: 147px;
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-item1,
+.border-item2,
+.border-item3{
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+}
+
+.border-item4 {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+ .border-item5,
+.border-item6,
+.border-item7 {
+  border-right: 1px solid #d9d9d9;
+}
+
+/* box-iteam-partner  end*/
+
+.img-brand {
+
+  margin-left: 4.25rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.customer-area-heading-main-partner {
+  height:auto;
+  min-height: 218px;
+  background: #ffffff;
+  text-align: center;
+  margin-top: 22px;
+}
+.section-heading-main-partner p {
+  justify-content: center;
+  font-size: 16px;
+  font-family: var(--font-family2);
+  letter-spacing: 5%;
+  color: #0281ff;
+  line-height: 192px;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.sub-heading-main-partner p {
+  color: var(--sub-color-heading);
+  font-weight: bold;
+  margin-top: -122px;
+  padding-top: 8px;
+  font-family: var(--font-family1);
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.customer-items-main-partner {
+  height: 394px;
+  background-color: #ffffff;
+}
+/* customer-items-main-partner */
+.customer-items-main-partner {
+  justify-items: center;
+}
+/* customer-area-heading-main-partner start */
+.customer-area-heading-main-partner,
+.heading-main-partner {
+  text-align: center;
+}
+/* customer-area-heading-main-partner end */
+
+/* carousel main partner end */
+.carousel {
+  margin: 30px auto 60px;
+  padding: 0 80px;
+}
+.carousel .carousel-item {
+  text-align: center;
+  overflow: hidden;
+  width: auto;
+  max-width: 1170px;
+  height: 160px;
+}
+.carousel .carousel-item h4 {
+  font-family: "Varela Round", sans-serif;
+}
+.carousel .carousel-item img {
+  display: inline-block;
+}
+.carousel .carousel-item .btn {
+  border-radius: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  background: #a177ff;
+  padding: 6px 15px;
+  margin-top: 5px;
+}
+.carousel .carousel-item .btn:hover {
+  background: #8c5bff;
+}
+.carousel .carousel-item .btn i {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.carousel .thumb-wrapper {
+  margin: 5px;
+  text-align: left;
+  background: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.carousel .thumb-content {
+  padding: 15px;
+  font-size: 13px;
+}
+
+.carousel-inner{
+
+ width: 1170px;
+ margin-left: -12%;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  height: 44px;
+  width: 44px;
+  background: none;
+  margin: auto 0;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+}
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  margin: -19px 0 0 0;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  font-weight: bold;
+}
+.carousel-control-prev i {
+  margin-left: -3px;
+}
+.carousel-control-next i {
+  margin-right: -3px;
+}
+.carousel-indicators {
+  bottom: -50px;
+}
+.carousel-indicators li,
+.carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 4px;
+  border: none;
+}
+.carousel-indicators li {
+ 
+  background: #c0dff9;
+}
+.carousel-indicators li.active {
+  background: #028bfe;
+}
+img {
+  border-radius: 5px;
+}
+
+/* carousel main partner end */
+/* box Carousel  start */
+
+.box-carousel-partner {
+  width:270px;
+  height: 160px;
+  background-color: #f0e8e8;
+  box-shadow: 0 5px 10px #eee7e7;
+  border-radius: 5px;
+}
+
+/*  boxCarousel  end */
+/* footer parters custom position */
+.container.footer_top {
+  margin-top: 200px;
+}
+/* footer parters custom position */

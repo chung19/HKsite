@@ -29,3 +29,9 @@ Route::get('/articleList', function () {
 Route::get('/contact-me', function () {
     return view('contact');
 });
+Route::get('/serviceLists', function () {
+    return view('serviceLists');
+});
+Route::get('/partners', function () {
+    return view('partners');
+});
