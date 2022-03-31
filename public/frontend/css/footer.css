@@ -1,4 +1,5 @@
 /* footer-top, Logo, Quick Links, Popular Post, Our Contact */
+
 .footer {
     background-color: #313132;
 }
@@ -149,7 +150,7 @@ span.footer_top-contact-desc {
 .popular_posts_content_item {
     display: flex;
     cursor: pointer;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 .popular_posts_content_item:not(:last-child) {
@@ -273,27 +274,26 @@ p.contentinformation_time {
         overflow: hidden !important;
     }
     /* footer */
+
+    .container-fluid.footer__wrapper-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
     .footer_top-logo-link img {
         margin-top: -70px;
-    }
-    .footer_top {
-        margin-left: 5%;
-        margin-right: 5%;
     }
     .footer_icon {
         padding-top: 20px;
     }
     h5.footer_top-posts-title {
-        margin-top: 20px;
+        margin-top: 50px;
         font-size: 22px;
     }
     .footer_top-contact-desc {
         font-size: 14px;
     }
     .popular_posts_content_img {
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
+        margin: 0;
     }
     .our_contact_content_img img {
         width: 85%;
@@ -307,6 +307,7 @@ p.contentinformation_time {
     }
     p.text-top-left {
         font-size: 12px;
+        text-align: center;
     }
     p.text-bottom-right {
         margin-top: -8%;
