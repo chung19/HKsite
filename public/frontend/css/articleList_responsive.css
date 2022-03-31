@@ -2,6 +2,10 @@
     section {
         overflow: hidden !important;
     }
+    .container {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
     .articles_list_content_left_title h6 {
         font-size: 14px;
     }
@@ -9,12 +13,16 @@
         font-size: 35px;
     }
     .item {
-        padding: 10px 29px;
+        padding-top: 15px;
+        padding-left: 20px;
         display: flex;
         flex-direction: column;
     }
     .image {
         width: 100%;
+    }
+    .text {
+        padding-left: 20px;
     }
     .articles_list_text_title h3 {
         font-size: 20px;
@@ -64,5 +72,8 @@
     /* Tag */
     .testButton {
         font-size: 12px;
+    }
+    .popular_posts_content_item {
+        padding-bottom: 30px;
     }
 }
