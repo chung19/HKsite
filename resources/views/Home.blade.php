@@ -553,33 +553,16 @@
       <div class="team-boxed">
         <div class="container">
           <div class="row people">
+          @foreach ($reviews as $review)
             <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
               <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review1.png">
-                <h3 class="name">Anjelina Santha</h3>
-                <p class="title"> Graphic Designer</p>
-                <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
-                  incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
+                <h3 class="name">{{ $review->name }}</h3>
+                <p class="title"> {{ $review->position }}</p>
+                <p class="description">{{ $review->content }}</p>
                 <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
               </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
-              <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review2.png">
-                <h3 class="name">Anjelina Santha</h3>
-                <p class="title"> Graphic Designer</p>
-                <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
-                  incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
-              <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review3.png">
-                <h3 class="name">Anjelina Santha</h3>
-                <p class="title"> Graphic Designer</p>
-                <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
-                  incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>

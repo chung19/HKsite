@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +31,7 @@ Route::get('/articleList', function () {
 Route::get('/contact-me', function () {
     return view('contact');
 });
+
+Route::resource('reviews',ReviewController::class);
+Route::resource('home',HomeController::class);
+Route::resource('/',HomeController::class);
