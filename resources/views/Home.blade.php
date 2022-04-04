@@ -292,85 +292,42 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
-        <div class="col-md-6 col-lg-4">
+        @foreach ($projects as $key  => $project)
+              @if ($key< 3 )
+              <div class="col-md-6 col-lg-4">
           <!-- Bootstrap 5 card box -->
           <div class="card-box">
             <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_1.png" class="img-fluid" alt="project_1.png">
+              <img src="/image/{{ $project->image }}" class="img-fluid" alt="project_1.png">
             </div>
             <div class="row card-box-chill">
               <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Social Media App</span></div>
+                <div class="text-card-project"><span>{{ $project->title }}</span></div>
                 <div class="textSmall-color-card"><span> Design-> Softs</span></div>
               </div>
               <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
+              @endif
+              @if ($key >= 3 )
+              <div class="col-md-6 col-lg-6">
           <!-- Bootstrap 5 card box -->
           <div class="card-box">
             <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_2.png" class="img-fluid" alt="project_2">
+              <img src="/image/{{ $project->image }}" class="img-fluid" alt="project_4">
             </div>
             <div class="row  card-box-chill">
               <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Food apps Interface</span></div>
+                <div class="text-card-project"><span>{{ $project->title }}</span></div>
                 <div class="textSmall-color-card"><span> Design-> Softs</span></div>
               </div>
               <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
           </div>
         </div>
-
-        <div class="col-md-6 col-lg-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_3.png" class="img-fluid" alt="project_3">
-            </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Mobile Apps Dashboard</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_4.png" class="img-fluid" alt="project_4">
-            </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Web Application Development</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_5.png" class="img-fluid" alt="project_5">
-            </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Custom Software Development</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
-          </div>
-        </div>
+             @endif
+        @endforeach
       </div>
     </div>
   </section>
