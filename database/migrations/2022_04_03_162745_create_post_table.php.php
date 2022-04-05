@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            Schema::drop('posts');
+            // Schema::drop('posts');
             $table->increments('post_id');
             $table->string('post_title',50);
             $table->string('post_content', 50);
