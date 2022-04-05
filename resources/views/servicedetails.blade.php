@@ -233,79 +233,23 @@
     <div class="allServices">
         <h1 class="allServices__title">All Services</h1>
         <div class="allServices__content">
-            <div class="allServices__row">
-                <div class="allServices__container">
-                    <div>
-                        <img src="./frontend/images/servicedetails/service1.webp">
-                    </div>
-                    <div class="allServices__overlay">
-                        <div class="allServices__text">
-                            <h2 class="allServices__textTitle">Digital Marketing</h2>
-                            <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                        </div>
-                        <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                    </div>
+        @foreach ($services as $service)
+            <div class="allServices__container">
+                <div>
+                    <img src="/image/{{ $service->image }}">
                 </div>
-
-                <div class="allServices__container">
-                    <img src="./frontend/images/servicedetails/bannerMAD.png">
-                    <div class="allServices__overlay">
-                        <div class="allServices__text">
-                            <h2 class="allServices__textTitle">Digital Marketing</h2>
-                            <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                        </div>
-                        <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
+                <div class="allServices__overlay">
+                    <div class="allServices__text">
+                        <h2 class="allServices__textTitle">{{ $service->title }}</h2>
+                        <p class="allServices__textContent">{{ $service->content }}</p>
                     </div>
-                </div>
-
-                <div class="allServices__container">
-                    <img src="./frontend/images/servicedetails/service3.png">
-                    <div class="allServices__overlay">
-                        <div class="allServices__text">
-                            <h2 class="allServices__textTitle">Digital Marketing</h2>
-                            <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                        </div>
-                        <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                    </div>
-                </div>
-
-            </div>
-            <div class="allServices__row">
-                <div class="allServices__container">
-                    <img src="./frontend/images/servicedetails/service4.png">
-                    <div class="allServices__overlay">
-                        <div class="allServices__text">
-                            <h2 class="allServices__textTitle">Digital Marketing</h2>
-                            <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                        </div>
-                        <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                    </div>
-                </div>
-
-                <div class="allServices__container">
-                    <img src="./frontend/images/servicedetails/service5.png">
-                    <div class="allServices__overlay">
-                        <div class="allServices__text">
-                            <h2 class="allServices__textTitle">Digital Marketing</h2>
-                            <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                        </div>
-                        <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                    </div>
-                </div>
-
-                <div class="allServices__container">
-                    <img src="./frontend/images/servicedetails/service6.png">
-                    <div class="allServices__overlay">
-                        <div class="allServices__text">
-                            <h2 class="allServices__textTitle">Digital Marketing</h2>
-                            <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                        </div>
-                        <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                    </div>
+                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
+
     <!--  <section> footer ============================-->
     @include("frontend-layout.footer")
     <!--    JavaScripts-->

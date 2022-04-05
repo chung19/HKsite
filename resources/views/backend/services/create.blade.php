@@ -1,14 +1,14 @@
-@extends('backend/reviews.layout')
+@extends('backend/services.layout')
 
 @section('content')
 <div class="row
 ">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New review</h2>
+            <h2>Add New Service</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('reviews.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('services.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -24,32 +24,20 @@
     </div>
 @endif
 
-<form action="{{ route('reviews.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Star:</strong>
-                <textarea class="form-control" style="height:150px" name="star" placeholder="Star"></textarea>
+                <strong>Title:</strong>
+                <input type="text" name="title" class="form-control" placeholder="Title">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Content:</strong>
                 <textarea class="form-control" style="height:150px" name="content" placeholder="Content"></textarea>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Position:</strong>
-                <textarea class="form-control" style="height:150px" name="position" placeholder="Position"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

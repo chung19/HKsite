@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServiceDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +35,8 @@ Route::get('/contact-me', function () {
 });
 
 Route::resource('reviews',ReviewController::class);
+Route::resource('services',ServiceController::class);
+Route::resource('service-details',ServiceDetailController::class);
 Route::resource('home',HomeController::class);
 Route::resource('/',HomeController::class);
+
