@@ -1,8 +1,8 @@
-@extends('backend/projects.layout')
+<!-- @extends('backend.layout') -->
      
 @section('content')
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-lg-12 mt-2">
             <div class="pull-left">
                 <h2>Project List</h2>
             </div>
@@ -49,8 +49,5 @@
             </td>
         </tr>
         @endforeach
-    </table>
-    
-   -->
-        
+    </table>    
 @endsection

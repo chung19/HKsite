@@ -1,13 +1,13 @@
-@extends('backend/projects.layout')
+@extends('backend.layout')
   
 @section('content')
 <div class="row">
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 mt-3">
         <div class="pull-left">
             <h2>Add New Project</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('projects.index') }}"> Back</a>
+            <a class="btn btn-danger" href="{{ route('projects.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -51,7 +51,7 @@
                 <input type="text" name="category" class="form-control" placeholder="Category">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
