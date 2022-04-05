@@ -1,5 +1,4 @@
 *{
-    font-family: Sans-serif;
     padding: 0;
     font-family: 'Istok Web', sans-serif;
 }
@@ -314,7 +313,7 @@ hr{
 }
 
 .allServices__content{
-    width: 1170px;
+    width: 1200px;
     display: inline-block;
 }
 
@@ -345,6 +344,7 @@ hr{
     position: relative;
     float: left;
     height: 283px;
+    margin: 15px;
   }
 
 .allServices__overlay {
@@ -405,39 +405,4 @@ hr{
     top: 26%;
     left: 28%;
 }
-
-.allServices__row{
-    width: 1170px;
-    height: 283px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.test{
-    display: block;
-}
-
-/* .allServices{
-    position: relative;
-}
-
-.allServices__content{
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0;
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* text */
 

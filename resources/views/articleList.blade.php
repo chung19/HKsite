@@ -332,7 +332,14 @@
                   <h4 class="popular_catagory_heading">Catagory List</h4>
                   <div class="popular_posts_content">
                     <ul class="popular_posts_content_list">
+
+                      @foreach ($list as $item)
                       <li class="popular_catagory_content_item">
+                        {{ $item -> category_name}} <span>(69)</span>
+                      </li>
+                      @endforeach
+
+                      <!-- <li class="popular_catagory_content_item">
                         National <span>(69)</span>
                       </li>
                       <li class="popular_catagory_content_item">
@@ -346,7 +353,7 @@
                       </li>
                       <li class="popular_catagory_content_item">
                         Magazine <span>(29)</span>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
