@@ -1,4 +1,4 @@
-@extends('backend/reviews.layout')
+@extends('backend.layout')
 
 @section('content')
 <div class="row

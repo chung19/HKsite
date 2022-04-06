@@ -5,6 +5,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceDetailController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,8 @@ Route::get('/contact-me', function () {
     return view('contact');
 });
 
+
+Route::resource('back-end', DashboardController::class);
 Route::resource('reviews',ReviewController::class);
 Route::resource('services',ServiceController::class);
 Route::resource('service-details',ServiceDetailController::class);

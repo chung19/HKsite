@@ -1,10 +1,10 @@
-@extends('backend/services.layout')
+@extends('backend.layout')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>services</h2>
+                <h2>Services</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('services.create') }}"> Create New service</a>
