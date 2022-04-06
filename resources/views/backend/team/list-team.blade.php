@@ -4,10 +4,10 @@
 <div class="row">
     <div class="col-lg-12 mt-2">
         <div class="pull-left">
-            <h2>Project List</h2>
+            <h2>Team List</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{ route('projects.create') }}"> Create New Project</a>
+            <a class="btn btn-success" href="{{ route('team.create') }}"> Create New Team</a>
         </div>
     </div>
 </div>
@@ -25,19 +25,19 @@
         <th>Category</th>
         <th width="280px">Action</th>
     </tr>
-    @foreach ($projects as $project)
+    @foreach ($teams as $team)
     <tr>
-        <td>{{ $project->id }}</td>
-        <td><img src="/image/{{ $project->image }}" width="100px"></td>
-        <td>{{ $project->title }}</td>
-        <td>{{ $project->description }}</td>
-        <td>{{ $project->category }}</td>
+        <td>{{ $team->id }}</td>
+        <td><img src="/image/{{ $team->image }}" width="100px"></td>
+        <td>{{ $team->title }}</td>
+        <td>{{ $team->description }}</td>
+        <td>{{ $team->category }}</td>
         <td>
-            <form action="{{ route('projects.destroy',$project->id) }}" method="POST">
+            <form action="{{ route('team.destroy',$team->id) }}" method="POST">
 
-                <a class="btn btn-info" href="{{ route('projects.show',$project->id) }}">Show</a>
+                <a class="btn btn-info" href="{{ route('team.show',$team->id) }}">Show</a>
 
-                <a class="btn btn-primary" href="{{ route('projects.edit',$project->id) }}">Edit</a>
+                <a class="btn btn-primary" href="{{ route('team.edit',$team->id) }}">Edit</a>
 
                 @csrf
                 @method('DELETE')

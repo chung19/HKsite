@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BlogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,19 +18,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\HomeController;
+
 Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
 
 Route::get('/service-details', function () {
     return view('servicedetails');
 });
-// Route::get('/service-details', 'ServiceController@details');
 Route::get('/articleList', function () {
     return view('articleList');
 });
 Route::get('/contact-me', function () {
     return view('contact');
 });
-use App\Http\Controllers\ProjectController;
+
 Route::resource('projects', ProjectController::class);
+Route::resource('back-end', DashboardController::class);
+Route::resource('team',TeamController::class);
+Route::resource('blog', BlogController::class);

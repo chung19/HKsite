@@ -4,18 +4,18 @@
 <div class="row">
     <div class="col-lg-12 mt-2">
         <div class="pull-left">
-            <h2>Project List</h2>
+            <h2>Blog List</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{ route('projects.create') }}"> Create New Project</a>
+            <a class="btn btn-success" href="{{ route('blog.create') }}"> Create New Blog</a>
         </div>
     </div>
 </div>
 @if ($message = Session::get('success'))
-            <div class="alert alert-success">
-                {{ $message }}
-            </div>
-        @endif
+<div class="alert alert-success">
+    {{ $message }}
+</div>
+@endif
 <table class="table table-bordered">
     <tr>
         <th>Id</th>
@@ -25,19 +25,19 @@
         <th>Category</th>
         <th width="280px">Action</th>
     </tr>
-    @foreach ($projects as $project)
+    @foreach ($blogs as $blog)
     <tr>
-        <td>{{ $project->id }}</td>
-        <td><img src="/image/{{ $project->image }}" width="100px"></td>
-        <td>{{ $project->title }}</td>
-        <td>{{ $project->description }}</td>
-        <td>{{ $project->category }}</td>
+        <td>{{ $blog->id }}</td>
+        <td><img src="/image/{{ $blog->image }}" width="100px"></td>
+        <td>{{ $blog->title }}</td>
+        <td>{{ $blog->description }}</td>
+        <td>{{ $blog->date }}</td>
         <td>
-            <form action="{{ route('projects.destroy',$project->id) }}" method="POST">
+            <form action="{{ route('blog.destroy',$blog->id) }}" method="POST">
 
-                <a class="btn btn-info" href="{{ route('projects.show',$project->id) }}">Show</a>
+                <a class="btn btn-info" href="{{ route('blog.show',$blog->id) }}">Show</a>
 
-                <a class="btn btn-primary" href="{{ route('projects.edit',$project->id) }}">Edit</a>
+                <a class="btn btn-primary" href="{{ route('blog.edit',$blog->id) }}">Edit</a>
 
                 @csrf
                 @method('DELETE')

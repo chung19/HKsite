@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(toggle && nav && bodypd && headerpd){
     toggle.addEventListener('click', ()=>{
     // show navbar
-    nav.classList.toggle('show')
+    nav.classList.toggle('showSider')
     // change icon
     toggle.classList.toggle('bx-x')
     // add padding to body
@@ -35,4 +35,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     linkColor.forEach(l=> l.addEventListener('click', colorLink))
     
     // Your code to run since DOM is loaded and ready
+    });
+
+    document.addEventListener("DOMContentLoaded", function(){
+        var btn = document.getElementById("myBtn");
+        var element = document.getElementById("myAlert");
+    
+        // Create alert instance
+        var myAlert = new bootstrap.Alert(element);
+    
+        btn.addEventListener("click", function(){
+            myAlert.close();
+        });
     });

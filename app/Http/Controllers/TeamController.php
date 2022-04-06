@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class ProjectController extends Controller
+class TeamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+        $teams = Team::all();
 
-        return view('backend/projects.list-project', compact('projects'));
+        return view('backend/team.list-team', compact('teams'));
     }
 
     /**
@@ -27,7 +27,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('backend/projects.create-project');
+        return view('backend/team.create-team');
     }
 
     /**
@@ -54,44 +54,44 @@ class ProjectController extends Controller
             $input['image'] = "$profileImage";
         }
 
-        Project::create($input);
+        Team::create($input);
 
-        return redirect()->route('projects.index')
-            ->with('success', 'Project created successfully.');       
+        return redirect()->route('team.index')
+            ->with('success', 'Team created successfully.');  
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Project  $project
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show(Team $team)
     {
-        return view('backend/projects.details-project', compact('project'));
+        return view('backend/team.details-team', compact('team'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Project  $project
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
+    public function edit(Team $team)
     {
-        return view('backend/projects.edit-project', compact('project'));
+        return view('backend/team.edit-team', compact('team'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Project  $project
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $project = Project::find($id);
+        $team = Team::find($id);
         $request->validate([
             'title' => 'required',
             'description' => 'required',
@@ -101,7 +101,7 @@ class ProjectController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/' . $project->image;
+            $destinationPath = 'image/' . $team->image;
             if (File::exists($destinationPath)) {
                 File::delete($destinationPath);
             }
@@ -112,27 +112,27 @@ class ProjectController extends Controller
             unset($input['image']);
         }
 
-        $project->update($input);
+        $team->update($input);
 
-        return redirect()->route('projects.index')
-            ->with('success', 'Project updated successfully');
+        return redirect()->route('team.index')
+            ->with('success', 'Team updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Project  $project
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $project = Project::find($id);
-        $destination = 'image/' . $project->image;
+        $team = Team::find($id);
+        $destination = 'image/' . $team->image;
         if (File::exists($destination)) {
             File::delete($destination);
         }
-        $project->delete();
-        return redirect()->route('projects.index')
-            ->with('success', 'Project deleted successfully');
+        $team->delete();
+        return redirect()->route('team.index')
+            ->with('success', 'Team deleted successfully');
     }
 }

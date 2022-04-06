@@ -292,9 +292,8 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
-        @foreach ($projects as $key  => $project)
-              @if ($key< 3 )
-              <div class="col-md-6 col-lg-4">
+        @foreach ($projects as $key => $project)
+        @if ($key< 3 ) <div class="col-md-6 col-lg-4">
           <!-- Bootstrap 5 card box -->
           <div class="card-box">
             <div class="card-thumbnail">
@@ -308,27 +307,27 @@
               <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
           </div>
-        </div>
-              @endif
-              @if ($key >= 3 )
-              <div class="col-md-6 col-lg-6">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="/image/{{ $project->image }}" class="img-fluid" alt="project_4">
+      </div>
+      @endif
+      @if ($key >= 3 )
+      <div class="col-md-6 col-lg-6">
+        <!-- Bootstrap 5 card box -->
+        <div class="card-box">
+          <div class="card-thumbnail">
+            <img src="/image/{{ $project->image }}" class="img-fluid" alt="project_4">
+          </div>
+          <div class="row  card-box-chill">
+            <div class="col-10 card-project-left">
+              <div class="text-card-project"><span>{{ $project->title }}</span></div>
+              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
             </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>{{ $project->title }}</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
+            <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
           </div>
         </div>
-             @endif
-        @endforeach
       </div>
+      @endif
+      @endforeach
+    </div>
     </div>
   </section>
   <!-- end <section> projects ============================-->
@@ -407,13 +406,14 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
+        @foreach ($teams as $team)
         <div class="col-12 col-md-6 col-lg-3 customHover">
           <!-- Bootstrap 5 card box -->
           <div class="card-box-team">
             <div class="card-thumbnail ">
               <div class="customMist">
               </div>
-              <img src="./frontend/images/index-img/team/team4.png" class=" img-team img-fluid" alt="team1.png">
+              <img src="/image/{{ $team->image }}" class=" img-team img-fluid" alt="imgTeam">
               <div class="overlay-team">
                 <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
                 <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
@@ -422,74 +422,12 @@
               </div>
             </div>
             <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
+              <div class="text-card-team"><span>{{ $team->title }}</span></div>
+              <div class="textSmall-color-card"><span> Design-> {{ $team->category }}</span></div>
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-md-6 col-lg-3 customHover">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-team">
-            <div class="card-thumbnail ">
-              <div class="customMist">
-              </div>
-              <img src="./frontend/images/index-img/team/team2.png" class="img-team img-fluid" alt="team1.png">
-              <div class="overlay-team">
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_in.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_add.png"></div>
-              </div>
-            </div>
-            <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 customHover">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-team">
-            <div class="card-thumbnail ">
-              <div class="customMist">
-              </div>
-              <img src="./frontend/images/index-img/team/team3.png" class="img-team img-fluid" alt="team1.png">
-              <div class="overlay-team">
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_in.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_add.png"></div>
-              </div>
-            </div>
-            <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 customHover">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-team">
-            <div class="card-thumbnail ">
-              <div class="customMist">
-              </div>
-              <img src="./frontend/images/index-img/team/team4.png" class="img-team img-fluid" alt="team1.png">
-              <div class="cover">
-              </div>
-              <div class="overlay-team">
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_in.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_add.png"></div>
-              </div>
-            </div>
-            <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
@@ -554,62 +492,6 @@
           <span>Software development outsourcing is just a tool to achieve business goals. But there is no way to get
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
-        </div>
-        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-blog">
-            <div class="card-thumbnail-blog item">
-              <img class="box-img-blog" src="./frontend/images/index-img/blog/blog1.png" alt="blog1.png">
-              <div class="cover">
-              </div>
-            </div>
-            <div class="name-blog"><span>Benefits Of Apps Develop</span></div>
-            <div class="list-inline title-blog">
-              <span class="list-inline-item"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Jan 30,
-                2021</span>
-              <span class="list-inline-item"><i class="fa fa-user" aria-hidden="true"></i> Admin</span>
-            </div>
-            <div class="description-blog"><span>Competently incentivize multifun with his expertise with holistic users
-                main in that Monotonectally product.</span></div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-blog">
-            <div class="card-thumbnail-blog item">
-              <img class="box-img-blog" src="./frontend/images/index-img/blog/blog2.png" alt="blog2.png">
-              <div class="cover">
-              </div>
-            </div>
-            <div class="name-blog"><span>Web Applications Dev</span></div>
-            <div class="list-inline title-blog">
-              <span class="list-inline-item"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Jan 30,
-                2021</span>
-              <span class="list-inline-item"><i class="fa fa-user" aria-hidden="true"></i> Admin</span>
-            </div>
-            <div class="description-blog"><span>Competently incentivize multifun with his expertise with holistic users
-                main in that Monotonectally product.</span></div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-blog">
-            <div class="card-thumbnail-blog item">
-              <img class="box-img-blog" src="./frontend/images/index-img/blog/blog3.png" alt="blog3.png">
-              <div class="cover">
-              </div>
-            </div>
-            <div class="name-blog"><span>Hibernate Query Language</span></div>
-            <div class="list-inline title-blog">
-              <span class="list-inline-item"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Jan 30,
-                2021</span>
-              <span class="list-inline-item"><i class="fa fa-user" aria-hidden="true"></i> Admin</span>
-            </div>
-            <div class="description-blog"><span>Competently incentivize multifun with his expertise with holistic users
-                main in that Monotonectally product.</span></div>
-          </div>
         </div>
         <div class="col-md-12 col-lg-12" id="btn-moveBlog">
           <!-- Bootstrap 5 button Bloge-->
