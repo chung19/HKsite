@@ -21,8 +21,10 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>star:</strong>
-                {{ $review->star }}
+                <strong>Star:</strong>
+                @for($i=1; $i<=$review->star; $i++)
+                    <span><i class="fa fa-star"></i></span>
+                @endfor
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">

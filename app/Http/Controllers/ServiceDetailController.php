@@ -13,4 +13,9 @@ class ServiceDetailController extends Controller
         return view('servicedetails',compact('services'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+    public function show(Service $service)
+    {
+        return view('backend.services.show',compact('service'));
+    }
+
 }

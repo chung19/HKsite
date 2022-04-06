@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" el="stylesheet">
     <!--Stylesheets-->
-    <link href="./frontend/css/header.css" rel="stylesheet" />
-    <link href="./frontend/css/footer.css" rel="stylesheet" />
+    <link href="../frontend/css/header.css" rel="stylesheet" />
+    <link href="../frontend/css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('./frontend/css/servicedetails.css')}}">
     <link rel="stylesheet" href="{{asset('./frontend/css/contact.css')}}">
 </head>
@@ -20,7 +20,6 @@
 <body style="background-color: #ffffff;">
 
     <!---------------------------------------------------------- header--------------------------------------------------------- -->
-    @include("frontend-layout.header")
     <!---------------------------------------------------------- end header--------------------------------------------------------- -->
     <div class="container-fluid header">
         <div class="container">
@@ -51,7 +50,7 @@
 
     <div class="inforService">
         <div class="inforService__content">
-            <h1 class="inforService__title">Mobile Apps Development</h1>
+            <h1 class="inforService__title">{{ $service->title }}</h1>
             <img class="inforService__banner" src="./frontend/images/servicedetails/bannerMAD.png">
             <p class="inforService__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
                 Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur
@@ -229,32 +228,7 @@
             </div>
         </div>
     </div>
-
-    <div class="allServices">
-        <h1 class="allServices__title">All Services</h1>
-        <div class="allServices__content">
-        @foreach ($services as $service)
-            <div class="allServices__container">
-                <div>
-                    <img src="/image/{{ $service->image }}">
-                </div>
-                <div class="allServices__overlay">
-                    <div class="allServices__text">
-                        <h2 class="allServices__textTitle">{{ $service->title }}</h2>
-                        <p class="allServices__textContent">{{ $service->content }}</p>
-                    </div>
-                    <a class="allServices__btn"
-                   >
-                        <img src="./frontend/images/servicedetails/next.png">
-                    </a>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-
     <!--  <section> footer ============================-->
-    @include("frontend-layout.footer")
     <!--    JavaScripts-->
     <!-- ===============================================-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
