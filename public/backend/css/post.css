@@ -4,11 +4,10 @@
 }
 
 .add__post{
-    width: 1170px;
+    width: 100vw;
     height: auto;
     background-color: #f0f4f8;
     padding: 20px;
-    margin: 100px auto;
     font-size: 20px;
 }
 
@@ -73,9 +72,19 @@ h2{
 .form__add__post button{
     width: 100px;
     height: 40px;
-    background-color: #ffffff;
+    background-color: #2bd9df;
 }
 
 .form__add__post button:hover{
     background-color: aqua;
+}
+
+.btn-add{
+    width: auto; 
+    height: auto; 
+    text-align: right;
+}
+
+#Category_Id{
+    padding: 5px;
 }

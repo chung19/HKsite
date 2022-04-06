@@ -13,19 +13,9 @@ class PostController extends Controller
     public function index(){
         $data = array(
             'listposts' => DB::table('posts')->get(),
-            
+            'listcategory' => DB::table('categories')->get()
         );
         return view('posts/add_post', $data);
-    }
-
-    public function test(Request $request){
-        $file = $request->file('post_image');
-        // $file = "qweqweqweqweqweqwe";
-        if(isset($file)){
-            echo 'ton tai';
-            echo $file;}
-        else
-            echo 'khong ton tai';
     }
 
     public function add(Request $request){

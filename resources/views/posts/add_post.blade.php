@@ -31,11 +31,7 @@
 
         <form action="/add-post" method="post" class="form__add__post" enctype="multipart/form-data">
             @csrf
-            <label for="Id">
-                <div class="nameRow">Id:</div>
-                <input type="text" name="post_id" value="{{ old('post_id') }}" class="post-input"><br>
-                <span style="color:red;">@error('post_id'){{ $message }} @enderror</span>
-            </label><br><br>
+            <input type="hidden" name="post_id" value="{{ $Info ->post_id }}">
             <label for="Title">
                 <div class="nameRow">Title:</div>
                 <input type="text" name="post_title" value="{{ old('post_title') }}" class="post-input"><br>
@@ -51,12 +47,22 @@
                 <input type="file" name="post_image" value="{{ old('post_image') }}" class="post-input"><br>
                 <span style="color:red;">@error('post_image'){{ $message }} @enderror</span>
             </label><br><br>
-            <label for="Category_Id">
+            <!-- <label for="Category_Id">
                 <div class="nameRow">Category name:</div>
                 <input type="text" name="category_id" value="{{ old('category_id') }}" class="post-input"><br>
                 <span style="color:red;">@error('Category_Name'){{ $message }} @enderror</span>
-            </label><br><br>
-            <button type="submit">Add</button>
+            </label><br><br> -->
+
+            <label for="Category_Id">
+                <div class="nameRow">Category name:</div>
+                <select name="Category_Id" id="Category_Id">
+                    @foreach ($listcategory as $item => $value)
+                        <option value="{{ old('category_id') }}">{{ $item -> category_name }}</option>
+                    @endforeach
+                </select>
+            </label>
+            <div class="btn-add"><button type="submit">Add</button></div>
+            
         </form>
 
         <br>
@@ -65,10 +71,10 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Category Post</th>
-                    <th>Action</th>
-                    <th>Category Post</th>
-                    <th>Category Post</th>
+                    <th>Title</th>
+                    <th>Content</th>
+                    <th>Image</th>
+                    <th>Category name</th>
                     <th>Action</th>
                 </tr>
             </thead>

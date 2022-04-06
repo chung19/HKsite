@@ -31,31 +31,28 @@
 
         <form action="{{route('update-post')}}" method="post" class="form__add__post">
             @csrf
-            <label for="Id">
-                <div class="nameRow">Id:</div>
-                <input type="text" name="post_id" value="{{ $Info ->post_id }}"><br>
-                <span style="color:red;">@error('post_id'){{ $message }} @enderror</span>
-            </label><br><br>
+            <input type="hidden" name="post_id" value="{{ $Info ->post_id }}">
             <label for="Title">
                 <div class="nameRow">Title:</div>
-                <input type="text" name="post_title" value="{{ $Info ->post_title }}"><br>
+                <input type="text" name="post_title" value="{{ $Info ->post_title }}" class="post-input"><br>
                 <span style="color:red;">@error('post_title'){{ $message }} @enderror</span>
             </label><br><br>
             <label for="Content">
                 <div class="nameRow">Content:</div>
-                <textarea type="text" name="post_content" value="{{ $Info ->post_content }}" rows="4" cols="50"></textarea><br>
+                <textarea type="text" name="post_content" value="" rows="4" cols="50" class="post-input">{{ $Info ->post_content }}</textarea><br>
                 <span style="color:red;">@error('post_content'){{ $message }} @enderror</span>
             </label><br><br>
             <label for="Image">
                 <div class="nameRow">Image:</div>
-                <input type="text" name="post_image" value="{{ $Info ->post_image }}"><br>
+                <input type="text" name="post_image" value="{{ $Info ->post_image }}" class="post-input"><br>
                 <span style="color:red;">@error('post_image'){{ $message }} @enderror</span>
             </label><br><br>
             <label for="Category_Id">
                 <div class="nameRow">Category name:</div>
-                <input type="text" name="category_id" value="{{ $Info ->category_id }}"><br>
+                <input type="text" name="category_id" value="{{ $Info ->category_id }}" class="post-input"><br>
                 <span style="color:red;">@error('Category_Name'){{ $message }} @enderror</span>
             </label><br><br>
+            
             <button type="submit">Update</button>
         </form>
 
