@@ -13,7 +13,8 @@ class HomeController extends Controller
         $projects = Project ::latest()->paginate(5);
         $teams = Team::latest()->paginate(4);
         $reviews = Review::latest()->paginate(5);
-        return view('home',compact('projects'),compact('teams'),compact('reviews'))
+        $blogs = Blog::latest()->paginate(3);
+        return view('home',compact('projects','teams','reviews','blogs'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }

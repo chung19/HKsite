@@ -482,7 +482,11 @@
         </div>
         <div class="col-md-12 col-lg-12">
           <!-- Bootstrap 5 button Bloge-->
-          <div class="text-center"><button type="button" class="btn btn-blog">VIEW ALL NEWS <i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+          <div class="text-center">
+          <a  href="{{'articleList'}}">
+            <button class="btn btn-blog">
+            VIEW ALL NEWS <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button></a></div>
         </div>
       </div>
     </div>
