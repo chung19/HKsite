@@ -44,19 +44,6 @@ Route::get('/edit-category-post/{category_id}', [App\Http\Controllers\CategoryCo
 Route::post('/update-category-post', [App\Http\Controllers\CategoryController::class, 'update'])->name('update-category-post');
 Route::get('/delete-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'delete']);
 
-// Route::post('/add-post', [App\Http\Controllers\PostController::class, 'add']);
-// Route::get('/post', [App\Http\Controllers\PostController::class, 'index']);
-// Route::get('/edit-post/{post_id}', [App\Http\Controllers\PostController::class, 'edit']);
-// Route::put('/update-post/{post_id}', [App\Http\Controllers\PostController::class, 'update'])->name('update-post');
-// Route::get('/delete-post/{post_id}', [App\Http\Controllers\PostController::class, 'delete']);
-
-Route::get('/students', [StudentController::class, 'index']);
-Route::get('/add-student', [StudentController::class, 'create']);
-Route::post('/add-student', [StudentController::class, 'store']);
-Route::get('/edit-student/{id}', [StudentController::class, 'edit']);
-Route::put('/update-student/{id}', [StudentController::class, 'update']);
-Route::delete('/delete-student/{id}', [StudentController::class, 'destroy']);
-
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/add-post', [PostController::class, 'create']);
 Route::post('/add-post', [PostController::class, 'store']);
