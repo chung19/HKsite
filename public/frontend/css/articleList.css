@@ -259,12 +259,22 @@ html {
     flex-direction: column;
     justify-content: space-between;
     margin-left: 25px;
+    margin-top: 0;
+    height: 100px;
+}
+
+.recent_posts_content p {
+    margin-bottom: 0px;
 }
 
 .contentinformation_heading p {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 600;
+}
+
+.contentinformation_heading {
+    margin-top: 0px;
 }
 
 .recent_posts_content_img {
@@ -280,8 +290,8 @@ html {
     font-weight: 500;
     font-size: 16px;
     color: #7b7d7e;
-    margin-top: -5px;
     margin-left: 0;
+    margin-bottom: -8px !important;
 }
 
 .recent_post_icon {
@@ -319,7 +329,7 @@ html {
     height: 115px;
     display: inline-block;
     align-self: center;
-    margin: 0 8px 8px 0;
+    margin: 0 3px 7px 0;
 }
 
 .popular_galary_content_item img {

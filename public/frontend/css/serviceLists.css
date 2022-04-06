@@ -1,0 +1,608 @@
+@import url(https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;800&display=swap);
+@import url(http://fonts.cdnfonts.com/css/myriad-pro);
+/* reset css */
+:root {
+  --font-family1: "Montserrat", sans-serif;
+  --font-family2: "Istok Web", sans-serif;
+  --font-family3: "Myriad Pro", sans-serif;
+  --text-content-color-head: #ffffff;
+  --sub-color-heading: #303132;
+  --tittle-color-heading: #0281ff;
+}
+/* reset css */
+
+* {
+  margin: auto;
+  padding: 0px;
+  /* border: 0; */
+ /* width:auto; 
+ max-width: 1920px; */
+  font-size: 100%; 
+
+  /* reset css */
+}
+/* style seviceLists  css*/
+/* .navbar  serviceList*/
+/* fake img png as icon */
+.filtered1 {
+  width: 5px;
+  height: 9px;
+  /* position:relative; */
+  /* background-color:#ffffff; */
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: url("./frontend/img/icons/i1.png"); 
+  mask-size: 100% 100%;
+  mask-image: url("./frontend/img/icons/i1.png"); 
+}
+.filtered2 {
+  width: 3.4375rem;
+  height: 3.0625rem;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: url("./img/icons/i2.png"); 
+  mask-size: 100% 100%;
+  mask-image: url("./img/icons/i2.png"); 
+}
+.filtered3 {
+  width: 3.4375rem;
+  height: 3.0625rem;
+  position: relative;
+  mask-image: url('/frontend/img/icons/i3.png'); 
+  -webkit-mask-image: url('/frontend/img/icons/i3.png'); 
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  background-color: #ffffff;
+}
+.filtered4 {
+  width: 3.4375rem;
+  height: 3.0625rem;
+  position: relative;
+  background-color: #ffffff;
+
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: url('/frontend/img/icons/i4.png'); 
+  mask-size: 100% 100%;
+  mask-image: url('/frontend/img/icons/i4.png'); 
+}
+.filtered5 {
+  width: 3.4375rem;
+  height: 3.0625rem;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: url('/frontend/img/icons/i5.png'); 
+  mask-size: 100% 100%;
+  mask-image: url('/frontend/img/icons/i5.png'); 
+}
+.filtered6 {
+  width: 3.4375rem;
+  height: 3.0625rem;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: url('/frontend/img/icons/i6.png'); 
+  mask-size: 100% 100%;
+  mask-image: url('/frontend/img/icons/i6.png'); 
+}
+
+.filtered7 {
+  width: 3.4375rem;
+  height: 3.0625rem;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: url('/frontend/img/icons/ic7.png'); 
+  mask-size: 100% 100%;
+  mask-image: url('/frontend/img/icons/ic7.png'); 
+}
+.filtered8 {
+  width: 3.4375rem;
+  height: 3.0625rem;
+  position: relative;
+  background-color: #ffffff;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-image: url('/frontend/img/icons/i8.png'); 
+  mask-size: 100% 100%;
+  mask-image: url('/frontend/img/icons/i8.png'); 
+}
+
+/* fake img png as icon  end*/
+/* nav -head serviceList */
+/* css color icon text size position */
+.nav-serviceList {
+  justify-content: space-between;
+  /* top: 0;
+  left: 0;
+  right: 0; */
+  background-color: #f0f4f8;
+  height: 5rem;
+
+ /* width: auto;
+ max-width :1200px */
+}
+
+.item-left_1{
+margin-left:9.1%;
+}
+.item-left_2{
+  margin-right:8.9%;
+  }
+
+.nav-icon-size {
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 12px;
+  height: 13px;
+  color: #028bfe;
+}
+.font-Regular {
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  color:#47474c;
+}
+.nav-link-color {
+  color: #47474a;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  opacity: 0.9;
+  font-size: 13px;
+  list-style: 3rem;
+  display: inline-block;
+  /* margin-right: 200px;
+ margin-left: 240px; */
+  padding-left: 40px;
+  font-size: 20px;
+}
+/* css padding color */
+.nav-link-color2 {
+  color: #8a8a8b!important;
+  display: inline-block;
+  /* margin-left: 200px;
+margin-right: 240px; */
+  font-size: 16px;
+  padding-right: 40px;
+  font-family: "Istok Web", sans-serif;
+}
+.nav-link-color3 {
+  color: #1292fe;
+  font-family: "Istok Web", sans-serif;
+}
+.icon-dot-color {
+  color: #1292fe;
+}
+.icon-arrow-color {
+  color: #1292fe;
+}
+/* .end  .nav-serviceList(head) */
+/* heading-seviceLists */
+.heading-seviceLists {
+  margin-top: 100px;
+  height: 122px;
+  padding-bottom: 145px;
+
+  /* margin: bottom 86px; */
+}
+.section-heading-seviceLists {
+  font-size: 1rem;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Istok Web", sans-serif;
+  letter-spacing: 5%;
+  color: #0281ff;
+}
+/*  css color font spacing */
+.sub-heading-seviceLists {
+  color: #131413;
+  /* font-weight: bold; */
+}
+.sub-heading-strong {
+  font-size: 40px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* heading-seviceLists  end*/
+/* box -content serviceList */
+.main-serviceList {
+  text-align: center;
+  background-color: white;
+  height:auto;
+  min-height: 928px;
+}
+.box-content-serviceList a{
+  text-decoration: none;
+}
+.box-content-serviceList{
+  /* padding-left: 55px; */
+  /* position: relative; */
+  /* display: inline-block; */
+  box-sizing: border-box;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* height:auto;
+  width: 1170px;;
+  max-height: 688px;
+  padding: 0px;
+  margin-left: -14.89px!important;
+left: 20px!important; */
+/* height:auto;
+min-height:100wh; */
+/* width: 1170px;  
+ height: 370px;  */
+  /* padding:20px 9%;
+  background:var(--primary-bg-color);
+  padding-bottom:80px; */
+  height:auto;
+  max-height: 570px;
+}
+.box-content-serviceList .box-container{
+  display: flex;
+  width:auto;
+  max-width: 1170px;
+  height:auto;
+ max-height: 250px;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-items: center;
+  justify-content:center;
+  /* height: auto;
+  t
+width: 1170px;
+  max-height: 570px; */
+   }
+   .box-content-serviceList .box-container .box-serviceList ,.box-serviceList2{
+    flex: 1 1 370px  ;
+    width: 370px;
+    height:250px;
+    margin-bottom: 40px;
+    text-align: center;
+    background:var(--secondary-bg-color);
+    padding-top: 20px;
+     padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-radius: 9px;
+    box-shadow: 0 5px 10px #e4dede;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+     }  
+    
+/* .col-no-pading-margin{
+  padding: 0px;
+  margin:0px;
+} */
+/* magin row__box_serviceList partner*/
+
+.img-serviceList {
+  /* position: relative; */
+  border-radius: 5%;
+}
+
+.box-content-serviceList   a{
+  list-style: none;
+  text-decoration: none;
+}
+
+.heading-serviceList {
+  text-decoration: none;
+  text-align: center;
+  margin-block-end: -90;
+  margin-top: -40px;
+}
+/* no padding margin css */
+.col-12, .col-md-6,.col-lg-4,.col-xl-4,.gutter-col-serviceList1{
+  margin-left:inherit 0px;
+  padding-left:inherit 0px;
+}
+/* no padding margin css */
+.gutter-col-serviceList1,.gutter-col-serviceList2,.gutter-col-serviceList3,
+.gutter-col-serviceList4,
+.gutter-col-serviceList5,
+.gutter-col-serviceList6
+{
+  margin-left: 0px!important;
+  padding-left: 0px!important;
+}
+  /* margin: left -5ppx; */
+ 
+
+.col{
+  padding:0px;
+}
+/* .col-xl-4{
+  padding:0px;
+} */
+/* .box-content-serviceList{
+  min-height:868px;
+} */
+
+/* block square css container box content */
+
+ 
+   /* margin:0px;
+  width: 370px;
+  height: 250px;
+  z-index: 0;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px #e4dede;
+  border-radius: 9px;
+  position: relative;
+  text-decoration: none; */
+
+
+ .boxCurved-serviceList {
+  margin-left: -20px;
+  margin-top:-20px;
+  /* top: 55;
+  right: 1; */
+  z-index: -1;
+  position: relative;
+  border-radius: 9px;
+  box-sizing: border-box;
+  width: 295px;
+  height: 120px;
+  background: linear-gradient(90deg, #01acfc 15%, #01acfc 25%, #4ccafd 60%);
+  /* clip-path: ellipse(3.9rem 3.9813rem at 10% 20%); */
+  clip-path: circle(26% at 9% 0);
+}
+
+.boxCurved-serviceList2 {
+  content: "";
+  top: 0;
+  left:0 ;
+  z-index: -1;
+  position: absolute;
+  border-radius: 9px;
+  box-sizing: border-box;
+  width: 310px;
+  height: 180px;
+  background-color: #01aafc;
+  opacity: 0.7;
+  clip-path: circle(28% at 5% 0);
+}
+.title-strong h4 {
+  margin-top: 555px;
+}
+.box-icon-serviceList {
+  position: relative;
+}
+
+/* css position and color size ... */
+.icon-position-serviceList {
+  position: absolute;
+  top: 4.5%;
+  left: 8px;
+  /* font-weight: 40; */
+}
+.icon-position-serviceList5 {
+  position: absolute;
+  top: 2.5%;
+  left: 7px;
+  /* font-weight: 40; */
+}
+
+/* hover background box */
+
+.box-content-serviceList .box-container .box-serviceList:hover {
+  background: linear-gradient(90deg, #01acfc 15%, #01acfc 25%, #00bdfb 60%);
+  transition: 0.9s linear;
+}
+
+.box-content-serviceList .box-container .box-serviceList2:hover {
+  background: linear-gradient(
+    90deg,
+    #01acfc 15%,
+    #01acfc 25%,
+    #00bdfb 60% /* 4ccafd  */
+  );
+  transition: 0.9s linear;
+}
+
+.box-content-serviceList .box-container .box-serviceList:hover .box-icon-serviceList {
+  background: #ffffff;
+  color: #fff;
+}
+.box-content-serviceList .box-container .box-serviceList2:hover .box-icon-serviceList {
+  background: #ffffff;
+  color: #fff;
+}
+.box-content-serviceList .box-container .box-serviceList2:hover .hide-img-box-serviceLists {
+  display: block; 
+  content: "";
+  background: transparent url("/frontend/img/icons/i4copy.png") right bottom no-repeat;
+  margin-top: -6.875rem;
+  padding-right: 20.5rem;
+  /* right: -200px;
+bottom:140px;
+position: relative; */
+  /* position:absolute; */
+  width: 110px;
+  height: 113px;
+
+}
+.box-content-serviceList .box-container .box-serviceList2:hover::after .hide-img-box-serviceList {
+  display: none;
+}
+
+.box-content-serviceList .box-container .box-serviceList2:hover .content-serviceList {
+  color: #fff;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .content-serviceList {
+  color: #fff;
+}
+.box-content-serviceList .box-container .box-serviceList2:hover .content-serviceList {
+  color: #fff;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .title-strong {
+  color: #fff;
+}
+.box-serviceList2:hover .title-strong {
+  color: #fff;
+}
+.box-content-serviceList .box-container .box-serviceList2:hover .circle-chevron-right-serviceList {
+  background-color: #ffffff;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .circle-chevron-right-serviceList {
+  background-color: #ffffff;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .boxCurved-serviceList {
+  background-color: #ffffff;
+}
+.box-serviceList2:hover .boxCurved-serviceList {
+  background-color: #ffffff;
+}
+.box-content-serviceList .box-container .box-serviceList2:hover .boxCurved-serviceList2 {
+
+  background-color: #ffffff;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .boxCurved-serviceList2 {
+  background-color: #ffffff;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .icon-position-serviceList {
+  background-color: #ffffff;
+  color:#028ffe;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .filtered3 {
+  background-color: #7dc5fe;
+}
+.box-content-serviceList .box-container .box-serviceList2:hover .filtered4 {
+  background-color: #7dc5fe;
+}
+
+.box-content-serviceList .box-container .box-serviceList:hover .filtered5 {
+  background-color: #7dc5fe;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .filtered6 {
+  background-color: #7dc5fe;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .filtered7 {
+  background-color: #7dc5fe;
+}
+.box-content-serviceList .box-container .box-serviceList:hover .filtered8 {
+  background-color: #7dc5fe;
+}
+
+/* hover background box end */
+
+/* cs icon circle */
+
+ .circle-chevron-right-serviceList {
+
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background-color: #f0f6f9;
+  color: #9cd1fe;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  margin-top: -0.1875rem;
+  margin-bottom: -7.8125rem;
+  margin-left: -18px;
+   position: absolute; 
+  bottom: 6.25rem;
+}
+/* cs icon circle */
+
+/* responsive mobile */
+
+/* responsive mobile */
+/* css spacing gutter colum*/
+/* .gutter-col-serviceList,
+.gutter-col-serviceList3,
+.gutter-col-serviceList6 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+.gutter-col-serviceList1,
+.gutter-col-serviceList4 {
+  /* margin-top: 24px;
+  margin-bottom: 24px;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding-left: 53px;
+  padding-right: -43px; */
+/* }
+.gutter-col-serviceList5,
+.gutter-col-serviceList2 {
+   padding-left: 43px;
+  padding-right: 3px; 
+} */
+
+/* .gutter-col-serviceList6,
+.gutter-col-serviceList3 {
+  padding-left: 33px;
+  padding-right: 33px;
+}  */
+
+/* css  decoration  */
+.tittle-serviceList {
+  color: #303132;
+  text-decoration: none;
+  font-weight: normal;
+  font-weight: 600;
+  margin: top 14.625rem;
+}
+
+/* css position border size color boxCurved ...  */
+
+.title-strong {
+  font-family: "Montserrat", sans-serif;
+  /* font-size: 24px; */
+  font-weight: bold;
+}
+.content-serviceList {
+  text-decoration: none;
+  color: #8d8d8d;
+  line-height: 0.7375rem;
+  font-family: "Istok Web", sans-serif;
+
+  /* font-size: 16px; */
+}
+
+
+/* .l{
+margin: left 3.5rem; ;
+} */
+.navbar-list {
+  list-style: none;
+}
+/* .navbar-item{
+  
+
+} */
+
+/* .container {
+
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+} */
+/* .row{
+    justify-content: center;
+    /* align-self: center; */
+/* align-items: center; */
+
+.service-item {
+  justify-content: center;
+  padding-left: 14.375rem;
+  background-color: #131414;
+}
+.service-img {
+  justify-content: center;
+}
+
+/* style seviceLists */

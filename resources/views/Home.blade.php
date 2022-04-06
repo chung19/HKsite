@@ -292,86 +292,42 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
-        <div class="col-md-6 col-lg-4">
+        @foreach ($projects as $key => $project)
+        @if ($key< 3 ) <div class="col-md-6 col-lg-4">
           <!-- Bootstrap 5 card box -->
           <div class="card-box">
             <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_1.png" class="img-fluid" alt="project_1.png">
+              <img src="/image/{{ $project->image }}" class="img-fluid" alt="project_1.png">
             </div>
             <div class="row card-box-chill">
               <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Social Media App</span></div>
+                <div class="text-card-project"><span>{{ $project->title }}</span></div>
                 <div class="textSmall-color-card"><span> Design-> Softs</span></div>
               </div>
               <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_2.png" class="img-fluid" alt="project_2">
-            </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Food apps Interface</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
+      </div>
+      @endif
+      @if ($key >= 3 )
+      <div class="col-md-6 col-lg-6">
+        <!-- Bootstrap 5 card box -->
+        <div class="card-box">
+          <div class="card-thumbnail">
+            <img src="/image/{{ $project->image }}" class="img-fluid" alt="project_4">
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_3.png" class="img-fluid" alt="project_3">
+          <div class="row  card-box-chill">
+            <div class="col-10 card-project-left">
+              <div class="text-card-project"><span>{{ $project->title }}</span></div>
+              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
             </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Mobile Apps Dashboard</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_4.png" class="img-fluid" alt="project_4">
-            </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Web Application Development</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-6">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box">
-            <div class="card-thumbnail">
-              <img src="./frontend/images/index-img/projects/project_5.png" class="img-fluid" alt="project_5">
-            </div>
-            <div class="row  card-box-chill">
-              <div class="col-10 card-project-left">
-                <div class="text-card-project"><span>Custom Software Development</span></div>
-                <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-              </div>
-              <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
-            </div>
+            <div class="col-2 card-project-right"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
           </div>
         </div>
       </div>
+      @endif
+      @endforeach
+    </div>
     </div>
   </section>
   <!-- end <section> projects ============================-->
@@ -450,13 +406,14 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
+        @foreach ($teams as $team)
         <div class="col-12 col-md-6 col-lg-3 customHover">
           <!-- Bootstrap 5 card box -->
           <div class="card-box-team">
             <div class="card-thumbnail ">
               <div class="customMist">
               </div>
-              <img src="./frontend/images/index-img/team/team4.png" class=" img-team img-fluid" alt="team1.png">
+              <img src="/image/{{ $team->image }}" class=" img-team img-fluid" alt="imgTeam">
               <div class="overlay-team">
                 <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
                 <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
@@ -465,74 +422,12 @@
               </div>
             </div>
             <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
+              <div class="text-card-team"><span>{{ $team->title }}</span></div>
+              <div class="textSmall-color-card"><span> Design-> {{ $team->category }}</span></div>
             </div>
           </div>
         </div>
-
-        <div class="col-12 col-md-6 col-lg-3 customHover">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-team">
-            <div class="card-thumbnail ">
-              <div class="customMist">
-              </div>
-              <img src="./frontend/images/index-img/team/team2.png" class="img-team img-fluid" alt="team1.png">
-              <div class="overlay-team">
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_in.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_add.png"></div>
-              </div>
-            </div>
-            <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 customHover">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-team">
-            <div class="card-thumbnail ">
-              <div class="customMist">
-              </div>
-              <img src="./frontend/images/index-img/team/team3.png" class="img-team img-fluid" alt="team1.png">
-              <div class="overlay-team">
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_in.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_add.png"></div>
-              </div>
-            </div>
-            <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 customHover">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-team">
-            <div class="card-thumbnail ">
-              <div class="customMist">
-              </div>
-              <img src="./frontend/images/index-img/team/team4.png" class="img-team img-fluid" alt="team1.png">
-              <div class="cover">
-              </div>
-              <div class="overlay-team">
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_fb.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_tw.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_in.png"></div>
-                <div class="list-icon-team"><img src="./frontend/images/index-img/icons/icon_add.png"></div>
-              </div>
-            </div>
-            <div class="body-card-team">
-              <div class="text-card-team"><span>Social Media App</span></div>
-              <div class="textSmall-color-card"><span> Design-> Softs</span></div>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
@@ -553,33 +448,16 @@
       <div class="team-boxed">
         <div class="container">
           <div class="row people">
+          @foreach ($reviews as $review)
             <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
               <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review1.png">
-                <h3 class="name">Anjelina Santha</h3>
-                <p class="title"> Graphic Designer</p>
-                <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
-                  incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
+                <h3 class="name">{{ $review->name }}</h3>
+                <p class="title"> {{ $review->position }}</p>
+                <p class="description">{{ $review->content }}</p>
                 <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
               </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
-              <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review2.png">
-                <h3 class="name">Anjelina Santha</h3>
-                <p class="title"> Graphic Designer</p>
-                <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
-                  incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
-              <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review3.png">
-                <h3 class="name">Anjelina Santha</h3>
-                <p class="title"> Graphic Designer</p>
-                <p class="description">Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod has a
-                  incididunt ut labore et dolore magna is Ut enim ad minim veniam, quis that</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>
@@ -598,6 +476,7 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
+<<<<<<< HEAD
 
         
 
@@ -657,13 +536,19 @@
                 main in that Monotonectally product.</span></div>
           </div>
         </div>
+=======
+>>>>>>> 8826cc43e3bd56f361f6963bfc063e40fdba5063
         <div class="col-md-12 col-lg-12" id="btn-moveBlog">
           <!-- Bootstrap 5 button Bloge-->
           <div class="text-center"><button type="button" class="btn btn-moveBlog"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
         </div>
         <div class="col-md-12 col-lg-12">
           <!-- Bootstrap 5 button Bloge-->
-          <div class="text-center"><button type="button" class="btn btn-blog">VIEW ALL NEWS <i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+          <div class="text-center">
+          <a  href="{{'articleList'}}">
+            <button class="btn btn-blog">
+            VIEW ALL NEWS <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          </button></a></div>
         </div>
       </div>
     </div>

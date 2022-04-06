@@ -113,7 +113,7 @@
       <div class="footer_bottom">
         <div class="row container body-footer-bottom">
           <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-            <p>
+            <p class="text-top-left">
               &COPY; Copyright 2021. All Rights Reserved. Design by
               <span> <a class="footer_bottom_text" href="#">Dream IT</a></span>
             </p>
