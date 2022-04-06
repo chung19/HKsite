@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ReviewController;
 
 
 /*
@@ -39,6 +42,9 @@ Route::get('/partners', function () {
 });
 
 Route::resource('projects', ProjectController::class);
+Route::resource('reviews',ReviewController::class);
 Route::resource('back-end', DashboardController::class);
 Route::resource('team',TeamController::class);
 Route::resource('blog', BlogController::class);
+
+

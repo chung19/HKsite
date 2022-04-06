@@ -2,6 +2,13 @@
     section {
         overflow: hidden !important;
     }
+    .articles_list_content.container {
+        padding-left: 4%;
+        padding-right: 2%;
+    }
+    .articles_list {
+        padding: 30px 0 30px;
+    }
     .articles_list_content_left_title h6 {
         font-size: 14px;
     }
@@ -9,12 +16,18 @@
         font-size: 35px;
     }
     .item {
-        padding: 10px 29px;
         display: flex;
         flex-direction: column;
     }
     .image {
         width: 100%;
+    }
+    .image img {
+        width: 88%;
+        padding-left: 2px;
+    }
+    .text {
+        padding-left: 21px;
     }
     .articles_list_text_title h3 {
         font-size: 20px;
@@ -38,7 +51,15 @@
     }
 
     /* Recent Post */
-    .contentinformation_heading {
+    .popular_recent_heading,
+    .popular_catagory_heading,
+    .popular_galary_heading,
+    .popular_archives_heading,
+    .popular_followUs_heading,
+    .popular_tags_heading {
+        font-size: 18px;
+    }
+    .contentinformation_heading p {
         font-size: 14px;
     }
     .contentinformation_time {
@@ -64,5 +85,9 @@
     /* Tag */
     .testButton {
         font-size: 12px;
+        padding: 7px 20px;
+    }
+    .popular_posts_content_item {
+        padding-bottom: 30px;
     }
 }

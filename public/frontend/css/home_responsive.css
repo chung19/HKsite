@@ -1,4 +1,4 @@
-@media(max-width: 512px) {
+@media (max-width: 512px) {
     section {
         overflow: hidden !important;
     }
@@ -195,15 +195,15 @@
         max-width: 330px;
         height: 100%;
     }
-     /* newsletter */
-     .newsletter {
+    /* newsletter */
+    .newsletter {
         height: 394px;
     }
     .beside-newsletter {
         margin-bottom: 10%;
         margin-top: 10%;
     }
-    .beside-newsletter .newsletter-title{
+    .beside-newsletter .newsletter-title {
         margin-right: 5%;
         margin-left: 5%;
     }
