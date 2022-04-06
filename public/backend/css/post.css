@@ -3,10 +3,13 @@
     font-family: 'Istok Web', sans-serif;
 }
 
+body{
+    background-color: #f0f4f8;
+}
+
 .add__post{
     width: 100vw;
     height: auto;
-    background-color: #f0f4f8;
     padding: 20px;
     font-size: 20px;
 }
@@ -87,4 +90,14 @@ h2{
 
 #Category_Id{
     padding: 5px;
+}
+
+.table__hover img{
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.form__add__post img{
+    width: 300px !important;
+    height: auto !important;
 }

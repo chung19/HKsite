@@ -15,87 +15,45 @@
 </head>
 <body>
     <div class="add__post">
+
+        @if (session('status'))
+            <h6 class="alert alert-success">{{ session('status') }}</h6>
+        @endif
+
         <h2>Create Post</h2>
 
-        @if(Session::get('success'))
-            <div class="alert alert-success">
-                {{Session::get('success')}}
-            </div>
-        @endif
+        <a href="{{ url('posts') }}" class="btn btn-danger float-end">BACK</a>
 
-        @if(Session::get('fail'))
-            <div class="alert alert-danger">
-                {{Session::get('fail')}}
-            </div>
-        @endif
-
-        <form action="/add-post" method="post" class="form__add__post" enctype="multipart/form-data">
+        <form action="{{ url('add-post') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="hidden" name="post_id" value="{{ $Info ->post_id }}">
-            <label for="Title">
-                <div class="nameRow">Title:</div>
-                <input type="text" name="post_title" value="{{ old('post_title') }}" class="post-input"><br>
-                <span style="color:red;">@error('post_title'){{ $message }} @enderror</span>
-            </label><br><br>
-            <label for="Content">
-                <div class="nameRow">Content:</div>
-                <textarea type="text" name="post_content" value="{{ old('post_content') }}" class="post-input" rows=5></textarea><br>
-                <span style="color:red;">@error('post_content'){{ $message }} @enderror</span>
-            </label><br><br>
-            <label for="Image">
-                <div class="nameRow">Image:</div>
-                <input type="file" name="post_image" value="{{ old('post_image') }}" class="post-input"><br>
-                <span style="color:red;">@error('post_image'){{ $message }} @enderror</span>
-            </label><br><br>
-            <!-- <label for="Category_Id">
-                <div class="nameRow">Category name:</div>
-                <input type="text" name="category_id" value="{{ old('category_id') }}" class="post-input"><br>
-                <span style="color:red;">@error('Category_Name'){{ $message }} @enderror</span>
-            </label><br><br> -->
 
-            <label for="Category_Id">
-                <div class="nameRow">Category name:</div>
-                <select name="Category_Id" id="Category_Id">
-                    @foreach ($listcategory as $item => $value)
-                        <option value="{{ old('category_id') }}">{{ $item -> category_name }}</option>
+            <div class="form-group mb-3">
+                <label for="">Title:</label>
+                <input type="text" name="post_title" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Content:</label>
+                <input type="text" name="post_content" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Image</label>
+                <input type="file" name="post_image" class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Category name:</label>
+                <select name="Category" id="Category_Id">
+                    @foreach ($category as $item)
+                        <option>{{ $item -> category_name }}</option>
                     @endforeach
                 </select>
-            </label>
-            <div class="btn-add"><button type="submit">Add</button></div>
-            
+            </div>
+            <div class="form-group mb-3">
+                <button type="submit" class="btn btn-primary">Add Post</button>
+            </div>
+
         </form>
 
-        <br>
 
-        <table class="table__hover">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>Image</th>
-                    <th>Category name</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($listposts as $item)
-                <tr>
-                    <td>{{ $item -> post_id}}</td>
-                    <td>{{ $item -> post_title}}</td>
-                    <td>{{ $item -> post_content}}</td>
-                    <td>{{ $item -> post_image}}</td>
-                    <td>{{ $item -> category_id}}</td>
-                    <td>
-                        <div class="btn-group">
-                            <a href="/edit-post/{{ $item->post_id }}" class="btn-edit">Edit</a>
-                            <a href="/delete-post/{{ $item->post_id }}" class="btn-delete">Delete</a>
-                        </div>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
     </div>
     
 

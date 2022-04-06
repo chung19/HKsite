@@ -6,12 +6,15 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
+use App\Models\posts;
+
+use App\Models\Categories;
+
 class ArticleListController extends Controller
 {
     public function index(){
-        $data = array(
-            'list' => DB::table('categories')->get()
-        );
-        return view('articleList', $data);
+        $post = posts::all();
+        $category = Categories::all();
+        return view('articleList', compact('post','category'));
     }
 }

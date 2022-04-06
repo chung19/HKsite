@@ -14,51 +14,55 @@
     <link rel="stylesheet" href="{{asset('./backend/css/post.css')}}">
 </head>
 <body>
-    <div class="add__post">
-        <h2>{{$Title}} | Post</h2>
 
-        @if(Session::get('success'))
-            <div class="alert alert-success">
-                {{Session::get('success')}}
+    <div class="col-md-12">
+
+            @if (session('status'))
+                <h6 class="alert alert-success">{{ session('status') }}</h6>
+            @endif
+
+            <div class="card">
+                <div class="card-header">
+                    <h4>Edit Post
+                        <a href="{{ url('posts') }}" class="btn btn-danger float-end">BACK</a>
+                    </h4>
+                </div>
+                <div class="card-body">
+
+                    <form action="{{ url('update-post/'.$post->id) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('PUT')
+
+                        <div class="form-group mb-3">
+                            <label for="">Title:</label>
+                            <input type="text" name="post_title" class="form-control" value="{{$post->post_title}}">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="">Content:</label>
+                            <input type="text" name="post_content" class="form-control" value="{{$post->post_content}}">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="">Image</label>
+                            <input type="file" name="post_image" class="form-control" value="{{$post->post_image}}">
+                            <img src="{{asset('backend/images/'.$post->post_image) }}" alt="Image">
+                        </div>
+                        <label for="Category_Id">
+                            <div class="nameRow">Category name:</div>
+                            <select name="Category" id="Category_Id">
+                                @foreach ($category as $item)
+                                    <option {{ $item->category_id == $post->category_id ? 'selected' : '' }}>{{ $item -> category_name }}</option>
+                                @endforeach
+                            </select>
+                        </label>
+                        <div class="form-group mb-3">
+                            <button type="submit" class="btn btn-primary">Update Student</button>
+                        </div>
+
+                    </form>
+
+                </div>
             </div>
-        @endif
-
-        @if(Session::get('fail'))
-            <div class="alert alert-danger">
-                {{Session::get('fail')}}
-            </div>
-        @endif
-
-        <form action="{{route('update-post')}}" method="post" class="form__add__post">
-            @csrf
-            <input type="hidden" name="post_id" value="{{ $Info ->post_id }}">
-            <label for="Title">
-                <div class="nameRow">Title:</div>
-                <input type="text" name="post_title" value="{{ $Info ->post_title }}" class="post-input"><br>
-                <span style="color:red;">@error('post_title'){{ $message }} @enderror</span>
-            </label><br><br>
-            <label for="Content">
-                <div class="nameRow">Content:</div>
-                <textarea type="text" name="post_content" value="" rows="4" cols="50" class="post-input">{{ $Info ->post_content }}</textarea><br>
-                <span style="color:red;">@error('post_content'){{ $message }} @enderror</span>
-            </label><br><br>
-            <label for="Image">
-                <div class="nameRow">Image:</div>
-                <input type="text" name="post_image" value="{{ $Info ->post_image }}" class="post-input"><br>
-                <span style="color:red;">@error('post_image'){{ $message }} @enderror</span>
-            </label><br><br>
-            <label for="Category_Id">
-                <div class="nameRow">Category name:</div>
-                <input type="text" name="category_id" value="{{ $Info ->category_id }}" class="post-input"><br>
-                <span style="color:red;">@error('Category_Name'){{ $message }} @enderror</span>
-            </label><br><br>
-            
-            <button type="submit">Update</button>
-        </form>
-
-        <br>
-
-    </div>
+        </div>
     
 
 </body>
