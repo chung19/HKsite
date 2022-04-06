@@ -20,12 +20,12 @@
     <link href="./frontend/css/header.css" rel="stylesheet" />
     <link href="./frontend/css/footer.css" rel="stylesheet" />
     <link href="./frontend/css/contact.css" rel="stylesheet" />
-
-</head>
+   
+    </head>
 
 <body>
     <!---------------------------------------------------------- header--------------------------------------------------------- -->
-    @include("frontend-layout.header")
+    @include("frontend.header")
     <!---------------------------------------------------------- end header--------------------------------------------------------- -->
     <section>
         <!-- HEADER -->
@@ -115,22 +115,49 @@
             </p>
             <!-- FORM -->
             <div class="container">
+                        <!-- Success message -->
+        @if(Session::has('success'))
+        <div class="alert alert-success">
+            {{Session::get('success')}}
+        </div>
+        @endif
+               <!-- Success message end -->
+               {{-- Laravel Contact Form Validation  --}}
+      <form action="" method="post" action="{{ route('contact.store') }}">
+        <!-- CROSS Site Request Forgery Protection -->
+       @csrf
                 <form class="form-info">
                     <div class="container-fluid" style="width: 60%; height: auto">
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Your Name" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('name') ? 'error' : '' }}" name="name" id="name" placeholder="Your Name" /><br />
+                           <!-- Error -->
+            @if ($errors->has('name'))
+            <div class="error">
+                {{ $errors->first('name') }}
+            </div>
+            @endif
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Your Email" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('email') ? 'error' : '' }}" name="email" id="email" placeholder="Your Email" /><br />
+                                @if ($errors->has('email'))
+                                <div class="error">
+                                    {{ $errors->first('email') }}
+                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Phone" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone" placeholder="Phone" /><br />
+                                @if ($errors->has('phone'))
+                                <div class="error">
+                                    {{ $errors->first('phone') }}
+                                </div>
+                                @endif
                             </div>
                             <div class="col-6">
-                                <select class="form-select">
+                                <select class="form-select {{ $errors->has('address') ? 'error' : '' }}" name="address" id="address">
                                     <option selected>---</option>
                                     <option>Option 1</option>
                                     <option>Option 2</option>
@@ -141,12 +168,23 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input type="text" class="form-control setting-padding" placeholder="Subject" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('subject') ? 'error' : '' }}" name="subject"
+                                id="subject" placeholder="Subject" /><br />
+                                @if ($errors->has('subject'))
+                                <div class="error">
+                                    {{ $errors->first('subject') }}
+                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <textarea class="form-control setting-padding " placeholder="You Message: " style="height: 140px; padding-top:22px;"></textarea><br />
+                                <textarea class="form-control setting-padding{{ $errors->has('message') ? 'error' : '' }}" name="message" id="message " placeholder="You Message: " style="height: 140px; padding-top:22px;"></textarea><br />
+                                @if ($errors->has('message'))
+                                <div class="error">
+                                    {{ $errors->first('message') }}
+                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">
@@ -169,7 +207,7 @@
         </div>
     </section>
     <!--  <section> footer ============================-->
-    @include("frontend-layout.footer")
+    @include("frontend.footer")
     <!--    JavaScripts-->
     <!-- ===============================================-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

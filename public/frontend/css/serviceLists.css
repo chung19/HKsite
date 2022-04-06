@@ -606,3 +606,114 @@ margin: left 3.5rem; ;
 }
 
 /* style seviceLists */
+/* responsive */
+/* pc */
+@media (min-width:1024px)
+{
+}
+  
+/* pc end */
+/* tablet */
+@media(min-width:723px) and (max-width:1023px)
+{
+ 
+}
+/* tablet end */
+/* mobie */
+@media(max-width:723px){
+   /* serviceLists */
+    .main-serviceList {
+        height: auto;
+    max-height: 2070px;
+    }
+    .main-serviceList .box-content-serviceList {
+        height: 200px;
+        margin-top: 0px;
+        min-height: 2401px;
+        /* padding-right: 5px; */
+    }
+    .footer__wrapper-content {
+      margin-top: 42px!important;
+  }
+  }
+
+
+
+
+/* mobie end */
+/* iphone XR */
+@media (max-width: 414px) and (max-height: 896px) {
+ 
+  
+      
+
+}
+/* iphone X */
+@media (max-width: 574px) {
+    /* serviceLists */
+    .main-serviceList .col-12 {
+        margin-top: 880px;
+        margin-left: -898px;
+        width: 100%;
+        flex: 0 0 auto;
+        /* padding-bottom: 300px; */
+    }
+    .main-serviceList .col-lg-6 .box-serviceList,
+    .box-serviceList2,
+    .box-serviceList3,
+    .box-serviceList4,
+    .box-serviceList5,
+    .box-serviceList6 {
+        width: 10%;
+    }
+
+  
+    .main-serviceList .box-serviceList2 {
+        padding: bottom 450px;
+    }
+
+    /*serviceLists end  */
+    /* partners */
+    .text-description-head-partner {
+        margin-top: -2px;
+        font-size: 14px;
+    }
+    .text-heading-heading-partner {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: var(--font-family1);
+        margin-top: 16px;
+    }
+  
+
+   
+
+    #main .col-sm-12,
+    .col-12 {
+        margin-right: 10px;
+        /* display: flex; */
+        justify-content: center;
+        width: 100%;
+    }
+    #main .col-12-padding {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin-bottom: 2px;
+    }
+
+    /* .text-content-head-partner{
+
+    } */
+}
+@media (min-width: 539) and (max-width: 1022px) {
+}
+/* full size */
+@media (max-width: 1023px) and (min-width: 573px) {
+
+}
+
+
+.container.footer_top {
+  margin-top: 20px;
+}
+/* responsive */

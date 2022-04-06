@@ -32,10 +32,10 @@
                 <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Blog Classic</a>
               </div>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact Us</a>
+                <a href="{{'contact'}}" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Contact Us</a>
               </div>
               <div class="footer_top-posts-info">
-                <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Faqs</a>
+                <a href="" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Faqs</a>
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3 mt60">
@@ -113,7 +113,7 @@
       <div class="footer_bottom">
         <div class="row container body-footer-bottom">
           <div class="col-12 col-md-6 col-lg-6 col-xl-6">
-            <p>
+            <p class="text-top-left">
               &COPY; Copyright 2021. All Rights Reserved. Design by
               <span> <a class="footer_bottom_text" href="#">Dream IT</a></span>
             </p>

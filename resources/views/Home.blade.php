@@ -23,7 +23,7 @@
 <body>
 
   <!---------------------------------------------------------- header--------------------------------------------------------- -->
-  @include("frontend-layout.header")
+  @include("frontend.header")
   <!---------------------------------------------------------- end header--------------------------------------------------------- -->
 
   <!--------------------------------------------------------- banner ----------------------------------------------------------->
@@ -668,6 +668,18 @@
   <!--  end <section> blog ============================-->
 
   <!--  <section> newsletter ============================-->
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+{{-- <form action="" method="post" action="{{ route('contact.store') }}"> --}}
+  
   <section class="newsletter">
     <div class="container-fluid">
       <div class="container">
@@ -685,6 +697,8 @@
               </div>
             </div>
           </div>
+          <form action="{{ route('newsletter.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
           <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
             <div class="input-group input-group-newsletter">
               <input type="email" class="form-control from-control-newsletter" placeholder="Enter your email">
@@ -696,12 +710,13 @@
         </div>
       </div>
     </div>
-
+   
   </section>
+
   <!--  <section> newsletter ============================-->
 
   <!--  <section> footer ============================-->
-  @include("frontend-layout.footer")
+  @include("frontend.footer")
   <!--    JavaScripts-->
   <!-- ===============================================-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

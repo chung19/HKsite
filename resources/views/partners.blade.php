@@ -48,7 +48,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <body>
     <!---------------------------------------------------------- header--------------------------------------------------------- -->
-    @include("frontend-layout.header")
+    @include("frontend.header")
     <!---------------------------------------------------------- end header--------------------------------------------------------- -->
     <!-- phần thêm code của bạn -->
     <!-- start main partner -->
@@ -276,7 +276,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- phần thêm code của bạn -->
     <!--  <section> footer ============================-->
-    @include('frontend-layout.footer')
+    @include('frontend.footer')
     <!--    JavaScripts-->
     <!-- ===============================================-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

@@ -35,7 +35,7 @@
 
 <body>
  <!---------------------------------------------------------- header--------------------------------------------------------- -->
- @include("frontend-layout.header")
+ @include("frontend.header")
  <!---------------------------------------------------------- end header--------------------------------------------------------- -->
   <!-- phần thêm code của bạn -->
 
@@ -221,7 +221,7 @@
      <!-- phần thêm code của bạn -->
  
   <!--  <section> footer ============================-->
-    @include("frontend-layout.footer")
+    @include("frontend.footer")
     <!--    JavaScripts-->
     <!-- ===============================================-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
