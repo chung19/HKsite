@@ -1,12 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\PostController;
-=======
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
@@ -14,7 +12,6 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BlogController;
 
->>>>>>> 8826cc43e3bd56f361f6963bfc063e40fdba5063
 
 /*
 |--------------------------------------------------------------------------
@@ -27,14 +24,6 @@ use App\Http\Controllers\BlogController;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('Home');
-});
-
-Route::get('/home', function () {
-    return view('Home');
-=======
 Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
 
@@ -43,22 +32,12 @@ Route::get('/service-details', function () {
 });
 Route::get('/articleList', function () {
     return view('articleList');
->>>>>>> 8826cc43e3bd56f361f6963bfc063e40fdba5063
 });
-
 Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
-
-
-// Route::get('/articleList', function () {
-//     return view('articleList');
-// });
-
 Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 'index'] );
-
 Route::get('/contact-me', function () {
     return view('contact');
 });
-<<<<<<< HEAD
 
 Route::post('/add-category-post', [App\Http\Controllers\CategoryController::class, 'add']);
 Route::get('/category-post', [App\Http\Controllers\CategoryController::class, 'index']);
@@ -72,7 +51,6 @@ Route::post('/add-post', [PostController::class, 'store']);
 Route::get('/edit-post/{post_id}', [PostController::class, 'edit']);
 Route::put('/update-post/{post_id}', [PostController::class, 'update']);
 Route::delete('/delete-post/{post_id}', [PostController::class, 'destroy']);
-=======
 Route::get('/serviceLists', function () {
     return view('serviceLists');
 });
@@ -87,4 +65,3 @@ Route::resource('team',TeamController::class);
 Route::resource('blog', BlogController::class);
 
 
->>>>>>> 8826cc43e3bd56f361f6963bfc063e40fdba5063
