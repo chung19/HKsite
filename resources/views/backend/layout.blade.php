@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{asset('../frontend/css/servicedetails.css')}}">
     <link rel="stylesheet" href="{{ asset('backend/css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/css/layout.css') }}">
     <link rel="stylesheet" href="{{asset('./backend/css/post.css')}}">
     <link rel="stylesheet" href="{{asset('./backend/css/categorypost.css')}}">
 
@@ -61,7 +60,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <script src="{{ asset('backend/js/sidebarMenu.js') }}"></script>
-
         <script src="{{ asset('backend/ckeditor/ckeditor.js')}}"></script>
         <script>
         ClassicEditor
@@ -72,7 +70,3 @@
         </script>
     </body>
 </html>
-<<<<<<< HEAD
-=======
-</html>
->>>>>>> c53ed31d51591f87b2929df4323adf89714980c4
