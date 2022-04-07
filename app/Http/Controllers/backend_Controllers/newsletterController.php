@@ -14,7 +14,7 @@ class newsletterController extends Controller
     public function index()
     {
         $newsletter = Newsletter::latest()->paginate(5);
-        return view('newsletter.index',compact('newsletter'))
+        return view('backend/newsletter.index',compact('newsletter'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -25,7 +25,7 @@ class newsletterController extends Controller
      */
     public function create()
     {
-        return view('newsletter.create');
+        return view('backend/newsletter.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class newsletterController extends Controller
      */
     public function show(Newsletter $newsletter)
     {
-        return view('newsletter.show',compact('newsletter'));
+        return view('backend/newsletter.show',compact('newsletter'));
     }
 
 
@@ -70,7 +70,7 @@ class newsletterController extends Controller
      */
     public function edit(Newsletter $newsletter)
     {
-        return view('newsletter.edit',compact('newsletter'));
+        return view('backend/newsletter.edit',compact('newsletter'));
     }
 
     /**

@@ -27,7 +27,7 @@
                          <a href="#" class="nav_link"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Blog</span> </a> 
                          <a href="#" class="nav_link"><i class="fa fa-server" aria-hidden="true"></i><span class="nav_name">Service</span> </a> 
                          <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
-                         <a href="#" class="nav_link"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Files</span> </a>
+                         <a href="{{ /showcontact }}" class="nav_link"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Files</span> </a>
                         </div>
                 </div> 
             </nav>

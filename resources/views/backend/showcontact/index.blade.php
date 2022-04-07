@@ -1,4 +1,4 @@
-@extends('backend/showcontact.layout')
+@extends('backend.layout')
      
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h2>Laravel Showcontact  CRUD with Image Upload Example from scratch - ItSolutionStuff.com</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('backend/showcontact.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('showcontact.create') }}"> Create New Product</a>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
             <th>Message</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($showcontacts as $showcontact)
+        @foreach ($showcontact as $showcontact)
         <tr>
             <td>{{ ++$i }}</td>
           
@@ -38,11 +38,14 @@
             <td>{{ $showcontact->address}}</td>
             <td>{{ $showcontact->subject}}</td>
             <td>{{ $showcontact->message }}</td>
-                <form action="{{ route('showcontacts.destroy',$showcontact->id) }}" method="POST">
+            <td>
+
+          
+                <form action="{{ route('showcontact.destroy',$showcontact->id) }}" method="POST">
      
-                    <a class="btn btn-info" href="{{ route('showcontacts.show',$showcontact->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('showcontact.show',$showcontact->id) }}">Show</a>
       
-                    <a class="btn btn-primary" href="{{ route('showcontacts.edit',$showcontact->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('showcontact.edit',$showcontact->id) }}">Edit</a>
      
                     @csrf
                     @method('DELETE')
@@ -54,6 +57,6 @@
         @endforeach
     </table>
     
-    {!! $showcontacts->links() !!}
+    {{-- {!! $showcontact->links() !!} --}}
         
 @endsection

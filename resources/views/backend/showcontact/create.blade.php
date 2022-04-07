@@ -1,4 +1,4 @@
-@extends('backend/showcontact.layout')
+@extends('backend.layout')
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">

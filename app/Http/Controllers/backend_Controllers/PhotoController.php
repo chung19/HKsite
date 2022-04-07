@@ -1,13 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\backend_Controllers;
+
 use App\Http\Controllers\Controller;
-use App\Models\Contact;
-use App\Http\Controllers\backend_Controllers\Showcontact;
-// use App\Models\showcontact;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 
-class showcontactController extends Controller
+class PhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,11 @@ class showcontactController extends Controller
      */
     public function index()
     {
-        $showcontact = Contact::latest()->paginate(5);
-        return view('backend/showcontact.index',compact('showcontact'))
+        $photo = Photo::latest()->paginate(5);
+    
+        return view('photo.index',compact('photo'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
 
     }
 
@@ -29,7 +30,7 @@ class showcontactController extends Controller
      */
     public function create()
     {
-        return view('backend/showcontact.create');
+        return view('photo.create');
     }
 
     /**
@@ -41,12 +42,8 @@ class showcontactController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'subject'=>'required',
-            'message' => 'required',
-            "address"=>'required'
+        
+            'images' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
   
         $input = $request->all();
@@ -58,50 +55,46 @@ class showcontactController extends Controller
             $input['image'] = "$profileImage";
         }
     
-        Showcontact::create($input);
+       Photo::create($input);
      
-        return redirect()->route('showcontact.index')
-                        ->with('success','showcontact created successfully.');
+        return redirect()->route('photos.index')
+                        ->with('success','Photo created successfully.');
     }
+
     /**
      * Display the specified resource.
      *
-     * @param  int  Showcontact $showcontact
+     * @param  \App\Models\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-
-    public function show(Showcontact $showcontact)
+    public function show(Photo $photo)
     {
-        return view('backend/showcontact.show',compact('showcontact'));
+        return view('photo.show',compact('photo'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  Showcontact $showcontact
+     * @param  \App\Models\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Showcontact $showcontact)
+    public function edit(Photo $photo)
     {
-        return view('backend/showcontact.edit',compact('showcontact'));
+        return view('photo.edit',compact('photo'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  Showcontact $showcontact
+     * @param  \App\Models\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Showcontact $showcontact)
+    public function update(Request $request, Photo $photo)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
-            'subject'=>'required',
-            'message' => 'required',
-            "address"=>'required'
+            'images' => 'required',
+        
         ]);
   
         $input = $request->all();
@@ -115,22 +108,24 @@ class showcontactController extends Controller
             unset($input['image']);
         }
           
-        $showcontact->update($input);
+        $photo->update($input);
     
-        return redirect()->route('showcontact.index')
-                        ->with('success','Showcontact updated successfully');
+        return redirect()->route('photos.index')
+                        ->with('success','Product updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  Showcontact $showcontact
+     * @param  \App\Models\Photo  $photo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Showcontact $showcontact)
+    public function destroy(Photo $photo)
     {
-        $showcontact>delete();
-        return redirect()->route('showcontact.index')
-                        ->with('success','Showcontact deleted successfully');
+        $product->delete();
+     
+        return redirect()->route('photos.index')
+                        ->with('success','Photo deleted successfully');
+
     }
 }

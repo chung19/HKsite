@@ -34,6 +34,9 @@ Route::resource('projects', ProjectController::class);
 Route::get('/serviceLists', function () {
     return view('serviceLists');
 });
+Route::get('/ss', function () {
+    return view('backend/showcontact.index');
+});
 // route contact
 Route::get('/partners', function () {
     return view('partners');

@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class Showcontact extends Model
 {
     use HasFactory;
-    // protected $guarded = [];
-    protected  $fillable = ['name', 'email', 'phone', 'subject', 'message'];
+    public $fillable = ['name', 'email', 'phone', 'subject', 'message'];
 }
