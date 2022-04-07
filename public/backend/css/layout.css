@@ -171,7 +171,11 @@ a {
         padding: 1rem 1rem 0 0
     }
 
+<<<<<<< HEAD
     .show {
+=======
+    .showSider {
+>>>>>>> refs/remotes/origin/master
         width: calc(var(--nav-width) + 156px)
     }
 

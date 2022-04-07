@@ -36,8 +36,14 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Star:</strong>
-                    <input type="text" name="star" value="{{ $review->star }}" class="form-control" placeholder="Star">
+                    <strong class="star">Star:</strong>
+                    <div class="rate">
+                        @for($i=5; $i>=1; $i--)
+                            <?php $star = $i; $starName = 'star'.(string)$i;?>
+                            <input type="radio" {{$star == 1 ? "id='star1' value=1" : ($star == 2 ? "id='star2' value=2" : ($star == 3 ? "id='star3' value=3" : ($star == 4 ? "id='star4' value=4" : "id='star5' value=5")))}} class="rate" name="star" {{$star==$review->star ? 'checked' : ''}}/>
+                            <label {{$star == 1 ? "for='star1'" : ($star == 2 ? "for='star2'" : ($star == 3 ? "for='star3'" : ($star == 4 ? "for='star4'" : "for='star5'")))}} title="text">{$star} star</label>
+                        @endfor
+                    </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

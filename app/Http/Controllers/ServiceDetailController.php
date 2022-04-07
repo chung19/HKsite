@@ -15,7 +15,12 @@ class ServiceDetailController extends Controller
     }
     public function show(Service $service)
     {
-        return view('backend.services.show',compact('service'));
+        return view('showDetails',compact('service'));
+    }
+    public function show1(Service $service, $id)
+    {
+        $service = Service::find($id);
+        return view('ShowDetails',compact('service'));
     }
 
 }

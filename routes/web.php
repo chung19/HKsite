@@ -6,6 +6,13 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceDetailController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\BlogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,19 +25,14 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/home', function () {
-    return view('home');
-});
-Route::get('/service-details', function () {
-    return view('servicedetails');
-});
-// Route::get('/service-details', 'ServiceController@details');
+Route::resource('/', HomeController::class);
+Route::resource('home', HomeController::class);
+
 Route::get('/articleList', function () {
     return view('articleList');
 });
+Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
+Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 'index'] );
 Route::get('/contact-me', function () {
     return view('contact');
 });
@@ -40,6 +42,34 @@ Route::resource('back-end', DashboardController::class);
 Route::resource('reviews',ReviewController::class);
 Route::resource('services',ServiceController::class);
 Route::resource('service-details',ServiceDetailController::class);
+Route::get('/service-details/{$id}',[ServiceDetailController::class, 'show1']);
 Route::resource('home',HomeController::class);
 Route::resource('/',HomeController::class);
+
+
+Route::post('/add-category-post', [App\Http\Controllers\CategoryController::class, 'add']);
+Route::get('/category-post', [App\Http\Controllers\CategoryController::class, 'index']);
+Route::get('/edit-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'edit']);
+Route::post('/update-category-post', [App\Http\Controllers\CategoryController::class, 'update'])->name('update-category-post');
+Route::get('/delete-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'delete']);
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/add-post', [PostController::class, 'create']);
+Route::post('/add-post', [PostController::class, 'store']);
+Route::get('/edit-post/{post_id}', [PostController::class, 'edit']);
+Route::put('/update-post/{post_id}', [PostController::class, 'update']);
+Route::delete('/delete-post/{post_id}', [PostController::class, 'destroy']);
+Route::get('/serviceLists', function () {
+    return view('serviceLists');
+});
+Route::get('/partners', function () {
+    return view('partners');
+});
+
+Route::resource('projects', ProjectController::class);
+Route::resource('reviews',ReviewController::class);
+Route::resource('back-end', DashboardController::class);
+Route::resource('team',TeamController::class);
+Route::resource('blog', BlogController::class);
+
 

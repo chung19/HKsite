@@ -31,7 +31,7 @@
             <td>{{ ++$i }}</td>
             <td><img src="/image/{{ $service->image }}" width="100px"></td>
             <td>{{ $service->title }}</td>
-            <td>{{ $service->content }}</td>
+            <td>{!! $service->content !!}</td>
             <td>
                 <form action="{{ route('services.destroy',$service->id) }}" method="POST">
 

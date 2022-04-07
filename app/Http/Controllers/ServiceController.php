@@ -15,7 +15,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::latest()->paginate(6);
+        $services = Service::latest()->paginate(10);
 
         return view('backend/services.index',compact('services'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -39,6 +39,7 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        echo $request -> input('content');
         $request->validate([
             'title' => 'required',
             'content' => 'required',
@@ -69,6 +70,10 @@ class ServiceController extends Controller
     public function show(Service $service)
     {
         return view('backend.services.show',compact('service'));
+    }
+    public function showDetails(Service $service)
+    {
+        return view('showDetails',compact('service'));
     }
 
     /**

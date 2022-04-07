@@ -28,14 +28,14 @@
                 <div class="col-6 contact-us">
                     <i class="fa fa-circle" aria-hidden="true" style="color: #0a8bfa; font-size: smaller"></i>
                     <b>
-                        Contact Us
+                        Services
                     </b>
                 </div>
                 <div class="col-6 menu-contact-us">
                     Home
                     <a href="#" style="text-decoration: none; color: #707070;">
                         <i class="fa fa-angle-right" aria-hidden="true" style="color: #707070;"></i>
-                        Servicesm
+                        Services
                     </a>
                     <a href="#" style="text-decoration: none">
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -243,16 +243,15 @@
                         <h2 class="allServices__textTitle">{{ $service->title }}</h2>
                         <p class="allServices__textContent">{{ $service->content }}</p>
                     </div>
-                    <a class="allServices__btn"
-                   >
+                    <a class="allServices__btn" href="{{ url('/service-details/'.$service->id) }}">
                         <img src="./frontend/images/servicedetails/next.png">
                     </a>
                 </div>
             </div>
-            @endforeach
+        @endforeach
         </div>
     </div>
-
+</div>
     <!--  <section> footer ============================-->
     @include("frontend-layout.footer")
     <!--    JavaScripts-->

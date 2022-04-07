@@ -1,4 +1,4 @@
-@extends('backend/services.layout')
+@extends('backend.layout')
 
 @section('content')
 <div class="row
@@ -27,6 +27,7 @@
 <form action="{{ route('services.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
+
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -37,7 +38,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Content:</strong>
-                <textarea class="form-control" style="height:150px" name="content" placeholder="Content"></textarea>
+                <textarea id="content" class="form-control" style="height:150px" name="content" placeholder="Content"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
