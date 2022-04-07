@@ -1,25 +1,28 @@
-*{
-    padding: 0;
-    font-family: 'Istok Web', sans-serif;
+* {
+    font-family: Sans-serif;
 }
-.inforService{
+* {
+    padding: 0;
+    font-family: "Istok Web", sans-serif;
+}
+.inforService {
     text-align: center;
 }
 
-.inforService__content{
+.inforService__content {
     width: 1170px;
     display: inline-block;
 }
 
-.inforService__banner{
+.inforService__banner {
     width: 100%;
     border-radius: 7px;
 }
 
-.inforService__title{
+.inforService__title {
     margin-top: 95px;
     margin-bottom: 70px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: bold;
 }
 
@@ -29,12 +32,12 @@
     text-align: left;
 }
 
-.inforService__featuresTitle{
+.inforService__featuresTitle {
     font-weight: bold;
     margin-top: 60px;
     text-align: left;
     margin-bottom: 25px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .inforService__features img {
@@ -44,36 +47,35 @@
     margin-left: -8px;
 }
 
-.inforService__features{
+.inforService__features {
     display: flex;
     align-items: center;
     margin: 8px;
 }
 
-.inforService__feature{
+.inforService__feature {
     margin-left: 0;
 }
 
-@media (max-width: 1200px){
-
+@media (max-width: 1200px) {
     /* inforService */
 
-    .inforService__title{
+    .inforService__title {
         width: 100vw;
         text-align: center;
     }
 
-    .inforService{
+    .inforService {
         width: 100%;
     }
 
-    .inforService__content{
+    .inforService__content {
         width: 90vw;
         font-family: Sans-serif;
         text-align: start;
     }
 
-    .inforService__banner{
+    .inforService__banner {
         width: 90vw;
         border-radius: 7px;
     }
@@ -82,53 +84,45 @@
         width: 90vw;
     }
 
-    .inforService__featuresTitle{
+    .inforService__featuresTitle {
         width: 90vw;
     }
 
-    .inforService__features{
+    .inforService__features {
         width: 90vw;
     }
-
 
     /* pricingPlan */
 
-    .pricingPlan__type{
+    .pricingPlan__type {
         display: inline-block !important;
         width: 370px !important;
     }
 
-    .pricingPlan__card{
+    .pricingPlan__card {
         margin: 25px 0 !important;
     }
 
     /* allServices */
 
-    .allServices__row{
+    .allServices__row {
         display: block !important;
         width: 370px !important;
         justify-content: start !important;
     }
 
-    .allServices__content{
+    .allServices__content {
         width: 370px !important;
     }
 
-    .allServices__container{
+    .allServices__container {
         margin: 15px;
     }
 }
 
-
-
-
-
-
-
-
 /* Pricing Plan */
 
-.pricingPlan{
+.pricingPlan {
     height: auto;
     margin-top: 80px;
     background-color: #f0f4f8;
@@ -137,22 +131,22 @@
     width: 100%;
 }
 
-.pricingPlan-title{
+.pricingPlan-title {
     padding-top: 95px;
     padding-bottom: 72px;
     font-size: 2.5em;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-.pricingPlan__type{
+.pricingPlan__type {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     width: 1170px;
     margin: 0 auto;
 }
 
-.pricingPlan__cardHeader{
+.pricingPlan__cardHeader {
     background-image: linear-gradient(#0d92f5, #02b9fe);
     text-align: center;
     border-radius: 18px 18px 0 0;
@@ -163,7 +157,7 @@
     width: 370px;
 }
 
-.pricingPlan__cardBody{
+.pricingPlan__cardBody {
     background-color: #ffffff;
     border-radius: 0 0 14px 14px;
     position: relative;
@@ -172,7 +166,7 @@
     height: 403px;
 }
 
-.pricingPlan__card{
+.pricingPlan__card {
     width: 370px;
     margin: 15px;
     transition: all 0.4s;
@@ -182,7 +176,7 @@
     background: inherit;
 }
 
-.pricingPlan__cardTitleContainer{
+.pricingPlan__cardTitleContainer {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -191,28 +185,28 @@
     transform: translate(-50%, -75%);
 }
 
-.pricingPlan__card:hover{
-    transform: translate(0px , -20px);
+.pricingPlan__card:hover {
+    transform: translate(0px, -20px);
 }
 
-.pricingPlan__card:hover .pricingPlan__cardBtnBuy{
+.pricingPlan__card:hover .pricingPlan__cardBtnBuy {
     background-image: linear-gradient(#0d92f5, #02b9fe);
     color: #ffffff;
 }
 
-.pricingPlan__cardNameTag{
+.pricingPlan__cardNameTag {
     font-size: 9px;
     color: #9ad6fc;
     margin-bottom: 20px;
 }
 
-.pricingPlan__cardTitle{
+.pricingPlan__cardTitle {
     font-size: 20px;
     color: #fefeff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-.pricingPlan__cardPrice{
+.pricingPlan__cardPrice {
     color: #000;
     width: 167px;
     height: 95px;
@@ -228,30 +222,29 @@
     transform: translate(-50%, 25%);
     border: none;
     border-radius: 6px;
-    box-shadow: 1px 1px 3px 0.1px rgba(0, 0, 0, .2);
-
+    box-shadow: 1px 1px 3px 0.1px rgba(0, 0, 0, 0.2);
 }
 
-.pricingPlan__cardBody-price{
+.pricingPlan__cardBody-price {
     font-size: 25px;
     padding-top: 20px;
     display: inline-flex;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
 
-.pricingPlan__cardBody-price p{
+.pricingPlan__cardBody-price p {
     font-size: 12px;
     margin-top: 5px;
     margin-right: 2px;
 }
 
-.pricingPlan__cardBody-durationType{
+.pricingPlan__cardBody-durationType {
     font-size: 10px;
     color: #888787;
 }
 
-.pricingPlan__cardBody-checked{
+.pricingPlan__cardBody-checked {
     width: 30px;
     height: 30px;
     background-color: #0a9af7;
@@ -260,12 +253,12 @@
     margin-right: 0;
 }
 
-.pricingPlan__cardBody-checked img{
+.pricingPlan__cardBody-checked img {
     width: 26px;
     height: 26px;
 }
 
-.pricingPlan__cardBody-use{
+.pricingPlan__cardBody-use {
     font-size: 15px;
     padding-left: 10px;
     padding-top: auto;
@@ -273,13 +266,13 @@
     margin-left: 0;
 }
 
-.pricingPlan__cardBody-used{
+.pricingPlan__cardBody-used {
     display: flex;
     align-items: center;
     margin: 7px;
 }
 
-.pricingPlan__cardBtnBuy{
+.pricingPlan__cardBtnBuy {
     margin-top: 27px;
     height: 45px;
     width: 140px;
@@ -290,12 +283,12 @@
     transition-duration: 0.4s;
 }
 
-hr{
+hr {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-.pricingPlan__cardLine{
+.pricingPlan__cardLine {
     width: 96%;
     bottom: 0px;
     margin-top: 35px;
@@ -304,38 +297,38 @@ hr{
     opacity: 1;
 }
 
-
+/* All Service */
 /* All Service */
 
-.allServices{
+.allServices {
     text-align: center;
     padding-bottom: 100px;
 }
 
-.allServices__content{
+.allServices__content {
     width: 1200px;
     display: inline-block;
 }
 
-.allServices__title{
+.allServices__title {
     margin-bottom: 45px;
     text-align: center;
     margin-top: 100px;
     font-size: 2.5em;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-.allServices__container img{
+.allServices__container img {
     width: 370px;
     height: 283px;
     border-radius: 8px;
 }
 
-.allServices__textTitle{
+.allServices__textTitle {
     margin-top: 60px;
     margin-bottom: 25px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: bold;
 }
@@ -345,7 +338,7 @@ hr{
     float: left;
     height: 283px;
     margin: 15px;
-  }
+}
 
 .allServices__overlay {
     position: absolute;
@@ -356,35 +349,34 @@ hr{
     width: 370px;
     height: 283px;
     opacity: 0;
-    transition: .5s ease;
+    transition: 0.5s ease;
     background-image: linear-gradient(#0d92f5, #02b9fe);
     border-radius: 8px;
     text-align: center;
-  }
+}
 
 .allServices__container:hover .allServices__overlay {
     opacity: 1;
-  }
+}
 
 .allServices__text {
     color: white;
     font-size: 20px;
     display: inline-block;
     width: 282px;
+}
 
-  }
-
-.allServices__text p{
+.allServices__text p {
     line-height: 26px;
 }
 
-.allServices__textContent{
+.allServices__textContent {
     font-size: 16px;
     height: 70px;
     width: auto;
 }
 
-.allServices__btn{
+.allServices__btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -398,7 +390,7 @@ hr{
     background-color: #ffffff;
 }
 
-.allServices__btn img{
+.allServices__btn img {
     width: 20px;
     height: 20px;
     position: absolute;
@@ -406,3 +398,27 @@ hr{
     left: 28%;
 }
 
+.allServices__row {
+    width: 1170px;
+    height: 283px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.test {
+    display: block;
+}
+
+/* .allServices{
+    position: relative;
+}
+
+.allServices__content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+} */
+
+/* text */

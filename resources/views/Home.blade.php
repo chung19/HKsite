@@ -450,11 +450,15 @@
           <div class="row people">
           @foreach ($reviews as $review)
             <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
-              <div class="box-review-card"><img class="rounded-circle" src="./frontend/images/index-img/review/review1.png">
+              <div class="box-review-card"><img class="rounded-circle" src="/image/{{ $review->image }}">
                 <h3 class="name">{{ $review->name }}</h3>
                 <p class="title"> {{ $review->position }}</p>
                 <p class="description">{{ $review->content }}</p>
-                <div class="small-ratings"> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star rating-color"></i> <i class="fa fa-star"></i> </div>
+                <div class="small-ratings">
+                    @for($i=1; $i<=$review->star; $i++)
+                    <span><i class="fa fa-star"></i></span>
+                    @endfor</i>
+                 </div>
               </div>
             </div>
             @endforeach

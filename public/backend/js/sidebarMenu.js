@@ -10,7 +10,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if(toggle && nav && bodypd && headerpd){
     toggle.addEventListener('click', ()=>{
     // show navbar
+<<<<<<< HEAD
+    nav.classList.toggle('show')
+=======
     nav.classList.toggle('showSider')
+>>>>>>> refs/remotes/origin/master
     // change icon
     toggle.classList.toggle('bx-x')
     // add padding to body
@@ -35,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     linkColor.forEach(l=> l.addEventListener('click', colorLink))
     
     // Your code to run since DOM is loaded and ready
+<<<<<<< HEAD
+=======
     });
 
     document.addEventListener("DOMContentLoaded", function(){
@@ -47,4 +53,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
         btn.addEventListener("click", function(){
             myAlert.close();
         });
+>>>>>>> refs/remotes/origin/master
     });

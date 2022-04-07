@@ -28,14 +28,14 @@
                 <div class="col-6 contact-us">
                     <i class="fa fa-circle" aria-hidden="true" style="color: #0a8bfa; font-size: smaller"></i>
                     <b>
-                        Contact Us
+                        Services
                     </b>
                 </div>
                 <div class="col-6 menu-contact-us">
                     Home
                     <a href="#" style="text-decoration: none; color: #707070;">
                         <i class="fa fa-angle-right" aria-hidden="true" style="color: #707070;"></i>
-                        Servicesm
+                        Services
                     </a>
                     <a href="#" style="text-decoration: none">
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -233,75 +233,25 @@
     <div class="allServices">
         <h1 class="allServices__title">All Services</h1>
         <div class="allServices__content">
+        @foreach ($services as $service)
             <div class="allServices__container">
                 <div>
-                    <img src="./frontend/images/servicedetails/service1.webp">
+                    <img src="/image/{{ $service->image }}">
                 </div>
                 <div class="allServices__overlay">
                     <div class="allServices__text">
-                        <h2 class="allServices__textTitle">Digital Marketing</h2>
-                        <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
+                        <h2 class="allServices__textTitle">{{ $service->title }}</h2>
+                        <p class="allServices__textContent">{{ $service->content }}</p>
                     </div>
-                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
+                    <a class="allServices__btn" href="{{ url('/service-details/'.$service->id) }}">
+                        <img src="./frontend/images/servicedetails/next.png">
+                    </a>
                 </div>
             </div>
-
-            <div class="allServices__container">
-                <img src="./frontend/images/servicedetails/bannerMAD.png">
-                <div class="allServices__overlay">
-                    <div class="allServices__text">
-                        <h2 class="allServices__textTitle">Digital Marketing</h2>
-                        <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                    </div>
-                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                </div>
-            </div>
-
-            <div class="allServices__container">
-                <img src="./frontend/images/servicedetails/service3.png">
-                <div class="allServices__overlay">
-                    <div class="allServices__text">
-                        <h2 class="allServices__textTitle">Digital Marketing</h2>
-                        <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                    </div>
-                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                </div>
-            </div>
-
-            <div class="allServices__container">
-                <img src="./frontend/images/servicedetails/service4.png">
-                <div class="allServices__overlay">
-                    <div class="allServices__text">
-                        <h2 class="allServices__textTitle">Digital Marketing</h2>
-                        <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                    </div>
-                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                </div>
-            </div>
-
-            <div class="allServices__container">
-                <img src="./frontend/images/servicedetails/service5.png">
-                <div class="allServices__overlay">
-                    <div class="allServices__text">
-                        <h2 class="allServices__textTitle">Digital Marketing</h2>
-                        <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                    </div>
-                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                </div>
-            </div>
-
-            <div class="allServices__container">
-                <img src="./frontend/images/servicedetails/service6.png">
-                <div class="allServices__overlay">
-                    <div class="allServices__text">
-                        <h2 class="allServices__textTitle">Digital Marketing</h2>
-                        <p class="allServices__textContent">Conveniently predominate sticky alignm than low risk high yield methods of emp brand superior techno</p>
-                    </div>
-                    <button class="allServices__btn"><img src="./frontend/images/servicedetails/next.png"></button>
-                </div>
-            </div>
+        @endforeach
         </div>
     </div>
+</div>
     <!--  <section> footer ============================-->
     @include("frontend-layout.footer")
     <!--    JavaScripts-->

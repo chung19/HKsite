@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServiceDetailController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
-use App\Http\Controllers\ReviewController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BlogController;
 
 
@@ -32,6 +33,16 @@ Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 
 Route::get('/contact-me', function () {
     return view('contact');
 });
+
+
+Route::resource('back-end', DashboardController::class);
+Route::resource('reviews',ReviewController::class);
+Route::resource('services',ServiceController::class);
+Route::resource('service-details',ServiceDetailController::class);
+Route::get('/service-details/{$id}',[ServiceDetailController::class, 'show1']);
+Route::resource('home',HomeController::class);
+Route::resource('/',HomeController::class);
+
 
 Route::post('/add-category-post', [App\Http\Controllers\CategoryController::class, 'add']);
 Route::get('/category-post', [App\Http\Controllers\CategoryController::class, 'index']);

@@ -1,4 +1,4 @@
-@extends('backend/reviews.layout')
+@extends('backend.layout')
 
 @section('content')
     <div class="row">
@@ -33,7 +33,10 @@
             <td>{{ ++$i }}</td>
             <td><img src="/image/{{ $review->image }}" width="100px"></td>
             <td>{{ $review->name }}</td>
-            <td>{{ $review->star }}</td>
+            <td>@for($i=1; $i<=$review->star; $i++)
+                    <span><i class="fa fa-star"></i></span>
+                @endfor
+            </td>
             <td>{{ $review->content }}</td>
             <td>{{ $review->position }}</td>
             <td>

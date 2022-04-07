@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ReviewController extends Controller
 {
@@ -58,7 +59,7 @@ class ReviewController extends Controller
         Review::create($input);
 
         return redirect()->route('reviews.index')
-                        ->with('success','review created successfully.');
+                        ->with('success','Review created successfully.');
     }
 
     /**
@@ -90,8 +91,9 @@ class ReviewController extends Controller
      * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Review $review)
+    public function update(Request $request, $id)
     {
+        $review = Review::find($id);
         $request->validate([
             'name' => 'required',
             'star' => 'required',
@@ -113,7 +115,7 @@ class ReviewController extends Controller
         $review->update($input);
 
         return redirect()->route('reviews.index')
-                        ->with('success','review updated successfully');
+                        ->with('success','Review updated successfully');
     }
 
     /**
@@ -122,8 +124,14 @@ class ReviewController extends Controller
      * @param  \App\Models\Review  $review
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Review $review)
+    public function destroy($id)
     {
+        $review = Review::find($id);
+        $destination = 'image/' . $review->image;
+        if (File::exists($destination)) {
+            File::delete($destination);
+        }
+
         $review->delete();
 
         return redirect()->route('reviews.index')

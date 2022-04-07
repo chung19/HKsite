@@ -12,4 +12,8 @@ class Review extends Model
     protected $fillable = [
         'name', 'star', 'content', 'position', 'image'
     ];
+    public function ReviewData()
+    {
+    return $this->hasMany('App\Models\ReviewRating','post_id');
+    }
 }
