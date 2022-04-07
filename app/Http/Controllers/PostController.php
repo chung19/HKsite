@@ -42,6 +42,7 @@ class PostController extends Controller
             $file->move('backend/images/', $filename);
             $post->post_image = $filename;
         }
+        $post->post_date = $request->input('post_date');
         $change = DB::table('categories')
                         ->where('category_name',$_POST['Category'])
                         ->first();
@@ -76,7 +77,7 @@ class PostController extends Controller
             $file->move('backend/images/', $filename);
             $post->post_image = $filename;
         }
-
+        $post->post_date = $request->input('post_date');
         $change = DB::table('categories')
                         ->where('category_name',$_POST['Category'])
                         ->first();

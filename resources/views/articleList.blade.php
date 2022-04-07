@@ -51,7 +51,7 @@
                       <div class="articles_list_text_date">
                         <div class="icon">
                           <img src="./assets/image/icon-calendar-check.png" alt="" />
-                          <span> 31 Dec, 2021 By</span>
+                          <span> {{ $item -> post_date}} By</span>
                           <a href="#">John Doe</a>
                         </div>
                       </div>
@@ -338,7 +338,18 @@
 
                       @foreach ($category as $item)
                       <li class="popular_catagory_content_item">
-                        {{ $item -> category_name}} <span>(69)</span>
+                        {{ $item -> category_name}} 
+                        <span>
+                          (<?php
+                            $id = DB::table('categories')
+                            ->where('category_name',$item->category_name)
+                            ->first();
+                            $change = DB::table('posts')
+                            ->where('category_id',$id->category_id)
+                            ->count();
+                            echo $change;
+                          ?>)
+                        </span>
                       </li>
                       @endforeach
 
