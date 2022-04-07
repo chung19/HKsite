@@ -20,7 +20,7 @@
             <input type="hidden" name="id" value= "{{ $Info ->category_id }}">
             @csrf
             <label for="Id">
-                Id: 
+                Id:
                 <!-- <div>{{ $Info ->category_id }}</div> -->
                 <input type="text" name="category_id" value="{{ $Info ->category_id }}"><br>
                 <span style="color:red;">@error('category_id'){{ $message }} @enderror</span>
@@ -39,4 +39,4 @@
 
 @endsection
 
-    
+

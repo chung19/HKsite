@@ -28,14 +28,7 @@ Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
 
 Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
-
-
-// Route::get('/articleList', function () {
-//     return view('articleList');
-// });
-
 Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 'index'] );
-
 Route::get('/contact-me', function () {
     return view('contact');
 });

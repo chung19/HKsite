@@ -44,7 +44,7 @@
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-primary">Update Student</button>
                 </div>
-                
+
 
             </form>
 
@@ -54,4 +54,4 @@
 
 @endsection
 
-    
+

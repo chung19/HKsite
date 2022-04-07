@@ -476,7 +476,6 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
-<<<<<<< HEAD
 
         
 
@@ -536,8 +535,6 @@
                 main in that Monotonectally product.</span></div>
           </div>
         </div>
-=======
->>>>>>> 8826cc43e3bd56f361f6963bfc063e40fdba5063
         <div class="col-md-12 col-lg-12" id="btn-moveBlog">
           <!-- Bootstrap 5 button Bloge-->
           <div class="text-center"><button type="button" class="btn btn-moveBlog"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
