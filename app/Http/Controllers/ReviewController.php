@@ -104,11 +104,14 @@ class ReviewController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
+            $destinationPath = 'image/' . $review->image;
+            if (File::exists($destinationPath)) {
+                File::delete($destinationPath);
+            }
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
+            $image->move('image/', $profileImage);
             $input['image'] = "$profileImage";
-        }else{
+        } else {
             unset($input['image']);
         }
 

@@ -8,19 +8,19 @@ use Illuminate\Http\Request;
 class ServiceDetailController extends Controller
 {
     public function index(){
-        $services = Service::latest()->paginate(6);
-
-        return view('servicedetails',compact('services'))
+        $s = Service::latest()->paginate(6);
+        $se = Service::latest()->paginate(6);
+        $service_default = Service::latest()->paginate(1);
+        return view('frontend/servicedetails',compact('s','se','service_default'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
-    public function show(Service $service)
-    {
-        return view('showDetails',compact('service'));
+    public function show($id)
+    {     
+        $se = Service::find($id);
+        $s = Service::latest()->paginate(6);
+       
+        return view('frontend/servicedetails',compact('se','s'));
     }
-    public function show1(Service $service, $id)
-    {
-        $service = Service::find($id);
-        return view('ShowDetails',compact('service'));
-    }
+
 
 }

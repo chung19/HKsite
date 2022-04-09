@@ -2,6 +2,7 @@
     section {
         overflow: hidden !important;
     }
+
     /* banner */
     .banner {
         height: 450px;
@@ -162,7 +163,7 @@
     }
 
     .team-boxed .people {
-        padding: 0px;
+        padding-top: 10%;
         position: inherit;
     }
 
@@ -187,26 +188,34 @@
     }
 
     .box-card-blog {
-        height: 1885px;
+        height: 786px;
     }
 
     .card-box-blog {
-        width: auto;
-        max-width: 330px;
+        width: 369px;
+        max-width: 369px;
         height: 100%;
     }
+
+    .btn-blog {
+        margin-top: 12px;
+    }
+
     /* newsletter */
     .newsletter {
         height: 394px;
     }
+
     .beside-newsletter {
         margin-bottom: 10%;
         margin-top: 10%;
     }
+
     .beside-newsletter .newsletter-title {
         margin-right: 5%;
         margin-left: 5%;
     }
+
     .input-group-newsletter {
         width: 100%;
     }

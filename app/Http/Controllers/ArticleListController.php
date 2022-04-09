@@ -15,6 +15,6 @@ class ArticleListController extends Controller
     public function index(){
         $post = posts::all();
         $category = Categories::all();
-        return view('articleList', compact('post','category'));
+        return view('frontend/articleList', compact('post','category'));
     }
 }

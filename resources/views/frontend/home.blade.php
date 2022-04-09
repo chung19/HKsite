@@ -8,22 +8,22 @@
   <title>Home</title>
   <!-- bootstrap5 css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{asset('./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css')}}">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" el="stylesheet">
   <!-- vendor -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <!--Stylesheets-->
-  <link href="./frontend/css/header.css" rel="stylesheet" />
-  <link href="./frontend/css/footer.css" rel="stylesheet" />
-  <link href="./frontend/css/home.css" rel="stylesheet" />
-  <link href="./frontend/css/home_responsive.css" rel="stylesheet" />
+  <link href="{{asset('./frontend/css/header.css')}}" rel="stylesheet" />
+  <link href="{{asset('./frontend/css/footer.css')}}" rel="stylesheet" />
+  <link href="{{asset('./frontend/css/home.css')}}" rel="stylesheet" />
+  <link href="{{asset('./frontend/css/home_responsive.css')}}" rel="stylesheet" />
 </head>
 
 <body>
 
   <!---------------------------------------------------------- header--------------------------------------------------------- -->
-  @include("frontend-layout.header")
+  @include("frontend/layout.header")
   <!---------------------------------------------------------- end header--------------------------------------------------------- -->
 
   <!--------------------------------------------------------- banner ----------------------------------------------------------->
@@ -448,17 +448,17 @@
       <div class="team-boxed">
         <div class="container">
           <div class="row people">
-          @foreach ($reviews as $review)
+            @foreach ($reviews as $review)
             <div class="col-12 col-md-4 col-lg-4 col-xl-4 item">
               <div class="box-review-card"><img class="rounded-circle" src="/image/{{ $review->image }}">
                 <h3 class="name">{{ $review->name }}</h3>
                 <p class="title"> {{ $review->position }}</p>
                 <p class="description">{{ $review->content }}</p>
                 <div class="small-ratings">
-                    @for($i=1; $i<=$review->star; $i++)
+                  @for($i=1; $i<=$review->star; $i++)
                     <span><i class="fa fa-star"></i></span>
                     @endfor</i>
-                 </div>
+                </div>
               </div>
             </div>
             @endforeach
@@ -480,76 +480,42 @@
             worthwhile results without cooperation and trust between a client company. outsourcing is just a tool to
             achieve business.</span>
         </div>
-
-        
-
-        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-blog">
-            <div class="card-thumbnail-blog item">
-              <img class="box-img-blog" src="./frontend/images/index-img/blog/blog1.png" alt="blog1.png">
-              <div class="cover">
+        <!-- Carousel blog-->
+        <div id="recipeCarousel" class="carousel" data-bs-interval="false">
+          <div class="carousel-inner" role="listbox">
+            @foreach ($post as $item)
+            <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+              <div class="card-box-blog">
+                <div class="card-thumbnail-blog item">
+                  <img class="box-img-blog" src="{{asset('backend/images/'.$item->post_image) }}" alt="blog.png">
+                  <div class="cover">
+                  </div>
+                </div>
+                <div class="name-blog"><span>{{ $item -> post_title}}</span></div>
+                <div class="list-inline title-blog">
+                  <span class="list-inline-item"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>{{ $item -> post_date}}</span>
+                  <span class="list-inline-item"><i class="fa fa-user" aria-hidden="true"></i> Admin</span>
+                </div>
+                <div class="description-blog"><span>{{ $item -> post_content}}</span></div>
               </div>
             </div>
-            <div class="name-blog"><span>Benefits Of Apps Develop</span></div>
-            <div class="list-inline title-blog">
-              <span class="list-inline-item"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Jan 30,
-                2021</span>
-              <span class="list-inline-item"><i class="fa fa-user" aria-hidden="true"></i> Admin</span>
-            </div>
-            <div class="description-blog"><span>Competently incentivize multifun with his expertise with holistic users
-                main in that Monotonectally product.</span></div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-blog">
-            <div class="card-thumbnail-blog item">
-              <img class="box-img-blog" src="./frontend/images/index-img/blog/blog2.png" alt="blog2.png">
-              <div class="cover">
-              </div>
-            </div>
-            <div class="name-blog"><span>Web Applications Dev</span></div>
-            <div class="list-inline title-blog">
-              <span class="list-inline-item"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Jan 30,
-                2021</span>
-              <span class="list-inline-item"><i class="fa fa-user" aria-hidden="true"></i> Admin</span>
-            </div>
-            <div class="description-blog"><span>Competently incentivize multifun with his expertise with holistic users
-                main in that Monotonectally product.</span></div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-4 col-xl-4">
-          <!-- Bootstrap 5 card box -->
-          <div class="card-box-blog">
-            <div class="card-thumbnail-blog item">
-              <img class="box-img-blog" src="./frontend/images/index-img/blog/blog3.png" alt="blog3.png">
-              <div class="cover">
-              </div>
-            </div>
-            <div class="name-blog"><span>Hibernate Query Language</span></div>
-            <div class="list-inline title-blog">
-              <span class="list-inline-item"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Jan 30,
-                2021</span>
-              <span class="list-inline-item"><i class="fa fa-user" aria-hidden="true"></i> Admin</span>
-            </div>
-            <div class="description-blog"><span>Competently incentivize multifun with his expertise with holistic users
-                main in that Monotonectally product.</span></div>
+            @endforeach
           </div>
         </div>
         <div class="col-md-12 col-lg-12" id="btn-moveBlog">
           <!-- Bootstrap 5 button Bloge-->
-          <div class="text-center"><button type="button" class="btn btn-moveBlog"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+          <a href="#recipeCarousel" data-bs-slide="next">
+            <div class="text-center"><button type="button" class="btn btn-moveBlog"><i class="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+          </a>
         </div>
         <div class="col-md-12 col-lg-12">
           <!-- Bootstrap 5 button Bloge-->
           <div class="text-center">
-          <a  href="{{'articleList'}}">
-            <button class="btn btn-blog">
-            VIEW ALL NEWS <i class="fa fa-arrow-right" aria-hidden="true"></i>
-          </button></a></div>
+            <a href="{{'articleList'}}">
+              <button class="btn btn-blog">
+                VIEW ALL NEWS <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button></a>
+          </div>
         </div>
       </div>
     </div>
@@ -590,12 +556,13 @@
   <!--  <section> newsletter ============================-->
 
   <!--  <section> footer ============================-->
-  @include("frontend-layout.footer")
+  @include("frontend/layout.footer")
   <!--    JavaScripts-->
   <!-- ===============================================-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <script src="./frontend/js/btnPlay.js"></script>
+  <script src="./frontend/js/Carousel.js"></script>
 </body>
 
 </html>

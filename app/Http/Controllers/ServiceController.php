@@ -17,7 +17,7 @@ class ServiceController extends Controller
     {
         $services = Service::latest()->paginate(10);
 
-        return view('backend/services.index',compact('services'))
+        return view('backend/services.index', compact('services'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -39,7 +39,7 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        echo $request -> input('content');
+        echo $request->input('content');
         $request->validate([
             'title' => 'required',
             'content' => 'required',
@@ -58,7 +58,7 @@ class ServiceController extends Controller
         Service::create($input);
 
         return redirect()->route('services.index')
-                        ->with('success','service created successfully.');
+            ->with('success', 'service created successfully.');
     }
 
     /**
@@ -69,11 +69,7 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        return view('backend.services.show',compact('service'));
-    }
-    public function showDetails(Service $service)
-    {
-        return view('showDetails',compact('service'));
+        return view('backend.services.show', compact('service'));
     }
 
     /**
@@ -84,7 +80,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        return view('backend/services.edit',compact('service'));
+        return view('backend/services.edit', compact('service'));
     }
 
     /**
@@ -94,7 +90,7 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $service = Service::find($id);
         $request->validate([
@@ -104,19 +100,23 @@ class ServiceController extends Controller
 
         $input = $request->all();
 
+
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
+            $destinationPath = 'image/' . $service->image;
+            if (File::exists($destinationPath)) {
+                File::delete($destinationPath);
+            }
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
+            $image->move('image/', $profileImage);
             $input['image'] = "$profileImage";
-        }else{
+        } else {
             unset($input['image']);
         }
 
         $service->update($input);
 
         return redirect()->route('services.index')
-                        ->with('success','Service updated successfully');
+            ->with('success', 'Service updated successfully');
     }
 
     /**
@@ -135,6 +135,6 @@ class ServiceController extends Controller
         $service->delete();
 
         return redirect()->route('services.index')
-                        ->with('success','Service deleted successfully');
+            ->with('success', 'Service deleted successfully');
     }
 }

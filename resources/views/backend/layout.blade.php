@@ -26,26 +26,13 @@
                 <div>
                     <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
                     <div class="nav_list">
-                         <a href="{{'back-end'}}" class="nav_link @if (\Request::is('back-end')) active  @endif"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="nav_name">Dashboard</span> </a>
-                         <a href="{{'projects'}}" class="nav_link @if (\Request::is('projects')) active  @endif"><i class="fa fa-product-hunt" aria-hidden="true"></i><span class="nav_name">Project</span> </a>
-                         <a href="{{'team'}}" class="nav_link @if (\Request::is('team')) active  @endif"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav_name">Team</span> </a>
-                         <a href="{{'reviews'}}" class="nav_link @if (\Request::is('reviews')) active  @endif""><i class="fa fa-renren" aria-hidden="true"></i><span class="nav_name">Review</span> </a>
-                         <a href="#" class="nav_link"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Blog</span> </a>
-                         <a href="{{'services'}}" class="nav_link @if (\Request::is('services')) active  @endif""><i class="fa fa-server" aria-hidden="true"></i><span class="nav_name">Service</span> </a>
-                         <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a>
-                         <a href="#" class="nav_link"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Files</span> </a>
-                        </div>
-                </div>
-                <div>
-                    <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
-                    <div class="nav_list">
-                         <a href="{{'back-end'}}" class="nav_link @if (\Request::is('back-end')) active  @endif"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="nav_name">Dashboard</span> </a>
-                         <a href="{{'projects'}}" class="nav_link @if (\Request::is('projects')) active  @endif"><i class="fa fa-product-hunt" aria-hidden="true"></i><span class="nav_name">Project</span> </a>
-                         <a href="{{'team'}}" class="nav_link @if (\Request::is('team')) active  @endif"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav_name">Team</span> </a>
-                         <a href="#" class="nav_link"><i class="fa fa-renren" aria-hidden="true"></i><span class="nav_name">Review</span> </a>
-                         <a href="{{'posts'}}" class="nav_link @if (\Request::is('posts')) active  @endif"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Blog</span> </a>
-                         <a href="#" class="nav_link"><i class="fa fa-server" aria-hidden="true"></i><span class="nav_name">Service</span> </a>
-                         <a href="{{'category-post'}}" class="nav_link @if (\Request::is('category-post')) active  @endif""> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Category post</span> </a>
+                         <a href="{{ url('back-end')}}" class="nav_link @if (\Request::is('back-end')) active  @endif"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="nav_name">Dashboard</span> </a>
+                         <a href="{{ url('projects')}}" class="nav_link @if (\Request::is('projects')) active  @endif"><i class="fa fa-product-hunt" aria-hidden="true"></i><span class="nav_name">Project</span> </a>
+                         <a href="{{ url('team')}}" class="nav_link @if (\Request::is('team')) active  @endif"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav_name">Team</span> </a>
+                         <a href="{{ url('reviews')}}" class="nav_link @if (\Request::is('reviews')) active  @endif"><i class="fa fa-renren" aria-hidden="true"></i><span class="nav_name">Review</span> </a>
+                         <a href="{{ url('posts')}}" class="nav_link @if (\Request::is('posts')) active  @endif"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Blog</span> </a>
+                         <a href="{{ url('services')}}" class="nav_link @if (\Request::is('services')) active  @endif"><i class="fa fa-server" aria-hidden="true"></i><span class="nav_name">Service</span> </a>
+                         <a href="{{ url('category-post')}}" class="nav_link @if (\Request::is('category-post')) active  @endif"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Category post</span> </a>
                          <a href="#" class="nav_link"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Files</span> </a>
                         </div>
                 </div>

@@ -6,7 +6,7 @@
         <div class="container footer_top">
           <div class="row">
             <div class="col-12 col-md-6 col-lg-3">
-              <a class="footer_top-logo-link" href="{{'home'}}"><img src="./frontend/images/footer/logo.png" alt="logo" class="footer_top-contact-logo" /></a>
+              <a class="footer_top-logo-link" href="{{'home'}}"><img src="{{asset('./frontend/images/footer/logo.png')}}" alt="logo" class="footer_top-contact-logo" /></a>
               <span class="footer_top-contact-desc">Our Company has been developing high-quality and reliable
                 software for corporate nees since 2008. We are renowned
                 professionals of software develeopmnent.</span>
@@ -44,7 +44,7 @@
                 <div class="popular_posts_content">
                   <div class="popular_posts_content_item">
                     <div class="popular_posts_content_img">
-                      <img src="./frontend/images/footer/anh_16.png" alt="" />
+                      <img src="{{asset('./frontend/images/footer/anh_16.png')}}" alt="" />
                     </div>
                     <div class="popular_posts_contentinformation">
                       <div class="contentinformation_heading_popular_post fontcolor">
@@ -55,7 +55,7 @@
                   </div>
                   <div class="popular_posts_content_item">
                     <div class="popular_posts_content_img">
-                      <img src="./frontend/images/footer/anh_16.png" alt="" />
+                      <img src="{{asset('./frontend/images/footer/anh_16.png')}}" alt="" />
                     </div>
                     <div class="popular_posts_contentinformation">
                       <div class="contentinformation_heading_popular_post fontcolor">
@@ -72,7 +72,7 @@
               <div class="our_contact_content">
                 <div class="our_contact_content_item">
                   <div class="our_contact_content_img">
-                    <img src="./frontend/images/footer/icon-address.png" alt="" />
+                    <img src="{{asset('./frontend/images/footer/icon-address.png')}}" alt="" />
                   </div>
                   <div class="our_contact_contentinformation">
                     <div class="contentinformation_heading_our_contact">
@@ -85,7 +85,7 @@
                 </div>
                 <div class="our_contact_content_item">
                   <div class="our_contact_content_img">
-                    <img src="./frontend/images/footer/icon-phone.png" alt="" />
+                    <img src="{{asset('./frontend/images/footer/icon-phone.png')}}" alt="" />
                   </div>
                   <div class="our_contact_contentinformation">
                     <div class="contentinformation_heading_our_contact">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="our_contact_content_item">
                   <div class="our_contact_content_img">
-                    <img src="./frontend/images/footer/icon-email.png" alt="" />
+                    <img src="{{asset('./frontend/images/footer/icon-email.png')}}" alt="" />
                   </div>
                   <div class="our_contact_contentinformation">
                     <div class="contentinformation_heading_our_contact">

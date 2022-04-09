@@ -8,11 +8,11 @@
     <title>Service</title>
     <!-- bootstrap5 css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" el="stylesheet">
     <!--Stylesheets-->
-    <link href="../frontend/css/header.css" rel="stylesheet" />
-    <link href="../frontend/css/footer.css" rel="stylesheet" />
+    <link href="{{asset('./frontend/css/header.css')}}" rel="stylesheet" />
+    <link href="{{asset('./frontend/css/footer.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('./frontend/css/servicedetails.css')}}">
     <link rel="stylesheet" href="{{asset('./frontend/css/contact.css')}}">
 </head>
@@ -20,6 +20,7 @@
 <body style="background-color: #ffffff;">
 
     <!---------------------------------------------------------- header--------------------------------------------------------- -->
+    @include("frontend/layout.header")
     <!---------------------------------------------------------- end header--------------------------------------------------------- -->
     <div class="container-fluid header">
         <div class="container">
@@ -27,14 +28,14 @@
                 <div class="col-6 contact-us">
                     <i class="fa fa-circle" aria-hidden="true" style="color: #0a8bfa; font-size: smaller"></i>
                     <b>
-                        Contact Us
+                        Services
                     </b>
                 </div>
                 <div class="col-6 menu-contact-us">
                     Home
                     <a href="#" style="text-decoration: none; color: #707070;">
                         <i class="fa fa-angle-right" aria-hidden="true" style="color: #707070;"></i>
-                        Servicesm
+                        Services
                     </a>
                     <a href="#" style="text-decoration: none">
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -50,15 +51,17 @@
 
     <div class="inforService">
         <div class="inforService__content">
-            <h1 class="inforService__title">{{ $service->title }}</h1>
-            <img class="inforService__banner" src="./frontend/images/servicedetails/bannerMAD.png">
-            <p class="inforService__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis
-                porttitor volutpat. Collaboration and idea-sharing after vertical. <br> <br> <br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur aliquet quam id dui posuere blandit.
-                Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet
-            </p>
+            @if ($se != '')
+            <h1 class="inforService__title">{{ $se->title }}</h1>
+            <img class="inforService__banner" src="/image/{{ $se->image }}">
+            <p class="inforService__text">{!! $se->content !!}</p>
+            @else
+                @foreach ($service_default as $service)
+                    <h1 class="inforService__title">{{ $service->title }}</h1>
+                    <img class="inforService__banner" src="/image/{{ $service->image }}">
+                    <p class="inforService__text">{!! $service->content !!}</p>
+                 @endforeach
+            @endif
             <h2 class="inforService__featuresTitle">Key features</h2>
             <div class="inforService__features">
                 <img src="./frontend/images/servicedetails/check_features.png">
@@ -228,7 +231,34 @@
             </div>
         </div>
     </div>
+
+    <div class="allServices">
+        <h1 class="allServices__title">All Services</h1>
+        <div class="allServices__content">
+            @foreach ($s as $service)
+            <div class="allServices__container">
+                <div>
+                    <img src="/image/{{ $service->image }}">
+                </div>
+                <div class="allServices__overlay">
+                    <div class="allServices__text">
+                        <h2 class="allServices__textTitle">{{ $service->title }}</h2>
+                        <p class="allServices__textContent">{!! $service->content !!}</p>
+                    </div>
+                   
+                    <a class="allServices__btn" href="{{ url('/service-details/'.$se->id= $service->id    ) }}">
+                        <img src="{{asset('./frontend/images/servicedetails/next.png')}}">
+                    </a>
+                
+
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    </div>
     <!--  <section> footer ============================-->
+    @include("frontend/layout.footer")
     <!--    JavaScripts-->
     <!-- ===============================================-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

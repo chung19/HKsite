@@ -24,24 +24,35 @@ use App\Http\Controllers\BlogController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// ----------------------------------frontend-----------------------------
 Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
-
 Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
 Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 'index'] );
+Route::resource('contact', ContactController::class);
 Route::get('/contact-me', function () {
-    return view('contact');
+    return view('frontend/contact');
+});
+Route::get('/serviceLists', function () {
+    return view('serviceLists');
+});
+Route::get('/partners', function () {
+    return view('partners');
 });
 
 
+// ----------------------------------backend-----------------------------
 Route::resource('back-end', DashboardController::class);
+Route::resource('projects', ProjectController::class);
 Route::resource('reviews',ReviewController::class);
+Route::resource('team',TeamController::class);
+Route::resource('blog', BlogController::class);
 Route::resource('services',ServiceController::class);
 Route::resource('service-details',ServiceDetailController::class);
-Route::get('/service-details/{$id}',[ServiceDetailController::class, 'show1']);
-Route::resource('home',HomeController::class);
-Route::resource('/',HomeController::class);
+
+
+
+
 
 
 Route::post('/add-category-post', [App\Http\Controllers\CategoryController::class, 'add']);
@@ -56,17 +67,5 @@ Route::post('/add-post', [PostController::class, 'store']);
 Route::get('/edit-post/{post_id}', [PostController::class, 'edit']);
 Route::put('/update-post/{post_id}', [PostController::class, 'update']);
 Route::delete('/delete-post/{post_id}', [PostController::class, 'destroy']);
-Route::get('/serviceLists', function () {
-    return view('serviceLists');
-});
-Route::get('/partners', function () {
-    return view('partners');
-});
-
-Route::resource('projects', ProjectController::class);
-Route::resource('reviews',ReviewController::class);
-Route::resource('back-end', DashboardController::class);
-Route::resource('team',TeamController::class);
-Route::resource('blog', BlogController::class);
 
 

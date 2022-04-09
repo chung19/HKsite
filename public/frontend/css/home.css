@@ -807,7 +807,10 @@ h4 {
 .list-icon-team img {
     cursor: pointer;
 }
-
+img.img-team.img-fluid {
+    width: 100%;
+    height: 298px;
+}
 /*------------------------------------------------------ <section> review ----------------------- */
 .card-review {
     background-image: url("../images/index-img/review/bg_review.png");
@@ -816,7 +819,9 @@ h4 {
     background-size: cover;
     height: 577px;
 }
-
+.box-review-card {
+    padding: 31px 50px 39px 50px;
+}
 .body-card-review {
     background-color: #132e68;
     opacity: 0.85;
@@ -878,9 +883,12 @@ h4 {
 .team-boxed .item {
     text-align: center;
     background-color: #ffffff;
+    padding: 0;
     margin-right: 20px;
-    width: 370px;
-    height: 416px;
+    width: auto;
+    height: auto;
+    max-width: 369px;
+    max-height: 416px;
     border: 1px solid #eeeeee;
 }
 
@@ -917,8 +925,9 @@ h4 {
 }
 
 .team-boxed .item img {
-    max-width: 100px;
-    margin-top: 66px;
+    max-width: 96px;
+    height: 96px;
+    max-height: 96px;
 }
 
 .rating-color {
@@ -1004,7 +1013,9 @@ h4 {
 
 img.box-img-blog {
     width: 100%;
-    height: auto;
+    max-width: 349px;
+    height: 100%;
+    max-height: 210px;
     object-fit: cover;
 }
 
@@ -1094,4 +1105,39 @@ i.fa.fa-envelope-o {
 .btn-newsletter:hover {
     background-color: #ffffff;
     border: 1px solid #263045;
+}
+
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
 }

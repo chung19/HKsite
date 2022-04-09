@@ -23,7 +23,7 @@
 
 <body>
   <!---------------------------------------------------------- header--------------------------------------------------------- -->
-  @include("frontend-layout.header")
+  @include("frontend/layout.header")
   <!---------------------------------------------------------- end header--------------------------------------------------------- -->
   <section>
     <div class="articles_list">
@@ -470,7 +470,7 @@
     </div>
   </section>
   <!--  <section> footer ============================-->
-  @include("frontend-layout.footer")
+  @include("frontend/layout.footer")
   <!--    JavaScripts-->
   <!-- ===============================================-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

@@ -3,12 +3,12 @@
 @section('content')
 <div class="row
 ">
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 mt-3">
         <div class="pull-left">
             <h2>Add New review</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('reviews.index') }}"> Back</a>
+            <a class="btn btn-danger" href="{{ route('reviews.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -69,7 +69,7 @@
                 <input type="file" name="image" class="form-control" placeholder="image">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
