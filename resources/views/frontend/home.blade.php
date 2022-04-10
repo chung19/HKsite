@@ -523,36 +523,46 @@
   <!--  end <section> blog ============================-->
 
   <!--  <section> newsletter ============================-->
-  <section class="newsletter">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
-            <span class="newsletter-title">Subscribe Our Newsletter
-              <span class="newsletter-description">Please Subscribe our news letter and and get update.</span>
-            </span>
+     {{-- alert success --}}
+     @if($message =Session::has('success'))
+     <div class="alert alert-success">
+         {{$message =Session::get('success')}}
+         <p>{{ $message }}</p>
+     </div>
+     @endif
+           {{-- alert success end --}}
+  <form action="{{ route('sms.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <section class="newsletter">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
+              <span class="newsletter-title">Subscribe Our Newsletter
+                <span class="newsletter-description">Please Subscribe our news letter and and get update.</span>
+              </span>
 
-          </div>
-          <div class="col-12 col-md-2 col-lg-2 col-xl-2">
-            <div class="circle1 circle-newsLetter">
-              <div class="circle2 ">
-                <div class="circle3"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+            </div>
+            <div class="col-12 col-md-2 col-lg-2 col-xl-2">
+              <div class="circle1 circle-newsLetter">
+                <div class="circle2 ">
+                  <div class="circle3"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
-            <div class="input-group input-group-newsletter">
-              <input type="email" class="form-control from-control-newsletter" placeholder="Enter your email">
-              <span class="input-group-btn">
-                <button class="btn btn-newsletter" type="submit">Subscribe</button>
-              </span>
+            <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
+              <div class="input-group input-group-newsletter">
+                <input type="email" name="email" class="form-control from-control-newsletter" placeholder="Enter your email">
+                <span class="input-group-btn">
+                  <button class="btn btn-newsletter" type="submit">Subscribe</button>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-  </section>
+    </section>
+  </form>
   <!--  <section> newsletter ============================-->
 
   <!--  <section> footer ============================-->

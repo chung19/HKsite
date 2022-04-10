@@ -20,8 +20,8 @@
     <link href="./frontend/css/header.css" rel="stylesheet" />
     <link href="./frontend/css/footer.css" rel="stylesheet" />
     <link href="./frontend/css/contact.css" rel="stylesheet" />
-
-</head>
+   
+    </head>
 
 <body>
     <!---------------------------------------------------------- header--------------------------------------------------------- -->
@@ -62,7 +62,7 @@
                 <div class="row row-body-contact">
                     <!-- MAP -->
                     <div class="col-8 map me-5">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d377213.7506651207!2d77.09716780735864!3d28.552991686641374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2zTml1IMSQw6otbGksIERlbGhpLCDhuqRuIMSQ4buZ!5e0!3m2!1svi!2s!4v1646802623139!5m2!1svi!2s" width="80%" height="443" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.5250429877615!2d106.65537731436098!3d10.847612992273264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529bc96bc31d5%3A0xb45cb7e22ebf8fda!2zQ8O0bmcgVHkgVE5ISCBHaeG6o2kgUGjDoXAgQ8O0bmcgTmdo4buHIFRow7RuZyBUaW4gVsOgIFRydXnhu4FuIFRow7RuZyBIb8OgbmcgS2hhbmc!5e0!3m2!1sen!2s!4v1649417486866!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <!-- INFO -->
                     <div class="col-4 info">
@@ -115,38 +115,82 @@
             </p>
             <!-- FORM -->
             <div class="container">
+                        <!-- Success message -->
+                        {{-- @if ($message = Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{ $message }}</p>
+                        </div>
+                    @endif --}}
+        @if($message =Session::has('success'))
+        <div class="alert alert-success">
+            {{$message =Session::get('success')}}
+            <p>{{ $message }}</p>
+        </div>
+        @endif
+               <!-- Success message end -->
+               {{-- Laravel Contact Form Validation  --}}
+          <form action="" method="post" action="{{ route('contact.store') }}">
+        <!-- CROSS Site Request Forgery Protection -->
+       @csrf
                 <form class="form-info">
                     <div class="container-fluid" style="width: 60%; height: auto">
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Your Name" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('name') ? 'error' : '' }}" name="name" id="name" placeholder="Your Name" /><br />
+                           <!-- Error -->
+            @if ($errors->has('name'))
+            <div class="error">
+                {{ $errors->first('name') }}
+            </div>
+            @endif
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Your Email" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('email') ? 'error' : '' }}" name="email" id="email" placeholder="Your Email" /><br />
+                                @if ($errors->has('email'))
+                                <div class="error">
+                                    {{ $errors->first('email') }}
+                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding" placeholder="Phone" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone" placeholder="Phone" /><br />
+                                @if ($errors->has('phone'))
+                                <div class="error">
+                                    {{ $errors->first('phone') }}
+                                </div>
+                                @endif
                             </div>
                             <div class="col-6">
-                                <select class="form-select">
+                                <select class="form-select {{ $errors->has('address') ? 'error' : '' }}" name="address" id="address">
                                     <option selected>---</option>
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
+                                    <option>Position 1</option>
+                                    <option>Position 2</option>
+                                    <option>Position 3</option>
+                                    <option>Position 4</option>
                                 </select><br />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input type="text" class="form-control setting-padding" placeholder="Subject" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('subject') ? 'error' : '' }}" name="subject"
+                                id="subject" placeholder="Subject" /><br />
+                                @if ($errors->has('subject'))
+                                <div class="error">
+                                    {{ $errors->first('subject') }}
+                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <textarea class="form-control setting-padding " placeholder="You Message: " style="height: 140px; padding-top:22px;"></textarea><br />
+                                <textarea class="form-control setting-padding{{ $errors->has('message') ? 'error' : '' }}" name="message" id="message " placeholder="You Message: " style="height: 140px; padding-top:22px;"></textarea><br />
+                                @if ($errors->has('message'))
+                                <div class="error">
+                                    {{ $errors->first('message') }}
+                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="row">

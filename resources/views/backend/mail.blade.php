@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text-center"></div>
+    @if($errors->any())
+<h4>{{$errors->first()}}</h4>
+@endif
+    <h2 >Hello</h2> <br><br>
+You have got an email from : {{ $name }} <br><br>
+User details: <br><br>
+Name: {{ $name }} <br>
+Email: {{ $email }} <br>
+Phone: {{ $phone }} <br>
+Subject: {{ $subject }} <br>
+Message: {{ $user_query }} <br><br>
+
+Thanks
+</div>
+</body>
+</html>
