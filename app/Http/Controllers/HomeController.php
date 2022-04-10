@@ -16,7 +16,8 @@ class HomeController extends Controller
         $teams = Team::latest()->paginate(5);
         $reviews = Review::latest()->paginate(5);
         $post = posts::all();
-        return view('frontend/home',compact('projects','teams','reviews','post'))
+        $newsletter = Newsletter::latest()->paginate(5);
+        return view('frontend/home',compact('projects','teams','reviews','post','newsletter'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 }

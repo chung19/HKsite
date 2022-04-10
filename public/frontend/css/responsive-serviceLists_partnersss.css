@@ -1,6 +1,4 @@
 /* pc */
-/* Desktops and laptops ----------- */
-
 @media (min-width:1024px)
 {
      /* partners  */
@@ -56,6 +54,9 @@
 .container.footer_top {
     margin-top: 302px;
     margin-left: 123px;
+   
+ 
+
   }
   /* footer parters custom position */
  /* partners end */
@@ -218,7 +219,7 @@
     #main .col-sm-12,
     .col-12 {
         margin-right: 10px;
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         width: 100%;
     }

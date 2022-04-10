@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News</title>
+  <title>Danh sách bài viết</title>
   <!-- bootstrap5 css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -36,43 +36,40 @@
                   <h6>UPDATE NEWS</h6>
                   <h1>Latest News</h1>
                 </div>
-
-                @foreach($post as $item)
-                  <div class="item d-flex ">
-                    <div class="image">
-                      <img src="./backend/images/{{ $item -> post_image}}" class="img-fluid" />
+                <div class="item d-flex ">
+                  <div class="image">
+                    <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
+                  </div>
+                  <div class="text">
+                    <div class="articles_list_text_title">
+                      <a href="#">
+                        <h3 class="h5">Benefits of App Developed</h3>
+                      </a>
                     </div>
-                    <div class="text">
-                      <div class="articles_list_text_title">
-                        <a href="#">
-                          <h3 class="h5">{{ $item -> post_title}}</h3>
-                        </a>
+                    <div class="articles_list_text_date">
+                      <div class="icon">
+                        <img src="./assets/image/icon-calendar-check.png" alt="" />
+                        <span> 31 Dec, 2021 By</span>
+                        <a href="#">John Doe</a>
                       </div>
-                      <div class="articles_list_text_date">
-                        <div class="icon">
-                          <img src="./assets/image/icon-calendar-check.png" alt="" />
-                          <span> {{ $item -> post_date}} By</span>
-                          <a href="#">John Doe</a>
-                        </div>
-                      </div>
+                    </div>
 
-                      <div class="articles_list_text_sub">
-                        <p>
-                        {{ $item -> post_content}}
-                        </p>
-                      </div>
-                      <div class="submit">
-                        <a href="#">READ MORE
-                          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                        </a>
-                      </div>
+                    <div class="articles_list_text_sub">
+                      <p>
+                        Compellingly aggregate proactive core competencies
+                        lever visualize resource maximizing architectures
+                        without front core development compet.
+                      </p>
+                    </div>
+                    <div class="submit">
+                      <a href="#">READ MORE
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+
+                      </a>
                     </div>
                   </div>
-                @endforeach
-
-
-                
-                <!-- <div class="item d-flex ">
+                </div>
+                <div class="item d-flex ">
                   <div class="image">
                     <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
                   </div>
@@ -236,7 +233,7 @@
                       </a>
                     </div>
                   </div>
-                </div> -->
+                </div>
                 <button type="submit" class="button-loadMore btn btn-primary">
                   Load More
                 </button>
@@ -367,7 +364,7 @@
                       </li>
                       <li class="popular_catagory_content_item">
                         Magazine <span>(29)</span>
-                      </li> -->
+                      </li>
                     </ul>
                   </div>
                 </div>

@@ -523,6 +523,18 @@
   <!--  end <section> blog ============================-->
 
   <!--  <section> newsletter ============================-->
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+{{-- <form action="" method="post" action="{{ route('contact.store') }}"> --}}
+  
   <section class="newsletter">
     <div class="container-fluid">
       <div class="container">
@@ -540,6 +552,8 @@
               </div>
             </div>
           </div>
+          <form action="{{ route('newsletter.store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
           <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
             <div class="input-group input-group-newsletter">
               <input type="email" class="form-control from-control-newsletter" placeholder="Enter your email">
@@ -551,8 +565,9 @@
         </div>
       </div>
     </div>
-
+   
   </section>
+
   <!--  <section> newsletter ============================-->
 
   <!--  <section> footer ============================-->

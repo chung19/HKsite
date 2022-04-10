@@ -36,6 +36,10 @@ Route::get('/contact-me', function () {
 Route::get('/serviceLists', function () {
     return view('serviceLists');
 });
+Route::get('/ss', function () {
+    return view('backend/showcontact.index');
+});
+// route contact
 Route::get('/partners', function () {
     return view('partners');
 });
@@ -69,3 +73,19 @@ Route::put('/update-post/{post_id}', [PostController::class, 'update']);
 Route::delete('/delete-post/{post_id}', [PostController::class, 'destroy']);
 
 
+// backend contact from 
+use App\Http\Controllers\backend_Controllers\ShowcontactController;
+Route::resource('showcontact', ShowcontactController::class);
+// backend contact from  end
+// frontend contact form
+use App\Http\Controllers\Controller;
+Route::get('/contact', [App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'createForm']);
+Route::post('/contact', [ App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+// use App\Http\Controllers\newsletterController;
+// Route::get('/home', [App\Http\Controllers\NewsletterfrondendController::class, 'createNewsletter']);
+// Route::post('/home', [ App\Http\Controllers\NewsletterfrondendController::class, 'newsletterForm']);
+// frontend contact form end
+// back end newsletters form
+use App\Http\Controllers\backend_Controllers\NewsletterController;
+Route::resource('newsletter', NewsletterController::class);
+// // back end newsletters form end
