@@ -12,15 +12,11 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::create('newsletters', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->string('email');
-        //     $table->string('image');
-        //     $table->timestamps();
+        Schema::create('newsletters', function (Blueprint $table) {
+            $table->id();
+            $table->string('email');
+            $table->timestamps();
             
-        // });
-        Schema::table('newsletters', function (Blueprint $table) {
-            $table->dropColumn('image');
         });
     }
 

@@ -12,4 +12,6 @@ class ContactController extends Controller
     {
         return view('frontend/contact');
     }
+
+    
 }

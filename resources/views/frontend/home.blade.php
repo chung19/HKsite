@@ -523,51 +523,43 @@
   <!--  end <section> blog ============================-->
 
   <!--  <section> newsletter ============================-->
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-{{-- <form action="" method="post" action="{{ route('contact.store') }}"> --}}
-  
-  <section class="newsletter">
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
-            <span class="newsletter-title">Subscribe Our Newsletter
-              <span class="newsletter-description">Please Subscribe our news letter and and get update.</span>
-            </span>
+  @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                {{ $message }}
+            </div>
+        @endif
+  <form action="{{ route('home.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <section class="newsletter">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
+              <span class="newsletter-title">Subscribe Our Newsletter
+                <span class="newsletter-description">Please Subscribe our news letter and and get update.</span>
+              </span>
 
-          </div>
-          <div class="col-12 col-md-2 col-lg-2 col-xl-2">
-            <div class="circle1 circle-newsLetter">
-              <div class="circle2 ">
-                <div class="circle3"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+            </div>
+            <div class="col-12 col-md-2 col-lg-2 col-xl-2">
+              <div class="circle1 circle-newsLetter">
+                <div class="circle2 ">
+                  <div class="circle3"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                </div>
               </div>
             </div>
-          </div>
-          <form action="{{ route('newsletter.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-          <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
-            <div class="input-group input-group-newsletter">
-              <input type="email" class="form-control from-control-newsletter" placeholder="Enter your email">
-              <span class="input-group-btn">
-                <button class="btn btn-newsletter" type="submit">Subscribe</button>
-              </span>
+            <div class="col-12 col-md-5 col-lg-5 col-xl-5 beside-newsletter">
+              <div class="input-group input-group-newsletter">
+                <input type="email" name="email" class="form-control from-control-newsletter" placeholder="Enter your email">
+                <span class="input-group-btn">
+                  <button class="btn btn-newsletter" type="submit">Subscribe</button>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-   
-  </section>
-
+    </section>
+  </form>
   <!--  <section> newsletter ============================-->
 
   <!--  <section> footer ============================-->
@@ -578,6 +570,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <script src="./frontend/js/btnPlay.js"></script>
   <script src="./frontend/js/Carousel.js"></script>
+  
 </body>
 
 </html>

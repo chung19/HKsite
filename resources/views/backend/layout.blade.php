@@ -33,7 +33,9 @@
                          <a href="{{ url('posts')}}" class="nav_link @if (\Request::is('posts')) active  @endif"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Blog</span> </a>
                          <a href="{{ url('services')}}" class="nav_link @if (\Request::is('services')) active  @endif"><i class="fa fa-server" aria-hidden="true"></i><span class="nav_name">Service</span> </a>
                          <a href="{{ url('category-post')}}" class="nav_link @if (\Request::is('category-post')) active  @endif"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Category post</span> </a>
-                         <a href="#" class="nav_link"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Files</span> </a>
+                         <a href="{{ url('showcontact')}}" class="nav_link @if (\Request::is('showcontacts')) active  @endif"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Show contacts</span> </a>
+                         <a href="{{ url('newsletter')}}" class="nav_link @if (\Request::is('newsletters')) active  @endif"> <i class="fa fa-solid fa-envelope" aria-hidden="true"></i> <span class="nav_name">Newsletter</span> </a>
+                         <a href="{{ url('gallerys ')}}" class="nav_link @if (\Request::is('gallerys')) active  @endif"> <i class="fa fa-solid fa-image" aria-hidden="true"></i> <span class="nav_name">Gallery</span> </a>
                         </div>
                 </div>
             </nav>

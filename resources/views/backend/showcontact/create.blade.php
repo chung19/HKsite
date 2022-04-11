@@ -1,12 +1,12 @@
 @extends('backend.layout')
 @section('content')
 <div class="row">
-    <div class="col-lg-12 margin-tb">
+    <div class="col-lg-12 mt-3">
         <div class="pull-left">
-            <h2>Add New Product</h2>
+            <h2>Add New Contact</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('showcontacts.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('showcontact.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -22,7 +22,7 @@
     </div>
 @endif
      
-<form action="{{ route('showcontacts.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('showcontact.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
      <div class="row">
@@ -62,7 +62,7 @@
                 <input type="file" name="message" class="form-control" placeholder="message">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center mt -3">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

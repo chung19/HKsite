@@ -7,12 +7,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceDetailController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\StudentController;
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\BlogController;
-
+use App\Http\Controllers\backend_Controllers\newsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
 Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
 Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 'index'] );
-Route::resource('contact', ContactController::class);
+Route::resource('/contact-me', ContactController::class);
 Route::get('/contact-me', function () {
     return view('frontend/contact');
 });
@@ -81,11 +81,10 @@ Route::resource('showcontact', ShowcontactController::class);
 use App\Http\Controllers\Controller;
 Route::get('/contact', [App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'createForm']);
 Route::post('/contact', [ App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
-// use App\Http\Controllers\newsletterController;
-// Route::get('/home', [App\Http\Controllers\NewsletterfrondendController::class, 'createNewsletter']);
-// Route::post('/home', [ App\Http\Controllers\NewsletterfrondendController::class, 'newsletterForm']);
 // frontend contact form end
 // back end newsletters form
-use App\Http\Controllers\backend_Controllers\NewsletterController;
-Route::resource('newsletter', NewsletterController::class);
+Route::resource('newsletter',newsletterController::class);
 // // back end newsletters form end
+Route::resource('services',ServiceController::class);
+Route::resource('service-details',ServiceDetailController::class);
+Route::resource('gallerys',PhotoController::class);
