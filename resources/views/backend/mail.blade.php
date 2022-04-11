@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="text-center"></div>
+
     @if($errors->any())
 <h4>{{$errors->first()}}</h4>
 @endif
@@ -20,7 +20,7 @@ Phone: {{ $phone }} <br>
 Subject: {{ $subject }} <br>
 Message: {{ $user_query }} <br><br>
 
-Thanks
+Thanks 
 </div>
 </body>
 </html>

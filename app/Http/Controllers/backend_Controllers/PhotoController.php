@@ -117,7 +117,7 @@ class PhotoController extends Controller
         $gallery->update($input);
     
         return redirect()->route('gallerys.index')
-                        ->with('success','Product updated successfully');
+                        ->with('success','Photo updated successfully');
     }
 
     /**

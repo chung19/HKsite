@@ -70,16 +70,7 @@
             </div>
             @endif
         </div>
-        <div class="form-group">
-            <label>Address</label>
-            <textarea class="form-control {{ $errors->has('address') ? 'error' : '' }}" name="address" id="address"rows="6"></textarea>
-            <!-- Error -->
-            @if ($errors->has('address'))
-            <div class="error">
-                {{ $errors->first('address') }}
-            </div>
-            @endif
-        </div>
+      
         <input type="submit" name="send" value="Send Message" class="btn btn-primary btn-block">
     </form>
     </div>
