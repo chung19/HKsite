@@ -7,10 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+
     @if($errors->any())
 <h4>{{$errors->first()}}</h4>
 @endif
-    <h2>Hello</h2> <br><br>
+    <h2 >Hello</h2> <br><br>
 You have got an email from : {{ $name }} <br><br>
 User details: <br><br>
 Name: {{ $name }} <br>
@@ -18,7 +19,8 @@ Email: {{ $email }} <br>
 Phone: {{ $phone }} <br>
 Subject: {{ $subject }} <br>
 Message: {{ $user_query }} <br><br>
-Address: {{ $address }}<br>
-Thanks
+
+Thanks 
+</div>
 </body>
 </html>

@@ -1,5 +1,4 @@
 @extends('backend.layout')
-     
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -7,7 +6,7 @@
                 <h2>Edit Newsletter</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('newsletter.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('newsletters.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +22,7 @@
         </div>
     @endif
     
-    <form action="{{ route('newsletter.update',$newsletter->id) }}" method="POST" enctype="multipart/form-data"> 
+    <form action="{{ route('newsletters.update',$newsletter->id) }}" method="POST" enctype="multipart/form-data"> 
         @csrf
         @method('PUT')
      

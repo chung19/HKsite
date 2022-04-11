@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\backend_Controllers;
 use App\Http\Controllers\Controller;
-use App\Models\newsletter;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 class newsletterController extends Controller
 {
@@ -13,9 +13,10 @@ class newsletterController extends Controller
      */
     public function index()
     {
-        $newsletter = Newsletter::latest()->paginate(5);
-        return view('backend/newsletter.index',compact('newsletter'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        // $newsletters = Newsletter::latest()->paginate(5);
+       $newsletters = Newsletter::all();
+        return view('backend/newsletters.list-newsletter',compact('newsletters'));
+            // ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -25,7 +26,7 @@ class newsletterController extends Controller
      */
     public function create()
     {
-        return view('backend/newsletter.create');
+        return view('backend/newsletters.create');
     }
 
     /**
@@ -39,13 +40,13 @@ class newsletterController extends Controller
         
         $request->validate([
             // $newsletter_img = new newsletter_img;
-            'email' => 'required',
+            'email' => 'required|email',
          
         ]);
   
         $input = $request->all();
-        newsletter::create($input);
-        return redirect()->route('newsletter.index')
+        Newsletter::create($input);
+        return redirect()->route('newsletters.index')
                         ->with('success','newsletter created successfully.');
     }
     
@@ -58,7 +59,7 @@ class newsletterController extends Controller
      */
     public function show(Newsletter $newsletter)
     {
-        return view('backend/newsletter.show',compact('newsletter'));
+        return view('backend/newsletters.show',compact('newsletter'));
     }
 
 
@@ -70,7 +71,7 @@ class newsletterController extends Controller
      */
     public function edit(Newsletter $newsletter)
     {
-        return view('backend/newsletter.edit',compact('newsletter'));
+        return view('backend/newsletters.edit',compact('newsletter'));
     }
 
     /**
@@ -88,12 +89,8 @@ class newsletterController extends Controller
         ]);
   
         $input = $request->all();
-  
-      
-          
         $newsletter->update($input);
-    
-        return redirect()->route('newsletter.index')
+        return redirect()->route('newsletters.index')
                         ->with('success','newsletter updated successfully');
     }
 
@@ -106,7 +103,7 @@ class newsletterController extends Controller
     public function destroy(Newsletter $newsletter)
     {
         $newsletter->delete();
-        return redirect()->route('newsletter.index')
+        return redirect()->route('newsletters.index')
         ->with('success','newsletter deleted successfully');
        
     }

@@ -21,7 +21,7 @@ class ContactUsFormController extends Controller {
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'subject'=>'required',
             'message' => 'required',
-            "address"=>'required'
+     
          ]);
         //  Store data in database
         Contact::create($request->all());
@@ -35,7 +35,7 @@ class ContactUsFormController extends Controller {
         ),
          function($message) use ($request){
             $message->from($request->email);
-            $message->to('hoangkhangsuport@gmail.com', '0394622960')->subject($request->get('subject'));
+            $message->to('hoangkhangsuport@gmail.com', 'Admin Support HK site')->subject($request->get('subject'));
         });
         return back()->withErrors(['success' => 'We have received your message and would like to thank you for writing to us.']);
     }

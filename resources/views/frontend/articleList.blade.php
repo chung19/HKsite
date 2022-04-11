@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danh sách bài viết</title>
+  <title>News</title>
   <!-- bootstrap5 css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./frontend/font/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -36,204 +36,39 @@
                   <h6>UPDATE NEWS</h6>
                   <h1>Latest News</h1>
                 </div>
+
+                @foreach($post as $item)
                 <div class="item d-flex ">
                   <div class="image">
-                    <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
+                    <img src="./backend/images/{{ $item -> post_image}}" class="img-fluid" />
                   </div>
                   <div class="text">
                     <div class="articles_list_text_title">
                       <a href="#">
-                        <h3 class="h5">Benefits of App Developed</h3>
+                        <h3 class="h5">{{ $item -> post_title}}</h3>
                       </a>
                     </div>
                     <div class="articles_list_text_date">
                       <div class="icon">
                         <img src="./assets/image/icon-calendar-check.png" alt="" />
-                        <span> 31 Dec, 2021 By</span>
+                        <span> {{ $item -> post_date}} By</span>
                         <a href="#">John Doe</a>
                       </div>
                     </div>
 
                     <div class="articles_list_text_sub">
                       <p>
-                        Compellingly aggregate proactive core competencies
-                        lever visualize resource maximizing architectures
-                        without front core development compet.
+                        {{ $item -> post_content}}
                       </p>
                     </div>
                     <div class="submit">
                       <a href="#">READ MORE
                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
                       </a>
                     </div>
                   </div>
                 </div>
-                <div class="item d-flex ">
-                  <div class="image">
-                    <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
-                  </div>
-                  <div class="text">
-                    <div class="articles_list_text_title">
-                      <a href="#">
-                        <h3 class="h5">UI/UX Design Services</h3>
-                      </a>
-                    </div>
-                    <div class="articles_list_text_date">
-                      <div class="icon">
-                        <img src="./assets/image/icon-calendar-check.png" alt="" />
-                        <span> 31 Dec, 2021 By</span>
-                        <a href="#">John Doe</a>
-                      </div>
-                    </div>
-
-                    <div class="articles_list_text_sub">
-                      <p>
-                        Appropriately syndircate end-to-end functionalities
-                        after visualize resource maximizing architectures
-                        without front highly efficient partnerships with
-                      </p>
-                    </div>
-                    <div class="submit">
-                      <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item d-flex ">
-                  <div class="image">
-                    <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
-                  </div>
-                  <div class="text">
-                    <div class="articles_list_text_title">
-                      <a href="#">
-                        <h3 class="h5">Higher Programming Consult</h3>
-                      </a>
-                    </div>
-                    <div class="articles_list_text_date">
-                      <div class="icon">
-                        <img src="./assets/image/icon-calendar-check.png" alt="" />
-                        <span> 31 Dec, 2021 By</span>
-                        <a href="#">John Doe</a>
-                      </div>
-                    </div>
-
-                    <div class="articles_list_text_sub">
-                      <p>
-                        Compellingly aggregate proactive core competencies
-                        lever visualize resource maximizing architectures
-                        without front core development compet.
-                      </p>
-                    </div>
-                    <div class="submit">
-                      <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item d-flex">
-                  <div class="image">
-                    <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
-                  </div>
-                  <div class="text">
-                    <div class="articles_list_text_title">
-                      <a href="#">
-                        <h3 class="h5">Benefits of App Developed</h3>
-                      </a>
-                    </div>
-                    <div class="articles_list_text_date">
-                      <div class="icon">
-                        <img src="./assets/image/icon-calendar-check.png" alt="" />
-                        <span> 31 Dec, 2021 By</span>
-                        <a href="#">John Doe</a>
-                      </div>
-                    </div>
-
-                    <div class="articles_list_text_sub">
-                      <p>
-                        Compellingly aggregate proactive core competencies
-                        lever visualize resource maximizing architectures
-                        without front core development compet.
-                      </p>
-                    </div>
-                    <div class="submit">
-                      <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item d-flex ">
-                  <div class="image">
-                    <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
-                  </div>
-                  <div class="text">
-                    <div class="articles_list_text_title">
-                      <a href="#">
-                        <h3 class="h5">UI/UX Design Services</h3>
-                      </a>
-                    </div>
-                    <div class="articles_list_text_date">
-                      <div class="icon">
-                        <img src="./assets/image/icon-calendar-check.png" alt="" />
-                        <span> 31 Dec, 2021 By</span>
-                        <a href="#">John Doe</a>
-                      </div>
-                    </div>
-
-                    <div class="articles_list_text_sub">
-                      <p>
-                        Appropriately syndircate end-to-end functionalities
-                        after visualize resource maximizing architectures
-                        without front highly efficient partnerships with
-                      </p>
-                    </div>
-                    <div class="submit">
-                      <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="item d-flex ">
-                  <div class="image">
-                    <img src="./assets/image/anh_1.png" alt="..." class="img-fluid" />
-                  </div>
-                  <div class="text">
-                    <div class="articles_list_text_title">
-                      <a href="#">
-                        <h3 class="h5">Higher Programming Consult</h3>
-                      </a>
-                    </div>
-                    <div class="articles_list_text_date">
-                      <div class="icon">
-                        <img src="./assets/image/icon-calendar-check.png" alt="" />
-                        <span> 31 Dec, 2021 By</span>
-                        <a href="#">John Doe</a>
-                      </div>
-                    </div>
-
-                    <div class="articles_list_text_sub">
-                      <p>
-                        Compellingly aggregate proactive core competencies
-                        lever visualize resource maximizing architectures
-                        without front core development compet.
-                      </p>
-                    </div>
-                    <div class="submit">
-                      <a href="#">READ MORE
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                @endforeach
                 <button type="submit" class="button-loadMore btn btn-primary">
                   Load More
                 </button>
@@ -253,15 +88,21 @@
                     </div>
                   </div>
                 </div>
+                @if ($message = Session::get('success'))
+                <div class="alert alert-success">
+                  {{ $message }}
+                </div>
+                @endif
                 <div class="articles_list_content_right_form d-flex">
-                  <form>
+                  <form action="{{ route('articleList.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <h3 class="mb-3">Sign Up to News</h3>
                     <span>
                       Subscribe to our news to get the lasest updates and
                       offers
                     </span>
                     <div class="form-group mb-3 mt-3">
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email" />
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email" />
                     </div>
                     <button type="submit" class="button-message w-100">
                       Send Message
@@ -335,17 +176,17 @@
 
                       @foreach ($category as $item)
                       <li class="popular_catagory_content_item">
-                        {{ $item -> category_name}} 
+                        {{ $item -> category_name}}
                         <span>
                           (<?php
                             $id = DB::table('categories')
-                            ->where('category_name',$item->category_name)
-                            ->first();
+                              ->where('category_name', $item->category_name)
+                              ->first();
                             $change = DB::table('posts')
-                            ->where('category_id',$id->category_id)
-                            ->count();
+                              ->where('category_id', $id->category_id)
+                              ->count();
                             echo $change;
-                          ?>)
+                            ?>)
                         </span>
                       </li>
                       @endforeach
@@ -364,7 +205,7 @@
                       </li>
                       <li class="popular_catagory_content_item">
                         Magazine <span>(29)</span>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                 </div>
@@ -472,6 +313,22 @@
   <!-- ===============================================-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <script>
+$(document).ready(function(){
+  document.addEventListener("DOMContentLoaded", function(){
+    var btn = document.getElementById("myBtn");
+    var element = document.getElementById("myToast");
+
+    /* Create toast instance */
+    var myToast = new bootstrap.Toast(element, {
+        delay: 1000
+    });
+
+    btn.addEventListener("click", function(){
+        myToast.show();
+    });
+});
+</script>
 </body>
 
 </html>

@@ -1,12 +1,12 @@
 @extends('backend.layout')
 @section('content')
 <div class="row">
-    <div class="col-lg-12 mt-3">
+    <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Add New Contact</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('showcontact.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('showcontacts.index') }}"> Back</a>
         </div>
     </div>
 </div>
@@ -22,7 +22,7 @@
     </div>
 @endif
      
-<form action="{{ route('showcontact.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('showcontacts.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     
      <div class="row">
@@ -35,34 +35,28 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
-                <textarea class="form-control" style="height:150px" name="email" placeholder="Email"></textarea>
+                <input type="text" name="email" class="form-control" placeholder="email">
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Address:</strong>
-                <textarea class="form-control" style="height:150px" name="address" placeholder="Address"></textarea>
-            </div>
-        </div>
+   
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Phone:</strong>
-                <textarea class="form-control" style="height:150px" name="phone" placeholder="Phone"></textarea>
+                <input type="text" name="phone" class="form-control" placeholder="phone">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Subject:</strong>
-                <input type="file" name="subject" class="form-control" placeholder="subject">
+                <input type="text" name="subject" class="form-control" placeholder="subject">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Message:</strong>
-                <input type="file" name="message" class="form-control" placeholder="message">
+                <textarea class="form-control" style="height:150px" name="message" placeholder="Message"rows="5" placeholder="message" placeholder="Message"></textarea>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center mt -3">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

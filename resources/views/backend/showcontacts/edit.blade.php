@@ -23,7 +23,7 @@
         </div>
     @endif
     
-    <form action="{{ route('showcontacts.update',$showcontact>id) }}" method="POST" enctype="multipart/form-data"> 
+    <form action="{{ route('showcontacts.update', $showcontact ->id) }}" method="POST" enctype="multipart/form-data"> 
         @csrf
         @method('PUT')
      
@@ -37,31 +37,25 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
-                    <textarea class="form-control" style="height:150px" name="email" placeholder="Email"></textarea>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Address:</strong>
-                    <textarea class="form-control" style="height:150px" name="address" placeholder="Address"></textarea>
+                    <input type="text" class="form-control"  name="email" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Phone:</strong>
-                    <textarea class="form-control" style="height:150px" name="phone" placeholder="Phone"></textarea>
+                    <input type="text" class="form-control"  name="phone" placeholder="Phone">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Subject:</strong>
-                    <input type="file" name="subject" class="form-control" placeholder="subject">
+                    <input type="text" name="subject" class="form-control" placeholder="subject">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Message:</strong>
-                    <input type="file" name="message" class="form-control" placeholder="message">
+                    <textarea class="form-control" style="height:150px" name="message" class="form-control" placeholder="message"></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

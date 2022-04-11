@@ -4,10 +4,9 @@ namespace App\Http\Controllers\backend_Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Http\Controllers\backend_Controllers\Showcontact;
-// use App\Models\showcontact;
 use Illuminate\Http\Request;
 
-class showcontactController extends Controller
+class ShowcontactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,10 @@ class showcontactController extends Controller
      */
     public function index()
     {
-        $showcontact = Contact::latest()->paginate(5);
-        return view('backend/showcontact.index',compact('showcontact'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $showcontacts = Contact::all();
+        // $showcontacts = Contact::latest()->paginate(5);
+        return view('backend/showcontacts.list-show-contact',compact('showcontacts'));
+            // ->with('i', (request()->input('page', 1) - 1) *5);
 
     }
 
@@ -29,7 +29,7 @@ class showcontactController extends Controller
      */
     public function create()
     {
-        return view('backend/showcontact.create');
+        return view('backend/showcontacts.create');
     }
 
     /**
@@ -40,97 +40,86 @@ class showcontactController extends Controller
      */
     public function store(Request $request)
     {
+         $showcontacts = new Contact();
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'subject'=>'required',
             'message' => 'required',
-            "address"=>'required'
+        
         ]);
   
         $input = $request->all();
   
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }
+        // 
     
-        Showcontact::create($input);
+    Contact::create($input);
      
-        return redirect()->route('showcontact.index')
-                        ->with('success','showcontact created successfully.');
+        return redirect()->route('showcontacts.index')
+                        ->with('success','showcontacts created successfully.');
     }
     /**
      * Display the specified resource.
      *
-     * @param  int  Showcontact $showcontact
+     * @param  int  Contact $showcontacts
      * @return \Illuminate\Http\Response
      */
 
-    public function show(Showcontact $showcontact)
+    public function show(Contact  $showcontact)
     {
-        return view('backend/showcontact.show',compact('showcontact'));
+        return view('backend/showcontacts.show',compact('showcontact'));
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  Showcontact $showcontact
+     * @param  int  Contact $showcontacts
      * @return \Illuminate\Http\Response
      */
-    public function edit(Showcontact $showcontact)
+    public function edit(Contact  $showcontact)
     {
-        return view('backend/showcontact.edit',compact('showcontact'));
+        return view('backend/showcontacts.edit',compact('showcontact'));
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  Showcontact $showcontact
+     * @param  int  Contact $showcontacts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Showcontact $showcontact)
+    public function update(Request $request, Contact $showcontact)
     {
+        // $showcontacts= Contact::find($id);
         $request->validate([
-            'name' => 'required',
+            'name' => 'required|string',
             'email' => 'required|email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'subject'=>'required',
             'message' => 'required',
-            "address"=>'required'
+   
         ]);
   
         $input = $request->all();
-  
-        if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }else{
-            unset($input['image']);
-        }
-          
         $showcontact->update($input);
-    
-        return redirect()->route('showcontact.index')
+        return redirect()->route('showcontacts.index')
                         ->with('success','Showcontact updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  Showcontact $showcontact
+     * @param  int  Contact $showcontacts
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Showcontact $showcontact)
+    public function destroy(Contact $showcontacts,$id)
     {
-        $showcontact>delete();
-        return redirect()->route('showcontact.index')
+        $showcontacts= Contact::find($id);
+        $showcontacts->delete();
+        return redirect()->route('showcontacts.index')
                         ->with('success','Showcontact deleted successfully');
     }
 }

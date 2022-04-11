@@ -1,13 +1,12 @@
 @extends('backend.layout')
-     
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel Showcontact  CRUD with Image Upload Example from scratch - ItSolutionStuff.com</h2>
+                <h2>Laravel Showcontact  CRUD hksite</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('showcontact.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('showcontacts.create') }}"> Create New Contact</a>
             </div>
         </div>
     </div>
@@ -20,32 +19,30 @@
      
     <table class="table table-bordered">
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
-            <th>Address</th>
             <th>Subject</th>
             <th>Message</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($showcontact as $showcontact)
+        @foreach ($showcontacts as $showcontact)
         <tr>
-            <td>{{ ++$i }}</td>
-          
+            <td>{{ $showcontact->id }}</td>
             <td>{{ $showcontact->name }}</td>
             <td>{{ $showcontact->email}}</td>
             <td>{{ $showcontact->phone }}</td>
-            <td>{{ $showcontact->address}}</td>
             <td>{{ $showcontact->subject}}</td>
             <td>{{ $showcontact->message }}</td>
             <td>
 
           
-                <form action="{{ route('showcontact.destroy',$showcontact->id) }}" method="POST">
+                <form action="{{ route('showcontacts.destroy',$showcontact->id) }}" method="POST">
      
-                    <a class="btn btn-info" href="{{ route('showcontact.show',$showcontact->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('showcontacts.show',$showcontact->id) }}">Show</a>
       
-                    <a class="btn btn-primary" href="{{ route('showcontact.edit',$showcontact->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('showcontacts.edit',$showcontact->id) }}">Edit</a>
      
                     @csrf
                     @method('DELETE')
@@ -56,7 +53,7 @@
         </tr>
         @endforeach
     </table>
-    
-    {{-- {!! $showcontact->links() !!} --}}
-        
+
+    {{-- {{$showcontacts->links() }}  --}}
+
 @endsection

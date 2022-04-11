@@ -1,13 +1,12 @@
-
 @extends('backend.layout')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Newsletter CRUD Form </h2>
+                <h2> Newsletter HKsite CRUD Form </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('newsletter.create') }}"> Create New Newsletter </a>
+                <a class="btn btn-success" href="{{ route('newsletters.create') }}"> Create New Newsletter </a>
             </div>
         </div>
     </div>
@@ -20,22 +19,21 @@
      
     <table class="table table-bordered">
         <tr>
+            <th>ID</th>
             <th>Email</th>
-            
+            <th width="280px">Action</th>
           
         </tr>
-        @foreach ($newsletter as $newsletter)
+        @foreach ($newsletters as $newsletter)
         <tr>
-            <td>{{ ++$i }}</td>
-
+            <td>{{ $newsletter->id }}</td>
             <td>{{ $newsletter->email}}</td>
-          
             <td>
-                <form action="{{ route('newsletter.destroy',$newsletter->id) }}" method="POST">
+                <form action="{{ route('newsletters.destroy',$newsletter->id) }}" method="POST">
      
-                    <a class="btn btn-info" href="{{ route('newsletter.show',$newsletter->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('newsletters.show',$newsletter->id) }}">Show</a>
       
-                    <a class="btn btn-primary" href="{{ route('newsletter.edit',$newsletter->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('newsletters.edit',$newsletter->id) }}">Edit</a>
      
                     @csrf
                     @method('DELETE')
@@ -45,7 +43,11 @@
             </td>
         </tr>
         @endforeach
+        {{-- {{ $newsletter->links() }} --}}
     </table>
-    {{-- {!! $products->links() !!} --}}
-    {{-- {!! $newsletter->links() !!} --}}
+
+  
+   
+
+
 @endsection
