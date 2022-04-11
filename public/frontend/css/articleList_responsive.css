@@ -1,0 +1,93 @@
+@media screen and (max-width: 512px) {
+    section {
+        overflow: hidden !important;
+    }
+    .articles_list_content.container {
+        padding-left: 4%;
+        padding-right: 2%;
+    }
+    .articles_list {
+        padding: 30px 0 30px;
+    }
+    .articles_list_content_left_title h6 {
+        font-size: 14px;
+    }
+    .articles_list_content_left_title h1 {
+        font-size: 35px;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+    }
+    .image img {
+        width: 88%;
+        padding-left: 2px;
+    }
+    .text {
+        padding-left: 21px;
+    }
+    .articles_list_text_title h3 {
+        font-size: 20px;
+    }
+    .popular_galary_content_item {
+        width: 105px;
+        height: 105px;
+    }
+    .articles_list_text_date {
+        font-size: 12px;
+    }
+    .articles_list_text_sub {
+        font-size: 14px;
+    }
+    .submit a {
+        font-size: 14px;
+    }
+    .button-loadMore {
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    /* Recent Post */
+    .popular_recent_heading,
+    .popular_catagory_heading,
+    .popular_galary_heading,
+    .popular_archives_heading,
+    .popular_followUs_heading,
+    .popular_tags_heading {
+        font-size: 18px;
+    }
+    .contentinformation_heading p {
+        font-size: 14px;
+    }
+    .contentinformation_time {
+        font-size: 14px;
+    }
+
+    /* Catagory List */
+    .popular_catagory_content_item {
+        font-size: 14px;
+    }
+
+    /* Archives */
+    .popular_archives_content_item {
+        font-size: 14px;
+    }
+
+    /* Follow Us */
+    .popular_followUs_content_list_icon i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    /* Tag */
+    .testButton {
+        font-size: 12px;
+        padding: 7px 20px;
+    }
+    .popular_posts_content_item {
+        padding-bottom: 30px;
+    }
+}
