@@ -20,8 +20,8 @@
     <link href="./frontend/css/header.css" rel="stylesheet" />
     <link href="./frontend/css/footer.css" rel="stylesheet" />
     <link href="./frontend/css/contact.css" rel="stylesheet" />
-   
-    </head>
+
+</head>
 
 <body>
     <!---------------------------------------------------------- header--------------------------------------------------------- -->
@@ -115,34 +115,34 @@
             </p>
             <!-- FORM -->
             <div class="container">
-                        <!-- Success message -->
-                        {{-- @if ($message = Session::get('success'))
+                <!-- Success message -->
+                {{-- @if ($message = Session::get('success'))
                         <div class="alert alert-success">
                             <p>{{ $message }}</p>
-                        </div>
-                    @endif --}}
-        @if($message =Session::has('success'))
-        <div class="alert alert-success">
-            {{$message =Session::get('success')}}
-            <p>{{ $message }}</p>
-        </div>
-        @endif
-               <!-- Success message end -->
-               {{-- Laravel Contact Form Validation  --}}
-          <form action="" method="post" action="{{ route('contact.store') }}">
-        <!-- CROSS Site Request Forgery Protection -->
-       @csrf
+            </div>
+            @endif --}}
+            @if($message =Session::has('success'))
+            <div class="alert alert-success">
+                {{$message =Session::get('success')}}
+                <p>{{ $message }}</p>
+            </div>
+            @endif
+            <!-- Success message end -->
+            {{-- Laravel Contact Form Validation  --}}
+            <form action="" method="post" action="{{ route('contact.store') }}">
+                <!-- CROSS Site Request Forgery Protection -->
+                @csrf
                 <form class="form-info">
                     <div class="container-fluid" style="width: 60%; height: auto">
                         <div class="row">
                             <div class="col-6">
                                 <input type="text" class="form-control setting-padding{{ $errors->has('name') ? 'error' : '' }}" name="name" id="name" placeholder="Your Name" /><br />
-                           <!-- Error -->
-            @if ($errors->has('name'))
-            <div class="error">
-                {{ $errors->first('name') }}
-            </div>
-            @endif
+                                <!-- Error -->
+                                @if ($errors->has('name'))
+                                <div class="error">
+                                    {{ $errors->first('name') }}
+                                </div>
+                                @endif
                             </div>
                             <div class="col-6">
                                 <input type="text" class="form-control setting-padding{{ $errors->has('email') ? 'error' : '' }}" name="email" id="email" placeholder="Your Email" /><br />
@@ -174,8 +174,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <input type="text" class="form-control setting-padding{{ $errors->has('subject') ? 'error' : '' }}" name="subject"
-                                id="subject" placeholder="Subject" /><br />
+                                <input type="text" class="form-control setting-padding{{ $errors->has('subject') ? 'error' : '' }}" name="subject" id="subject" placeholder="Subject" /><br />
                                 @if ($errors->has('subject'))
                                 <div class="error">
                                     {{ $errors->first('subject') }}
@@ -209,7 +208,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+        </div>
         </div>
     </section>
     <!--  <section> footer ============================-->

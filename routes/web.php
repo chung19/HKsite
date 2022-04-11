@@ -6,12 +6,12 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceDetailController;
+use App\Http\Controllers\ArticleListController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TeamController;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\backend_Controllers\newsletterController;
 use App\Http\Controllers\backend_Controllers\PhotoController;
 use App\Http\Controllers\backend_Controllers\ShowcontactController;
@@ -29,11 +29,8 @@ use App\Http\Controllers\backend_Controllers\ShowcontactController;
 Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
 Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
-Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 'index'] );
-Route::resource('/contact-me', ContactController::class);
-Route::get('/contact', function () {
-    return view('frontend/contact');
-});
+Route::resource('articleList',ArticleListController::class);
+Route::resource('contact', ContactController::class);
 Route::get('serviceLists', function () {
     return view('frontend/serviceLists');
 });

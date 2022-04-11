@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\posts;
-
+use App\Models\Newsletter;
 use App\Models\Categories;
 
 class ArticleListController extends Controller
@@ -17,4 +17,19 @@ class ArticleListController extends Controller
         $category = Categories::all();
         return view('frontend/articleList', compact('post','category'));
     }
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            // $newsletter_img = new newsletter_img;
+            'email' => 'required',
+
+        ]);
+
+        $input = $request->all();
+        newsletter::create($input);
+        return redirect()->route('articleList.index')
+            ->with('success', 'newsletter created successfully.');
+    }
+
 }
