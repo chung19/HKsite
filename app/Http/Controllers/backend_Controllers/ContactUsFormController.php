@@ -25,7 +25,7 @@ class ContactUsFormController extends Controller {
          ]);
         //  Store data in database
         Contact::create($request->all());
-        //  Send mail to admin
+        // Send mail to admin
         \Mail::send('backend.mail', array(
             'name' => $request->get('name'),
             'email' => $request->get('email'),
@@ -39,4 +39,23 @@ class ContactUsFormController extends Controller {
         });
         return back()->withErrors(['success' => 'We have received your message and would like to thank you for writing to us.']);
     }
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            // $newsletter_img = new newsletter_img;
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'subject'=>'required',
+            'message' => 'required',
+
+        ]);
+
+        $input = $request->all();
+        Contact::create($input);
+        return redirect()->route('contact.createForm')
+            ->with('success', 'newsletter created successfully.');
+    }
+   
 }

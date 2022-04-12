@@ -18,6 +18,12 @@
                 {{ $newsletter->email }}
             </div>
         </div>
-   
+        <div class="details col-md-9">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                <a class="btn btn-primary" href="{{ route('newsletters.edit',$newsletter->id) }}">Edit</a>
+            </div>
+            </div>
+        </div>
     </div>
 @endsection

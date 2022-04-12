@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HomeController;
@@ -28,12 +29,13 @@ use App\Http\Controllers\backend_Controllers\ShowcontactController;
 // ----------------------------------frontend-----------------------------
 Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
+// Route::resource('contact', ContactController::class);
 Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
 Route::get('/articleList', [App\Http\Controllers\ArticleListController::class , 'index'] );
-Route::resource('/contact-me', ContactController::class);
-Route::get('/contact', function () {
-    return view('frontend/contact');
-});
+// Route::resource('/contact-me', ContactController::class);
+// Route::get('/contact', ContactController::class {
+//     return view('frontend/contact');
+// });
 Route::get('serviceLists', function () {
     return view('frontend/serviceLists');
 });
@@ -78,6 +80,8 @@ Route::resource('showcontacts', ShowcontactController::class);
 Route::get('/contact', [App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'createForm']);
 Route::post('/contact', [ App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 // frontend contact form end
+// Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
+// Route::post('/contact', [ App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
 // back end newsletters form
 Route::resource('newsletters',newsletterController::class);
 // // back end newsletters form end

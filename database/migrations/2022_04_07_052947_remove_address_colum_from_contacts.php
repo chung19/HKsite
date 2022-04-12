@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
+        if (Schema::hasColumn('address'))
+        {
         Schema::table('contacts', function (Blueprint $table) {
             $table->dropColumn('address');
         });
+    }
     }
 
     /**

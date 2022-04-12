@@ -121,15 +121,20 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif --}}
-        @if($message =Session::has('success'))
+        {{-- @if($message =Session::has('success'))
         <div class="alert alert-success">
             {{$message =Session::get('success')}}
             <p>{{ $message }}</p>
         </div>
-        @endif
+        @endif --}}
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            {{ $message }}
+        </div>
+    @endif
                <!-- Success message end -->
                {{-- Laravel Contact Form Validation  --}}
-          <form action="" method="post" action="{{ route('contact.store') }}">
+          <form  method="POST" action="{{ route('contact.store') }}">
         <!-- CROSS Site Request Forgery Protection -->
        @csrf
                 <form class="form-info">
@@ -209,6 +214,7 @@
                         </div>
                     </div>
                 </form>
+          </form>
             </div>
         </div>
     </section>
