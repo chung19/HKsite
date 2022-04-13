@@ -15,7 +15,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                {{   $showcontact->name }}
+            {{   $showcontact->name }}
                
             </div>
         </div>
@@ -35,13 +35,20 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Subject:</strong>
-                {{   $showcontact->phone }}
+                {{   $showcontact->subject }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Message:</strong>
-                {{   $showcontact->phone }}
+                {{   $showcontact->message }}
+            </div>
+        </div>
+        <div class="details col-md-9">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-3">
+                <a class="btn btn-primary" href="{{ route('showcontacts.edit',$showcontact->id) }}">Edit</a>
+            </div>
             </div>
         </div>
        

@@ -30,7 +30,9 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email</strong>
+                    {{ $newsletter->email }}
                     <input type="text" name="email" class="form-control" placeholder="Email">
+                 
                 </div>
             </div>
             {{-- <div class="col-xs-12 col-sm-12 col-md-12">

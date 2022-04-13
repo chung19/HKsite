@@ -12,10 +12,10 @@
     </div>
 </div>
 @if ($message = Session::get('success'))
-            <div class="alert alert-success">
-                {{ $message }}
-            </div>
-        @endif
+<div class="alert alert-success">
+    {{ $message }}
+</div>
+@endif
 <table class="table table-bordered">
     <tr>
         <th>Id</th>
@@ -42,10 +42,10 @@
                 @csrf
                 @method('DELETE')
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete_{{ $project->id }}">Delete</button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalDelete_{{ $project->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -53,7 +53,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <span>Are you sure you want to change?</span>
+                                <span>Are you sure you want to delete {{ $project->title }}?</span>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Save changes</button>
