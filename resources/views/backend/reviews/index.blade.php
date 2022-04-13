@@ -49,10 +49,10 @@
                 @csrf
                 @method('DELETE')
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete">Delete</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete_{{$review->id}}">Delete</button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalDelete_{{$review->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">

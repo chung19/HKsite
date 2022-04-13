@@ -48,7 +48,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Category:</strong>
-                <input type="text" name="category" class="form-control" placeholder="Category">
+                <input type="text" name="category" value="{{old('category')}}"class="form-control" placeholder="Category">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">
