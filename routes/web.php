@@ -53,11 +53,11 @@ Route::resource('service-details',ServiceDetailController::class);
 
 
 
-Route::post('/add-category-post', [App\Http\Controllers\CategoryController::class, 'add']);
-Route::get('/category-post', [App\Http\Controllers\CategoryController::class, 'index']);
-Route::get('/edit-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'edit']);
-Route::post('/update-category-post', [App\Http\Controllers\CategoryController::class, 'update'])->name('update-category-post');
-Route::get('/delete-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'delete']);
+// Route::post('/add-category-post', [App\Http\Controllers\CategoryController::class, 'add']);
+// Route::get('/category-post', [App\Http\Controllers\CategoryController::class, 'index']);
+// Route::get('/edit-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'edit']);
+// Route::post('/update-category-post', [App\Http\Controllers\CategoryController::class, 'update'])->name('update-category-post');
+// Route::get('/delete-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'delete']);
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/add-post', [PostController::class, 'create']);
@@ -65,6 +65,13 @@ Route::post('/add-post', [PostController::class, 'store']);
 Route::get('/edit-post/{post_id}', [PostController::class, 'edit']);
 Route::put('/update-post/{post_id}', [PostController::class, 'update']);
 Route::delete('/delete-post/{post_id}', [PostController::class, 'destroy']);
+
+Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/add-category', [CategoryController::class, 'create']);
+Route::post('/add-category', [CategoryController::class, 'store']);
+Route::get('/edit-category/{category_id}', [CategoryController::class, 'edit']);
+Route::put('/update-category/{category_id}', [CategoryController::class, 'update']);
+Route::delete('/delete-category/{category_id}', [CategoryController::class, 'destroy']);
 
 
 // backend contact from 

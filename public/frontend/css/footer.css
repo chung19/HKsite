@@ -158,9 +158,9 @@ span.footer_top-contact-desc {
     margin-bottom: 27px;
 }
 
-.popular_posts_content_img {
-    width: 80px;
-    height: 80px;
+.popular_posts_content_img img{
+    width: 80px ;
+    height: 80px ;
 }
 
 .popular_posts_contentinformation {

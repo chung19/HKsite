@@ -15,7 +15,8 @@ class ArticleListController extends Controller
     public function index(){
         $post = posts::all();
         $category = Categories::all();
-        return view('frontend/articleList', compact('post','category'));
+        $randPost = posts::inRandomOrder()->limit(2)->get();
+        return view('frontend/articleList', compact('post','category','randPost'));
     }
     public function store(Request $request)
     {

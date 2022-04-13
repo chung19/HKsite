@@ -6,68 +6,56 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
+use App\Models\Categories;
+
+use Illuminate\Support\Facades\File;
+
+use Illuminate\Support\Facades\Storage;
+
 class CategoryController extends Controller
 {
-    public function index(){
-        $data = array(
-            'list' => DB::table('categories')->get()
-        );
-        return view('category/add_categories', $data);
+    public function index()
+    {
+        $category = Categories::all();
+        return view('/backend/categories.index_categories', compact('category'));
     }
 
-    public function add(Request $request){
-        echo "false";
-        $request ->validate([
-            'category_id' =>'required',
-            'category_name' =>'required'
+    public function create()
+    {
+        $category = Categories::all();
+        return view('/backend/categories.add_categories', compact('category'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'category_name' => 'required'
         ]);
 
-        $query = DB::table('categories')->insert([
-            'category_id'=>$request->input('category_id'),
-            'category_name'=>$request->input('category_name')
-        ]);
-
-        if($query){
-            return back()->with('success','Data have been successfuly inserted');
-        }
-        else{
-            return back()->with('fail','Something went wrong');
-        }
-
+        $category = new Categories;
+        $category->category_name = $request->input('category_name');
+        $category->save();
+        return redirect()->back()->with('status','Category Added Successfully');
     }
 
-    public function edit($id){
-        $row = DB::table('categories')
-                    ->where('category_id',$id)
-                    ->first();
-        $data = [
-            'Info' => $row,
-            'Title' => 'Edit'
-        ];
-        return view('category/edit_categories',$data);
+    public function edit($id)
+    {
+        $category = Categories::find($id);
+        return view('backend/categories.edit_categories', compact('category'));
     }
 
-    public function update(Request $request){
-        $request -> validate([
-            'category_id'=>'required',
-            'category_name'=>'required'
-        ]);
-
-        $updating = DB::table('categories')
-                        ->where('category_id', $request -> input("category_id"))
-                        ->update([
-                            'category_name'=>$request->input('category_name')
-                        ]);
-
-        return redirect('/category-post');
-
+    public function update(Request $request, $id)
+    {
+        $category = Categories::find($id);
+        $category->category_name = $request->input('category_name');
+        $category->update();
+        return redirect()->back()->with('status','Category Updated Successfully');
     }
 
-    public function delete($id){
-        $detele = DB::table('categories')
-                        ->where('category_id',$id)
-                        ->delete();
-        return redirect('/category-post');
+    public function destroy($id)
+    {
+        $category = Categories::find($id);
+        $category->delete();
+        return redirect()->back()->with('status','Category Deleted Successfully');
     }
-
 }

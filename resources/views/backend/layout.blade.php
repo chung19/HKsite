@@ -10,10 +10,9 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('frontend/font/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{asset('../frontend/css/servicedetails.css')}}">
-    <link rel="stylesheet" href="{{ asset('backend/css/layout.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
-    <link rel="stylesheet" href="{{asset('./backend/css/post.css')}}">
-    <link rel="stylesheet" href="{{asset('./backend/css/categorypost.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/css/layout.css') }}">
+    <link rel="stylesheet" href="{{asset('backend/css/style.css') }}">
+    <link rel="stylesheet" href="{{asset('backend/css/post.css')}}">
 
 </head>
     <body id="body-pd">
@@ -32,7 +31,7 @@
                          <a href="{{ url('reviews')}}" class="nav_link @if (\Request::is('reviews')) active  @endif"><i class="fa fa-renren" aria-hidden="true"></i><span class="nav_name">Review</span> </a>
                          <a href="{{ url('posts')}}" class="nav_link @if (\Request::is('posts')) active  @endif"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Blog</span> </a>
                          <a href="{{ url('services')}}" class="nav_link @if (\Request::is('services')) active  @endif"><i class="fa fa-server" aria-hidden="true"></i><span class="nav_name">Service</span> </a>
-                         <a href="{{ url('category-post')}}" class="nav_link @if (\Request::is('category-post')) active  @endif"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Category post</span> </a>
+                         <a href="{{ url('category')}}" class="nav_link @if (\Request::is('category')) active  @endif"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Category post</span> </a>
                          <a href="{{ url('showcontacts')}}" class="nav_link @if (\Request::is('showcontacts')) active  @endif"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Show contacts</span> </a>
                          <a href="{{url('newsletters ')}}" class="nav_link @if (\Request::is('newsletters')) active  @endif"> <i class="fa fa-solid fa-envelope" aria-hidden="true"></i> <span class="nav_name">Newsletter</span> </a>
                          <a href="{{url('gallerys ')}}" class="nav_link @if (\Request::is('gallerys')) active  @endif"> <i class="fa fa-solid fa-image" aria-hidden="true"></i> <span class="nav_name">Gallery</span> </a>

@@ -183,7 +183,7 @@
                               ->where('category_name', $item->category_name)
                               ->first();
                             $change = DB::table('posts')
-                              ->where('category_id', $id->category_id)
+                              ->where('category_id', $id->id)
                               ->count();
                             echo $change;
                             ?>)

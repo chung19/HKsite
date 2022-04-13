@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('post_content');
             $table->string('post_image');
             $table->string('post_date');
-            $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('category_id')->on('categories');
+            $table->unsignedBigInteger('category_id'); 
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps ();
         });
     }

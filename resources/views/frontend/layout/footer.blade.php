@@ -42,7 +42,23 @@
               <h5 class="footer_top-posts-title">Popular Post</h5>
               <div class="content_right_our_contact">
                 <div class="popular_posts_content">
-                  <div class="popular_posts_content_item">
+
+                  @foreach ($randPost as $item)
+                    <div class="popular_posts_content_item">
+                      <div class="popular_posts_content_img">
+                        <img src="./backend/images/{{ $item -> post_image}}" alt="" />
+                      </div>
+                      <div class="popular_posts_contentinformation">
+                        <div class="contentinformation_heading_popular_post fontcolor">
+                        {{ $item -> post_title}}
+                        </div>
+                        <p class="contentinformation_time">{{ $item -> post_date}}</p>
+                      </div>
+                    </div>
+                  @endforeach
+
+                  
+                  <!-- <div class="popular_posts_content_item">
                     <div class="popular_posts_content_img">
                       <img src="{{asset('./frontend/images/footer/anh_16.png')}}" alt="" />
                     </div>
@@ -52,18 +68,7 @@
                       </div>
                       <p class="contentinformation_time">August 24, 2021</p>
                     </div>
-                  </div>
-                  <div class="popular_posts_content_item">
-                    <div class="popular_posts_content_img">
-                      <img src="{{asset('./frontend/images/footer/anh_16.png')}}" alt="" />
-                    </div>
-                    <div class="popular_posts_contentinformation">
-                      <div class="contentinformation_heading_popular_post fontcolor">
-                        Android Application Program-2021
-                      </div>
-                      <p class="contentinformation_time">August 24, 2021</p>
-                    </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
