@@ -10,19 +10,19 @@
             </div>
         </div>
     </div>
-    
+
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
     @endif
-     
+
     <table class="table table-bordered">
         <tr>
             <th>ID</th>
             <th>Email</th>
             <th width="280px">Action</th>
-          
+
         </tr>
         @foreach ($newsletters as $newsletter)
         <tr>
@@ -30,15 +30,15 @@
             <td>{{ $newsletter->email}}</td>
             <td>
                 <form action="{{ route('newsletters.destroy',$newsletter->id) }}" method="POST">
-     
+
                     <a class="btn btn-info" href="{{ route('newsletters.show',$newsletter->id) }}">Show</a>
-      
+
                     <a class="btn btn-primary" href="{{ route('newsletters.edit',$newsletter->id) }}">Edit</a>
-     
+
                     @csrf
                     @method('DELETE')
-        
-                    <button type="submit" class="btn btn-danger"onclick="return confirm('Are you sure deteted this Newsletter  Email : {{ $newsletter->email }}?')">Delete</button>
+
+                    <button type="submit" class="btn btn-danger"onclick="return confirm('Are you sure deteted this Newsletter  ID:{{$newsletter->email  }} Email : {{ $newsletter->email }}?')">Delete</button>
                 </form>
             </td>
         </tr>
@@ -46,8 +46,8 @@
         {{-- {{ $newsletter->links() }} --}}
     </table>
 
-  
-   
+
+
 
 
 @endsection

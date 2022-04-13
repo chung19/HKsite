@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\backend_Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
-use App\Http\Controllers\backend_Controllers\Showcontact;
+// use App\Http\Controllers\backend_Controllers\Showcontact;
 use Illuminate\Http\Request;
 
 class ShowcontactController extends Controller
@@ -47,15 +47,15 @@ class ShowcontactController extends Controller
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'subject'=>'required',
             'message' => 'required',
-        
+
         ]);
-  
+
         $input = $request->all();
-  
-        // 
-    
+
+        //
+
     Contact::create($input);
-     
+
         return redirect()->route('showcontacts.index')
                         ->with('success','showcontacts created successfully.');
     }
@@ -100,9 +100,9 @@ class ShowcontactController extends Controller
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'subject'=>'required',
             'message' => 'required',
-   
+
         ]);
-  
+
         $input = $request->all();
         $showcontact->update($input);
         return redirect()->route('showcontacts.index')
