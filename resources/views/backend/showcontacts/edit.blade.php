@@ -31,35 +31,40 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
+                    {{   $showcontact->name }}
                     <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
+                    {{   $showcontact->email }}
                     <input type="text" class="form-control"  name="email" placeholder="Email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Phone:</strong>
+                    {{   $showcontact->phone }}
                     <input type="text" class="form-control"  name="phone" placeholder="Phone">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Subject:</strong>
+                    {{   $showcontact->subject }}
                     <input type="text" name="subject" class="form-control" placeholder="subject">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Message:</strong>
+                    {{   $showcontact->message }}
                     <textarea class="form-control" style="height:150px" name="message" class="form-control" placeholder="message"></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" >Submit</button>
             </div>
         </div>
      

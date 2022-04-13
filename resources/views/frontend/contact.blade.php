@@ -164,11 +164,11 @@
                             </div>
                             <div class="col-6">
                                 <select class="form-select {{ $errors->has('address') ? 'error' : '' }}" name="address" id="address">
-                                    <option selected>---</option>
-                                    <option>Position 1</option>
-                                    <option>Position 2</option>
-                                    <option>Position 3</option>
-                                    <option>Position 4</option>
+                                    <option selected>Position option</option>
+                                    <option> Leader</option>
+                                    <option>Project Management </option>
+                                    <option> Tester</option>
+                                    <option> Staff</option>
                                 </select><br />
                             </div>
                         </div>

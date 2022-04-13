@@ -34,9 +34,9 @@ Route::resource('contact', ContactController::class);
 Route::get('serviceLists', function () {
     return view('frontend/serviceLists');
 });
-Route::get('partners', function () {
-    return view('frontend/partners');
-});
+
+
+
 
 
 // ----------------------------------backend-----------------------------
@@ -67,7 +67,7 @@ Route::put('/update-post/{post_id}', [PostController::class, 'update']);
 Route::delete('/delete-post/{post_id}', [PostController::class, 'destroy']);
 
 
-// backend contact from 
+// backend contact from
 Route::resource('showcontacts', ShowcontactController::class);
 // backend contact from  end
 // frontend contact form

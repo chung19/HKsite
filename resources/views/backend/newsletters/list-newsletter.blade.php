@@ -38,7 +38,7 @@
                     @csrf
                     @method('DELETE')
         
-                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <button type="submit" class="btn btn-danger"onclick="return confirm('Are you sure deteted this Newsletter  Email : {{ $newsletter->email }}?')">Delete</button>
                 </form>
             </td>
         </tr>
