@@ -40,6 +40,7 @@
                     ->first();
                     echo $change -> category_name
                 ?>
+                
             </td>
         <td>
             <div style="display:flex;">

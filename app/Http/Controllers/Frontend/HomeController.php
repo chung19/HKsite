@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
+use App\Http\Controllers\Controller;
 use App\Models\Project;
 use App\Models\Team;
 use App\Models\posts;

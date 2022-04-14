@@ -1,20 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controller;
-use App\Http\Controllers\ReviewController;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ServiceDetailController;
-use App\Http\Controllers\ArticleListController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\TeamController;
-use App\Http\Controllers\backend_Controllers\newsletterController;
-use App\Http\Controllers\backend_Controllers\PhotoController;
-use App\Http\Controllers\backend_Controllers\ShowcontactController;
+use App\Http\Controllers\Frontend\Controller;
+use App\Http\Controllers\Frontend\ReviewController;
+use App\Http\Controllers\Frontend\ServiceController;
+use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ServiceDetailController;
+use App\Http\Controllers\Frontend\ArticleListController;
+use App\Http\Controllers\Frontend\DashboardController;
+use App\Http\Controllers\Frontend\CategoryController;
+use App\Http\Controllers\Frontend\PostController;
+use App\Http\Controllers\Frontend\ProjectController;
+use App\Http\Controllers\Frontend\TeamController;
+use App\Http\Controllers\Backend\newsletterController;
+use App\Http\Controllers\Backend\PhotoController;
+use App\Http\Controllers\Backend\ShowcontactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,11 +28,14 @@ use App\Http\Controllers\backend_Controllers\ShowcontactController;
 // ----------------------------------frontend-----------------------------
 Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
-Route::get('/service-details', [App\Http\Controllers\ServiceController::class , 'indexService'] );
+Route::get('/service-details', [App\Http\Controllers\Frontend\ServiceController::class , 'indexService'] );
 Route::resource('articleList',ArticleListController::class);
 Route::resource('contact', ContactController::class);
 Route::get('serviceLists', function () {
     return view('frontend/serviceLists');
+});
+Route::get('partners', function () {
+    return view('frontend.partners');
 });
 
 
@@ -40,24 +43,13 @@ Route::get('serviceLists', function () {
 
 
 // ----------------------------------backend-----------------------------
-Route::resource('back-end', DashboardController::class);
+Route::resource('admin', DashboardController::class);
 Route::resource('projects', ProjectController::class);
 Route::resource('reviews',ReviewController::class);
 Route::resource('team',TeamController::class);
 Route::resource('blog', BlogController::class);
 Route::resource('services',ServiceController::class);
 Route::resource('service-details',ServiceDetailController::class);
-
-
-
-
-
-
-// Route::post('/add-category-post', [App\Http\Controllers\CategoryController::class, 'add']);
-// Route::get('/category-post', [App\Http\Controllers\CategoryController::class, 'index']);
-// Route::get('/edit-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'edit']);
-// Route::post('/update-category-post', [App\Http\Controllers\CategoryController::class, 'update'])->name('update-category-post');
-// Route::get('/delete-category-post/{category_id}', [App\Http\Controllers\CategoryController::class, 'delete']);
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/add-post', [PostController::class, 'create']);
@@ -78,9 +70,8 @@ Route::delete('/delete-category/{category_id}', [CategoryController::class, 'des
 Route::resource('showcontacts', ShowcontactController::class);
 // backend contact from  end
 // frontend contact form
-
-Route::get('/contact', [App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'createForm']);
-Route::post('/contact', [ App\Http\Controllers\backend_Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+Route::get('/contact', [App\Http\Controllers\Backend\ContactUsFormController::class, 'createForm']);
+Route::post('/contact', [ App\Http\Controllers\Backend\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 // frontend contact form end
 // back end newsletters form
 Route::resource('newsletters',newsletterController::class);

@@ -25,7 +25,7 @@
                 <div>
                     <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
                     <div class="nav_list">
-                         <a href="{{ url('back-end')}}" class="nav_link @if (\Request::is('back-end')) active  @endif"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="nav_name">Dashboard</span> </a>
+                         <a href="{{ url('admin')}}" class="nav_link @if (\Request::is('admin')) active  @endif"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="nav_name">Dashboard</span> </a>
                          <a href="{{ url('projects')}}" class="nav_link @if (\Request::is('projects')) active  @endif"><i class="fa fa-product-hunt" aria-hidden="true"></i><span class="nav_name">Project</span> </a>
                          <a href="{{ url('team')}}" class="nav_link @if (\Request::is('team')) active  @endif"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav_name">Team</span> </a>
                          <a href="{{ url('reviews')}}" class="nav_link @if (\Request::is('reviews')) active  @endif"><i class="fa fa-renren" aria-hidden="true"></i><span class="nav_name">Review</span> </a>

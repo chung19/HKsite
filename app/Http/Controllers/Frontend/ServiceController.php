@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Models\Review;
+namespace App\Http\Controllers\Frontend;
+use App\Http\Controllers\Controller;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class ReviewController extends Controller
+class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        $reviews = Review::latest()->paginate(5);
+        $services = Service::latest()->paginate(10);
 
-        return view('backend/reviews.index',compact('reviews'))
+        return view('backend/services.index', compact('services'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -28,7 +28,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        return view('backend/reviews.create');
+        return view('backend/services.create');
     }
 
     /**
@@ -39,12 +39,11 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
+        echo $request->input('content');
         $request->validate([
-            'name' => 'required',
-            'star' => 'required',
+            'title' => 'required',
             'content' => 'required',
-            'position' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $input = $request->all();
@@ -56,55 +55,54 @@ class ReviewController extends Controller
             $input['image'] = "$profileImage";
         }
 
-        Review::create($input);
+        Service::create($input);
 
-        return redirect()->route('reviews.index')
-                        ->with('success','Review created successfully.');
+        return redirect()->route('services.index')
+            ->with('success', 'service created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Review  $review
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Review $review)
+    public function show(Service $service)
     {
-        return view('backend/reviews.show',compact('review'));
+        return view('backend.services.show', compact('service'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Review  $review
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function edit(Review $review)
+    public function edit(Service $service)
     {
-        return view('backend/reviews.edit',compact('review'));
+        return view('backend/services.edit', compact('service'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Review  $review
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $review = Review::find($id);
+        $service = Service::find($id);
         $request->validate([
-            'name' => 'required',
-            'star' => 'required',
-            'content' => 'required',
-            'position' => 'required',
+            'title' => 'required',
+            'content' => 'required'
         ]);
 
         $input = $request->all();
 
+
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/' . $review->image;
+            $destinationPath = 'image/' . $service->image;
             if (File::exists($destinationPath)) {
                 File::delete($destinationPath);
             }
@@ -115,29 +113,28 @@ class ReviewController extends Controller
             unset($input['image']);
         }
 
-        $review->update($input);
+        $service->update($input);
 
-        return redirect()->route('reviews.index')
-                        ->with('success','Review updated successfully');
+        return redirect()->route('services.index')
+            ->with('success', 'Service updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Review  $review
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $review = Review::find($id);
-        $destination = 'image/' . $review->image;
+        $service = Service::find($id);
+        $destination = 'image/' . $service->image;
         if (File::exists($destination)) {
             File::delete($destination);
         }
+        $service->delete();
 
-        $review->delete();
-
-        return redirect()->route('reviews.index')
-                        ->with('success','Review deleted successfully');
+        return redirect()->route('services.index')
+            ->with('success', 'Service deleted successfully');
     }
 }

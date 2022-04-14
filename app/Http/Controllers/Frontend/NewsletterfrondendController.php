@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Newsletter;
@@ -16,17 +16,17 @@ class NewsletterfrondendController extends Controller
         // dd($request->all());die();
         // Form validation
         $this->validate($request, [
-            
+
             'email' => 'required|email',
-           
-        
+
+
          ]);
           //  Store data in database
          Newsletter::create($request->all());
         }
         //  Store data in database
-       
-    
-      
-       
+
+
+
+
 }

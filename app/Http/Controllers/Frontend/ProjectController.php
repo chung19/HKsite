@@ -1,7 +1,6 @@
 <?php
-
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Frontend;
+use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -57,7 +56,7 @@ class ProjectController extends Controller
         Project::create($input);
 
         return redirect()->route('projects.index')
-            ->with('success', 'Project created successfully.');       
+            ->with('success', 'Project created successfully.');
     }
 
     /**
