@@ -41,6 +41,6 @@
     </tr>
     @endforeach
 </table>
-    {{-- {{$gallerys->links() }}  --}}
+    <!-- {{-- {{$gallerys->links() }}  --}} -->
 @endsection
 </button>

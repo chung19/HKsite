@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+    showNavbar('header_toggle', 'nav-bar', 'body-pd', 'header')
 
     /*===== LINK ACTIVE =====*/
     const linkColor = document.querySelectorAll('.nav_link')
