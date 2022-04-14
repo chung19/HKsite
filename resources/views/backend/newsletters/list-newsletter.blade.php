@@ -43,7 +43,7 @@
             </td>
         </tr>
         @endforeach
-        {{-- {{ $newsletter->links() }} --}}
+        {{-- {{ $newsletters->links() }} --}}
     </table>
 
 

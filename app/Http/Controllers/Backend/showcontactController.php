@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\backend_Controllers;
+namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 // use App\Http\Controllers\backend_Controllers\Showcontact;

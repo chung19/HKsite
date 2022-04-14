@@ -15,17 +15,17 @@
     <link rel="stylesheet" href="{{asset('backend/css/post.css')}}">
 
 </head>
-    <body id="body-pd">
-        <header class="header" id="header">
-            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+    <body id="body-pd" class="body-pd">
+        <header class="header body-pd" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu bx-x' id="header_toggle"></i> </div>
             <div class="header_img"><img src="{{ asset('./frontend/images/index-img/team/team4.png') }}" class="img-fluid" alt="Responsive image">
         </header>
-        <div class="l-navbar" id="nav-bar">
+        <div class="l-navbar showSider" id="nav-bar">
             <nav class="nav">
                 <div>
                     <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
                     <div class="nav_list">
-                         <a href="{{ url('back-end')}}" class="nav_link @if (\Request::is('back-end')) active  @endif"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="nav_name">Dashboard</span> </a>
+                         <a href="{{ url('admin')}}" class="nav_link @if (\Request::is('admin')) active  @endif"><i class="fa fa-tachometer" aria-hidden="true"></i><span class="nav_name">Dashboard</span> </a>
                          <a href="{{ url('projects')}}" class="nav_link @if (\Request::is('projects')) active  @endif"><i class="fa fa-product-hunt" aria-hidden="true"></i><span class="nav_name">Project</span> </a>
                          <a href="{{ url('team')}}" class="nav_link @if (\Request::is('team')) active  @endif"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav_name">Team</span> </a>
                          <a href="{{ url('reviews')}}" class="nav_link @if (\Request::is('reviews')) active  @endif"><i class="fa fa-renren" aria-hidden="true"></i><span class="nav_name">Review</span> </a>

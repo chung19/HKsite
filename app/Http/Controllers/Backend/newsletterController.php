@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\backend_Controllers;
+namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Newsletter;
 use Illuminate\Http\Request;
@@ -14,7 +14,7 @@ class newsletterController extends Controller
     public function index()
     {
         // $newsletters = Newsletter::latest()->paginate(5);
-       $newsletters = Newsletter::all();
+        $newsletters = Newsletter::all();
         return view('backend/newsletters.list-newsletter',compact('newsletters'));
             // ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -37,19 +37,19 @@ class newsletterController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $request->validate([
             // $newsletter_img = new newsletter_img;
             'email' => 'required|email',
-         
+
         ]);
-  
+
         $input = $request->all();
         Newsletter::create($input);
         return redirect()->route('newsletters.index')
                         ->with('success','newsletter created successfully.');
     }
-    
+
 
     /**
      * Display the specified resource.
@@ -85,9 +85,9 @@ class newsletterController extends Controller
     {
         $request->validate([
             'email' => 'required',
-          
+
         ]);
-  
+
         $input = $request->all();
         $newsletter->update($input);
         return redirect()->route('newsletters.index')
@@ -105,6 +105,6 @@ class newsletterController extends Controller
         $newsletter->delete();
         return redirect()->route('newsletters.index')
         ->with('success','newsletter deleted successfully');
-       
+
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Frontend;
+use App\Http\Controllers\Controller;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -57,7 +57,7 @@ class TeamController extends Controller
         Team::create($input);
 
         return redirect()->route('team.index')
-            ->with('success', 'Team created successfully.');  
+            ->with('success', 'Team created successfully.');
     }
 
     /**

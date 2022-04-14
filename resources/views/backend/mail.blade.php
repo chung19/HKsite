@@ -19,8 +19,8 @@ Email: {{ $email }} <br>
 Phone: {{ $phone }} <br>
 Subject: {{ $subject }} <br>
 Message: {{ $user_query }} <br><br>
-
-Thanks 
+{{-- <p>{{ $test_message }}</p> --}}
+Thanks
 </div>
 </body>
 </html>

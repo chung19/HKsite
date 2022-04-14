@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\backend_Controllers;
+namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Contact;
@@ -10,7 +10,7 @@ class ContactUsFormController extends Controller {
     public function createForm(Request $request) {
       return view('frontend.contact');
     }
-    
+
     // Store Contact Form data
     public function ContactUsForm(Request $request) {
         // dd($request->all());die();
@@ -21,7 +21,7 @@ class ContactUsFormController extends Controller {
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'subject'=>'required',
             'message' => 'required',
-     
+
          ]);
         //  Store data in database
         Contact::create($request->all());
