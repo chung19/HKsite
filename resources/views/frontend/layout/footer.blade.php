@@ -42,7 +42,10 @@
               <h5 class="footer_top-posts-title">Popular Post</h5>
               <div class="content_right_our_contact">
                 <div class="popular_posts_content">
-
+                    <?php
+                    $randPost = DB::table('posts')
+                                    ->inRandomOrder()->limit(2)->get();
+                  ?>
                   @foreach ($randPost as $item)
                     <div class="popular_posts_content_item">
                       <div class="popular_posts_content_img">
@@ -57,7 +60,7 @@
                     </div>
                   @endforeach
 
-                  
+
                   <!-- <div class="popular_posts_content_item">
                     <div class="popular_posts_content_img">
                       <img src="{{asset('./frontend/images/footer/anh_16.png')}}" alt="" />
