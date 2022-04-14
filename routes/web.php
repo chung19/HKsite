@@ -1,17 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Frontend\Controller;
-use App\Http\Controllers\Frontend\ReviewController;
-use App\Http\Controllers\Frontend\ServiceController;
-use App\Http\Controllers\Frontend\HomeController;
-use App\Http\Controllers\Frontend\ServiceDetailController;
 use App\Http\Controllers\Frontend\ArticleListController;
-use App\Http\Controllers\Frontend\DashboardController;
-use App\Http\Controllers\Frontend\CategoryController;
-use App\Http\Controllers\Frontend\PostController;
-use App\Http\Controllers\Frontend\ProjectController;
-use App\Http\Controllers\Frontend\TeamController;
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Backend\NewsletterfrondendControllerController;
+use App\Http\Controllers\Frontend\ServiceDetailController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Backend\ReviewController;
+use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\PostController;
+use App\Http\Controllers\Backend\ProjectController;
+use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\newsletterController;
 use App\Http\Controllers\Backend\PhotoController;
 use App\Http\Controllers\Backend\ShowcontactController;
@@ -28,14 +30,14 @@ use App\Http\Controllers\Backend\ShowcontactController;
 // ----------------------------------frontend-----------------------------
 Route::resource('/', HomeController::class);
 Route::resource('home', HomeController::class);
-Route::get('/service-details', [App\Http\Controllers\Frontend\ServiceController::class , 'indexService'] );
+Route::get('/service-details', [App\Http\Controllers\Backend\ServiceController::class , 'indexService'] );
 Route::resource('articleList',ArticleListController::class);
 Route::resource('contact', ContactController::class);
 Route::get('serviceLists', function () {
     return view('frontend/serviceLists');
 });
 Route::get('partners', function () {
-    return view('frontend.partners');
+    return view('frontend/partners');
 });
 
 

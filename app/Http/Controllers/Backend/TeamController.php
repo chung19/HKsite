@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
-use App\Models\Service;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class ServiceController extends Controller
+class TeamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::latest()->paginate(10);
+        $teams = Team::all();
 
-        return view('backend/services.index', compact('services'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('backend/team.list-team', compact('teams'));
     }
 
     /**
@@ -28,7 +27,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('backend/services.create');
+        return view('backend/team.create-team');
     }
 
     /**
@@ -39,11 +38,11 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        echo $request->input('content');
         $request->validate([
             'title' => 'required',
-            'content' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:12048',
+            'category' => 'required',
         ]);
 
         $input = $request->all();
@@ -55,54 +54,54 @@ class ServiceController extends Controller
             $input['image'] = "$profileImage";
         }
 
-        Service::create($input);
+        Team::create($input);
 
-        return redirect()->route('services.index')
-            ->with('success', 'service created successfully.');
+        return redirect()->route('team.index')
+            ->with('success', 'Team created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service)
+    public function show(Team $team)
     {
-        return view('backend.services.show', compact('service'));
+        return view('backend/team.details-team', compact('team'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function edit(Service $service)
+    public function edit(Team $team)
     {
-        return view('backend/services.edit', compact('service'));
+        return view('backend/team.edit-team', compact('team'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $service = Service::find($id);
+        $team = Team::find($id);
         $request->validate([
             'title' => 'required',
-            'content' => 'required'
+            'description' => 'required',
+            'category' => 'required',
         ]);
 
         $input = $request->all();
 
-
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/' . $service->image;
+            $destinationPath = 'image/' . $team->image;
             if (File::exists($destinationPath)) {
                 File::delete($destinationPath);
             }
@@ -113,28 +112,27 @@ class ServiceController extends Controller
             unset($input['image']);
         }
 
-        $service->update($input);
+        $team->update($input);
 
-        return redirect()->route('services.index')
-            ->with('success', 'Service updated successfully');
+        return redirect()->route('team.index')
+            ->with('success', 'Team updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Service  $service
+     * @param  \App\Models\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $service = Service::find($id);
-        $destination = 'image/' . $service->image;
+        $team = Team::find($id);
+        $destination = 'image/' . $team->image;
         if (File::exists($destination)) {
             File::delete($destination);
         }
-        $service->delete();
-
-        return redirect()->route('services.index')
-            ->with('success', 'Service deleted successfully');
+        $team->delete();
+        return redirect()->route('team.index')
+            ->with('success', 'Team deleted successfully');
     }
 }
