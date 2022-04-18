@@ -69,7 +69,7 @@
     <div class="box-content-serviceList">
       <div class="box-container">
         <!-- box 1 -->
-      
+        @foreach ($services as $service)
       <div class="box-serviceList">
        <a class="bg-color-serviceList" href="https://cs.symfony.com/">
           <div class="boxCurved-serviceList box-icon-serviceList"></div>
@@ -78,7 +78,7 @@
           <div class="heading-serviceList ">
              <div class="tittle-serviceList">
                <p>
-               <h4 class="title-strong">Digital Marketing</h4>
+               <h4 class="title-strong">{{ $service -> title}}</h4>
                </p>
              </div>
              <div class="content-serviceList">
@@ -92,122 +92,7 @@
             alt="Icons 2" /></i></span>
           </a>
         </div>
-           <!-- box 1 end -->
-               <!-- box 2 -->
-      <div class="box-serviceList2">
-       <a class="bg-color-serviceList" href="https://cs.symfony.com/">
-          <div class="boxCurved-serviceList box-icon-serviceList"></div>
-              <div class="boxCurved-serviceList2 "></div>
-          <span><i class=" filtered4  icon-position-serviceList"></i></span>
-          <div class="heading-serviceList ">
-             <div class="tittle-serviceList">
-               <p>
-               <h4 class="title-strong">Web Development </h4>
-               </p>
-             </div>
-             <div class="content-serviceList">
-               <p>Conveniently predominate sticky ali</p>
-               <p>than low risk high yield methods of emp</p>
-               <p> brand superior techno</p>
-             </div>
-             <div class="hide-img-box-serviceList"></div>
-           </div>
-           <span class="circle-chevron-right-serviceList"> <img src="{{ ('./frontend/img/icons/i2.png') }}"
-            alt="Icons 2" /></i></span>
-          </a>
-          </div>
-              <!-- box2 end -->
-                  <!-- box 3 -->
-      <div class="box-serviceList">
-       <a class="bg-color-serviceList" href="https://cs.symfony.com/">
-          <div class="boxCurved-serviceList box-icon-serviceList"></div>
-              <div class="boxCurved-serviceList2 "></div>
-          <span><i class=" filtered5  icon-position-serviceList"></i></span>
-          <div class="heading-serviceList ">
-             <div class="tittle-serviceList">
-               <p>
-               <h4 class="title-strong">App Designs</h4>
-               </p>
-             </div>
-             <div class="content-serviceList">
-               <p> Energistically target dynamic technolog </p>
-               <p> content and ubiquileApp have become</p>
-               <p> future-proof value</p>
-             </div>
-           </div>
-           <span class="circle-chevron-right-serviceList"> <img src="{{ ('./frontend/img/icons/i2.png') }}"
-             alt="Icons 2" /></i></span>
-          </a>
-          </div>
-              <!-- box 3 end -->
-                  <!-- box 4 -->
-      <div class="box-serviceList">
-       <a class="bg-color-serviceList" href="https://cs.symfony.com/">
-          <div class="boxCurved-serviceList box-icon-serviceList"></div>
-              <div class="boxCurved-serviceList2 "></div>
-          <span><i class=" filtered6  icon-position-serviceList"></i></span>
-          <div class="heading-serviceList ">
-             <div class="tittle-serviceList">
-               <p>
-               <h4 class="title-strong">Graphic Design</h4>
-               </p>
-             </div>
-             <div class="content-serviceList">
-               <p> Conveniently predominate sticky ali </p>
-               <p> than low risk high yield methods of emp</p>
-               <p> brand superior techno</p>
-             </div>
-           </div>
-           <span class="circle-chevron-right-serviceList"> <img src="{{ ('./frontend/img/icons/i2.png') }}"
-             alt="Icons 2" /></i></span>
-          </a>
-          </div>
-              <!-- box 4 end -->
-                  <!-- box 5 -->
-      <div class="box-serviceList">
-       <a class="bg-color-serviceList" href="https://cs.symfony.com/">
-          <div class="boxCurved-serviceList box-icon-serviceList"></div>
-              <div class="boxCurved-serviceList2 "></div>
-          <span><i class=" filtered7  icon-position-serviceList"></i></span>
-          <div class="heading-serviceList ">
-             <div class="tittle-serviceList">
-               <p>
-               <h4 class="title-strong">Custom Soft Dev</h4>
-               </p>
-             </div>
-             <div class="content-serviceList">
-               <p> Holisticly strategize standardized manu </p>
-               <p> products for dynamic expertise. Rapidio</p>
-               <p> equity invested synergy</p>
-             </div>
-           </div>
-           <span class="circle-chevron-right-serviceList"> <img src="{{ ('./frontend/img/icons/i2.png') }}"
-             alt="Icons 2" /></i></span>
-         </a>
-          </div>
-              <!-- box 5 end -->
-                  <!-- box 6 -->
-      <div class="box-serviceList">
-       <a class="bg-color-serviceList" href="https://cs.symfony.com/">
-          <div class="boxCurved-serviceList box-icon-serviceList"></div>
-              <div class="boxCurved-serviceList2 "></div>
-          <span><i class=" filtered8  icon-position-serviceList"></i></span>
-       
-          <div class="heading-serviceList ">
-             <div class="tittle-serviceList">
-               <p>
-               <h4 class="title-strong">e-Commerce Service</h4>
-               </p>
-             </div>
-             <div class="content-serviceList">
-               <p> Distinctively communicate areexcellent </p>
-               <p> content and ubiquileApp have become</p>
-               <p> Synergistically with</p>
-             </div>
-           </div>
-           <span class="circle-chevron-right-serviceList"> <img src="{{ ('./frontend/img/icons/i2.png') }}"
-             alt="Icons 2" /></i></span>
-          </a>
+      @endforeach
           </div>
               <!-- box 6 end -->
       </div>
@@ -217,8 +102,8 @@
   <!-- box-content-serviceList  -->
   </div>
   <!-- main-serviceList End -->
-  
- 
+
+
   <!--  <section> footer ============================-->
   @include("frontend/layout.footer")
     <!--    JavaScripts-->

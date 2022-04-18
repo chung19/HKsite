@@ -6,6 +6,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Backend\NewsletterfrondendControllerController;
 use App\Http\Controllers\Frontend\ServiceDetailController;
+use App\Http\Controllers\Frontend\ServiceListsController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Backend\ReviewController;
 use App\Http\Controllers\Backend\ServiceController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\newsletterController;
 use App\Http\Controllers\Backend\PhotoController;
 use App\Http\Controllers\Backend\ShowcontactController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +41,9 @@ Route::get('serviceLists', function () {
 Route::get('partners', function () {
     return view('frontend/partners');
 });
+Route::get('articleListDetail', function () {
+    return view('frontend/articleListDetail');
+});
 
 
 
@@ -52,6 +57,7 @@ Route::resource('team',TeamController::class);
 Route::resource('blog', BlogController::class);
 Route::resource('services',ServiceController::class);
 Route::resource('service-details',ServiceDetailController::class);
+Route::resource('serviceLists',ServiceListsController::class);
 
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/add-post', [PostController::class, 'create']);

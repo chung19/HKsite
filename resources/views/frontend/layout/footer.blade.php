@@ -21,7 +21,6 @@
             <div class="footer_top-posts-info">
               <a href="#" class="footer_top-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> About Us</a>
             </div>
-<<<<<<< HEAD
             <div class="footer_top-posts-info">
               <a href="#" class="footer_topt-posts-place"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Our Services</a>
             </div>
@@ -54,27 +53,6 @@
                   <div class="popular_posts_contentinformation">
                     <div class="contentinformation_heading_popular_post fontcolor">
                       {{ $item -> post_title}}
-=======
-            <div class="col-12 col-md-6 col-lg-3 mt60">
-              <h5 class="footer_top-posts-title">Popular Post</h5>
-              <div class="content_right_our_contact">
-                <div class="popular_posts_content">
-                    <?php
-                    $randPost = DB::table('posts')
-                                    ->inRandomOrder()->limit(2)->get();
-                  ?>
-                  @foreach ($randPost as $item)
-                    <div class="popular_posts_content_item">
-                      <div class="popular_posts_content_img">
-                        <img src="./backend/images/{{ $item -> post_image}}" alt="" />
-                      </div>
-                      <div class="popular_posts_contentinformation">
-                        <div class="contentinformation_heading_popular_post fontcolor">
-                        {{ $item -> post_title}}
-                        </div>
-                        <p class="contentinformation_time">{{ $item -> post_date}}</p>
-                      </div>
->>>>>>> fce7d6898c018cde277c691210463208b1fe4589
                     </div>
                     <p class="contentinformation_time">{{ $item -> post_date}}</p>
                   </div>
@@ -82,12 +60,7 @@
                 @endforeach
 
 
-<<<<<<< HEAD
                 <!-- <div class="popular_posts_content_item">
-=======
-
-                  <!-- <div class="popular_posts_content_item">
->>>>>>> fce7d6898c018cde277c691210463208b1fe4589
                     <div class="popular_posts_content_img">
                       <img src="{{asset('./frontend/images/footer/anh_16.png')}}" alt="" />
                     </div>
