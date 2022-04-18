@@ -41,14 +41,5 @@
     </tr>
     @endforeach
 </table>
-<<<<<<< HEAD
-    {{-- {{$gallerys->links() }} --}}
-=======
-<<<<<<< HEAD
-    <!-- {{-- {{$gallerys->links() }}  --}} -->
-=======
-    {{$gallerys->links() }}
->>>>>>> fce7d6898c018cde277c691210463208b1fe4589
->>>>>>> origin
 @endsection
 </button>

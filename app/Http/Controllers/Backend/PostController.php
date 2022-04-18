@@ -18,8 +18,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $post = posts::all();
+        $post = posts::paginate(2);
         $category = Categories::all();
+        // $paginatePost = posts::paginate(2);
         return view('backend/posts.index_post', compact('post','category'));
     }
 

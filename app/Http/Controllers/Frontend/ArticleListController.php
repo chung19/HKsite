@@ -10,14 +10,16 @@ use Illuminate\Support\Facades\DB;
 use App\Models\posts;
 use App\Models\Newsletter;
 use App\Models\Categories;
+use App\Models\Photo;
 
 class ArticleListController extends Controller
 {
     public function index(){
-        $post = posts::all();
+        $recent = posts::latest()->paginate(3);
+        $post = posts::paginate(2);
         $category = Categories::all();
-        $randPost = posts::inRandomOrder()->limit(2)->get();
-        return view('frontend/articleList', compact('post','category','randPost'));
+        $randPhoto = Photo::inRandomOrder()->limit(6)->get();
+        return view('frontend/articleList', compact('post','category','randPhoto','recent'));
     }
     public function store(Request $request)
     {

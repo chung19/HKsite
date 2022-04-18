@@ -69,10 +69,14 @@
                   </div>
                 </div>
                 @endforeach
-                <button type="submit" class="button-loadMore btn btn-primary">
-                  Load More
-                </button>
+
+                <a href="{{ url('/articleList?page=3')}}">
+                  <button class="button-loadMore btn btn-primary" href="{{ url('/articleList?page=3')}}">
+                    Load More
+                  </button>
+                </a>
               </div>
+                <div>{{$post->onEachSide(1)->links()}}</div>
             </div>
             <div class="col-lg-4">
               <div class="articles_list_content_left">
@@ -112,61 +116,26 @@
                 <div class="content_right_recent_posts">
                   <h4 class="popular_recent_heading">Recent Post</h4>
                   <div class="recent_posts_content">
-                    <div class="recent_posts_content_item">
-                      <div class="recent_posts_content_img">
-                        <img src="./assets/image/anh_7.png" alt="" />
-                      </div>
-                      <div class="recent_posts_contentinformation">
-                        <div class="contentinformation_heading">
-                          <p>
-                            Participate in staff meet ingness manage dedicated
+                    @foreach ($recent as $item)
+                      <div class="recent_posts_content_item">
+                        <div class="recent_posts_content_img">
+                          <img src="./backend/images/{{ $item -> post_image }}" alt="" />
+                        </div>
+                        <div class="recent_posts_contentinformation">
+                          <div class="contentinformation_heading">
+                            <p>
+                            {{ $item -> post_title }}
+                            </p>
+                          </div>
+                          <p class="recect_contentinformation_time">
+                            <span class="recent_post_icon">
+                              <img src="./assets/image/icon-clock.png" alt="" />
+                            </span>
+                            {{ $item -> post_date }}
                           </p>
                         </div>
-                        <p class="recect_contentinformation_time">
-                          <span class="recent_post_icon">
-                            <img src="./assets/image/icon-clock.png" alt="" />
-                          </span>
-                          24 Jan, 2021
-                        </p>
                       </div>
-                    </div>
-                    <div class="recent_posts_content_item">
-                      <div class="recent_posts_content_img">
-                        <img src="./assets/image/anh_8.png" alt="" />
-                      </div>
-                      <div class="recent_posts_contentinformation">
-                        <div class="contentinformation_heading">
-                          <p>
-                            Dramatically provide access schemas without
-                            extensive back compatiple
-                          </p>
-                        </div>
-                        <p class="recect_contentinformation_time">
-                          <span class="recent_post_icon">
-                            <img src="./assets/image/icon-clock.png" alt="" />
-                          </span>
-                          18 Dec, 2021
-                        </p>
-                      </div>
-                    </div>
-                    <div class="recent_posts_content_item">
-                      <div class="recent_posts_content_img">
-                        <img src="./assets/image/anh_9.png" alt="" />
-                      </div>
-                      <div class="recent_posts_contentinformation">
-                        <div class="contentinformation_heading">
-                          <p>
-                            Participate in staff meet ingness manage dedicated
-                          </p>
-                        </div>
-                        <p class="recect_contentinformation_time">
-                          <span class="recent_post_icon">
-                            <img src="./assets/image/icon-clock.png" alt="" />
-                          </span>
-                          Tháng 3, 2021
-                        </p>
-                      </div>
-                    </div>
+                    @endforeach
                   </div>
                 </div>
                 <div class="content_right_catagory_posts">
@@ -212,24 +181,12 @@
                 <div class="content_right_galary_posts">
                   <h4 class="popular_galary_heading">Galary</h4>
                   <div class="popular_posts_content">
+                    @foreach ($randPhoto as $item)
                     <div class="popular_galary_content_item">
-                      <img src="./assets/image/anh_10.png" alt="" />
+                      <img src="./images/{{$item -> images}}" alt="" />
                     </div>
-                    <div class="popular_galary_content_item">
-                      <img src="./assets/image/anh_11.png" alt="" />
-                    </div>
-                    <div class="popular_galary_content_item">
-                      <img src="./assets/image/anh_12.png" alt="" />
-                    </div>
-                    <div class="popular_galary_content_item">
-                      <img src="./assets/image/anh_13.png" alt="" />
-                    </div>
-                    <div class="popular_galary_content_item">
-                      <img src="./assets/image/anh_14.png" alt="" />
-                    </div>
-                    <div class="popular_galary_content_item">
-                      <img src="./assets/image/anh_15.png" alt="" />
-                    </div>
+                    @endforeach
+                    
                   </div>
                 </div>
                 <div class="content_right_archives_posts">

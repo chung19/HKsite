@@ -189,6 +189,11 @@ html {
     background: linear-gradient(119deg, #028bfe, #029dfe, #02b4fe);
 }
 
+.button-message p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
 .input-group {
     padding-bottom: 10px;
 }
@@ -275,10 +280,16 @@ html {
 
 .contentinformation_heading {
     margin-top: 0px;
+    margin-left: 0;
 }
 
 .recent_posts_content_img {
     padding-bottom: 20px;
+}
+
+.recent_posts_content_img img{
+    width: 100px;
+    height: 100px;
 }
 
 .fontcolor {
