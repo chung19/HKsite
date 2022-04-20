@@ -86,6 +86,17 @@
                           from. Comparison new ham melancholy son themselves
                         </p>
                       </div>
+                      <div class="articles_list_text_content">
+                          <div class="articles_list_text_icon">
+                              <img src="./assets/image/icon-quote.png" alt="">
+                          </div>
+                          <div class="articles_list_text_reply">
+                                <i><p>Aouses or months settle remove ladies appear. Engrossed
+                                suffering supposing he recommend do eagerness.
+                                Commanded no of depending extremity amiable pleased.</p>
+                                <span>John Doe</span></i>
+                          </div>
+                      </div>
                       <div class="articles_list_text_sub">
                         <p>
                           Drawings can followed improved out sociable not.
@@ -103,37 +114,179 @@
                         <h3 class="articles_list_text_heading">
                           Conduct replied off whether arrived adapted
                         </h3>
-                        <div class="article_list_content">
-                        <ul class="article_list_content_list">
-                        <li class="article_list_content_item">
-                            <img src="./assets/image/icon-check.png" alt="" />
-                            <span>Compellingly facilitate impactful</span>
-                        </li>
-                        <li class="article_list_content_item">
-                            <img src="./assets/image/icon-check.png" alt="" />
-                            <span>Uniquely seize leveraged infomediaries rather than</span>
-                        </li>
-                        <li class="article_list_content_item">
-                            <img src="./assets/image/icon-check.png" alt="" />
-                            <span>Conveniently administrate functional </span>
-                        </li>
-                        <li class="article_list_content_item">
-                            <img src="./assets/image/icon-check.png" alt="" />
-                            <span>Globally recaptiualize virtual meta services</span>
-                        </li>
-                        <li class="article_list_content_item">
-                            <img src="./assets/image/icon-check.png" alt="" />
-                            <span>Dynamically leverage other's unique</span>
-                        </li>
-                        </ul>
-                     </div>
-                      </div>
+                            <div class="article_list_content">
+                            <ul class="article_list_content_list">
+                            <li class="article_list_content_item">
+                                <img src="./assets/image/icon-check.png" alt="" />
+                                <span>Compellingly facilitate impactful</span>
+                            </li>
+                            <li class="article_list_content_item">
+                                <img src="./assets/image/icon-check.png" alt="" />
+                                <span>Uniquely seize leveraged infomediaries rather than</span>
+                            </li>
+                            <li class="article_list_content_item">
+                                <img src="./assets/image/icon-check.png" alt="" />
+                                <span>Conveniently administrate functional </span>
+                            </li>
+                            <li class="article_list_content_item">
+                                <img src="./assets/image/icon-check.png" alt="" />
+                                <span>Globally recaptiualize virtual meta services</span>
+                            </li>
+                            <li class="article_list_content_item">
+                                <img src="./assets/image/icon-check.png" alt="" />
+                                <span>Dynamically leverage other's unique</span>
+                            </li>
+                            </ul>
+                            </div>
+                        </div>
                     </div>
                   </div>
+                  <div class="article_list_content_textIcon">
+                    <div class="article_list_content_text">
+                        <p>StartUp Software Development</p>
+                    </div>
+                    <div class="article_list_content_icon">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="article_list_recent_posts">
+                    <h4 class="article_list_recent_heading">Recent Post</h4>
+                        <div class="article_list_content">
+                            <div class="article_list_content_items">
+                                <div class="recent_posts_date">
+                                    <img src="./assets/image/icon-date.png" alt="">
+                                </div>
+                                <div class="recent_posts_img">
+                                    <img src="./assets/image/anh_18.png" alt="">
+                                    <div class="recent_posts_content_info">
+                                    <div class="recent_posts_content_title">
+                                        <h5>Benefits Of App Dev</h5>
+                                    </div>
+                                    <div class="recent_posts_content_text">
+                                        <p>Competently incentivize multifun
+                                        expertise with holistic users.
+                                        Monotonectally product</p>
+                                    </div>
+                                    <div class="recent_posts_content_icon">
+                                        <a href="http://"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="article_list_content_items">
+                                <div class="recent_posts_date">
+                                    <img src="./assets/image/icon-date2.png" alt="">
+                                </div>
+                                <div class="recent_posts_img">
+                                    <img src="./assets/image/anh_19.png" alt="">
+                                    <div class="recent_posts_content_info">
+                                    <div class="recent_posts_content_title">
+                                        <h5>Web Applications Dev</h5>
+                                    </div>
+                                    <div class="recent_posts_content_text">
+                                        <p>Assertively facilitate backend
+                                        products with tactical technology.
+                                        When some apps</p>
+                                    </div>
+                                    <div class="recent_posts_content_icon">
+                                        <a href="http://"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+                  <div class="articles_list_text_comments">
+                  <h3 class="articles_list_text_comments_heading">
+                          5 Comments
+                  </h3>
+                  <div class="articles_list_comments_items">
+                    <div class="articles_list_comments_content">
+                        <div class="articles_list_comments_img">
+                            <img src="./assets/image/anh_18.png" alt="">
+                        </div>
+                        <div class="articles_list_comments_info">
+                            <div class="articles_list_comments_nameAndDate">
+                                <span> Marts Davis</span>
+                                Jan 23, 2021
+                            </div>
+                            <div class="articles_list_comments_text">
+                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article
+                                musical shyness yet sixteen yet blushes. Entire its the did.</p>
+                            </div>
+                            <div class="articles_list_comments_reply">
+                            <a href="http://"><i class="fa fa-reply" aria-hidden="true"></i><span>REPLY</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles_list_comments_content1">
+                        <div class="articles_list_comments_img1">
+                            <img src="./assets/image/anh_18.png" alt="">
+                        </div>
+                        <div class="articles_list_comments_info1">
+                            <div class="articles_list_comments_nameAndDate1">
+                                <span>Emma Sara</span>
+                                Feb 29, 2021
+                            </div>
+                            <div class="articles_list_comments_text1">
+                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay
+                            musical shyness yet sixteen yet blushes. Entire.</p>
+                            </div>
+                            <div class="articles_list_comments_reply1">
+                            <a href="http://"><i class="fa fa-reply" aria-hidden="true"></i><span>REPLY</span></a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="articles_list_comments_items">
+                    <div class="articles_list_comments_content">
+                        <div class="articles_list_comments_img">
+                            <img src="./assets/image/anh_18.png" alt="">
+                        </div>
+                        <div class="articles_list_comments_info">
+                            <div class="articles_list_comments_nameAndDate">
+                                <span> David Marts</span>
+                                Jan 23, 2021
+                            </div>
+                            <div class="articles_list_comments_text">
+                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article
+                                musical shyness yet sixteen yet blushes. Entire its the did.</p>
+                            </div>
+                            <div class="articles_list_comments_reply">
+                            <a href="http://"><i class="fa fa-reply" aria-hidden="true"></i><span>REPLY</span></a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="articles_list_text_leav_comments">
+                  <h3 class="articles_list_text_leav_comments_heading">
+                          Leav A Comments
+                  </h3>
+                  <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <input type="text" class="form-control form-input" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-6">
+                        <input type="text" class="form-control form-input" placeholder="Your Email">
+                        </div>
+                    </div>
+                    <div class="form-group form-comment">
+                    <textarea class="form-control"rows="7"  placeholder="Your Comment"></textarea>
+                </div>
+                    <button type="submit" class="button-comment">
+                      ADD COMMENT
+                    </button>
+                  </form>
+                    </div>
                 </div>
               </div>
               <div class="col-lg-4">
-              <div class="articles_list_content_left">
+              <div class="articles_list_content_right">
                 <div class="input-group mb-3">
                   <div class="search border">
                     <input type="text" class="form-control border-0" placeholder="Search here..." aria-label="Search here..." aria-describedby="basic-addon2" />
