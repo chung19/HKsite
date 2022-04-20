@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Image;
 
 class PhotoController extends Controller
 {
@@ -43,16 +44,18 @@ class PhotoController extends Controller
     {
         $request->validate([
 
-            'images' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:12048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:12048',
         ]);
 
         $input = $request->all();
 
-        if ($images = $request->file('images')) {
-            $destinationPath = 'images/';
-            $profileImage = date('YmdHis') . "." . $images->getClientOriginalExtension();
-            $images->move($destinationPath, $profileImage);
-            $input['images'] = "$profileImage";
+        if ($image = $request->file('image')) {
+            $profileImage = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('image/');
+            // thumbnail 
+            $img = Image::make($image->path());
+            $img->fit(116,116)->save(  $destinationPath .'/'.$profileImage);
+            $input['image'] = "$profileImage";
         }
 
        Photo::create($input);
@@ -95,21 +98,24 @@ class PhotoController extends Controller
 
         $gallery = Photo::find($id);
         $request->validate([
-            'images' => 'required|mimes:jpeg,png,jpg,gif,svg|max:12048',
+            'image' => 'required|mimes:jpeg,png,jpg,gif,svg|max:12048',
 
         ]);
         $input = $request->all();
 
-        if ($images = $request->file('images')) {
-            $destinationPath = 'images/' . $gallery->images;
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/' . $gallery->image;
             if (File::exists($destinationPath)) {
                 File::delete($destinationPath);
             }
-            $profileImage = date('YmdHis') . "." . $images->getClientOriginalExtension();
-            $images->move('images/', $profileImage);
-            $input['images'] = "$profileImage";
+            $profileImage = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('image/');
+            // thumbnail 
+            $img = Image::make($image->path());
+            $img->fit(116,116)->save(  $destinationPath .'/'.$profileImage);
+            $input['image'] = "$profileImage";
         } else {
-            unset($input['images']);
+            unset($input['image']);
         }
 
 
@@ -128,7 +134,7 @@ class PhotoController extends Controller
     public function destroy( $id)
     {
         $gallery = Photo::find($id);
-        $destination = 'images/' . $gallery->images;
+        $destination = 'image/' . $gallery->image;
         if (File::exists($destination)) {
             File::delete($destination);
         }
