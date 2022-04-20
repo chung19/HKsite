@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
+
 use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
@@ -13,6 +15,12 @@ use App\Models\Categories;
 use Illuminate\Support\Facades\File;
 
 use Illuminate\Support\Facades\Storage;
+
+use Illuminate\Http\UploadedFile;
+
+use Illuminate\Database\Eloquent\Model;
+
+use Image;
 
 class PostController extends Controller
 {
@@ -45,9 +53,28 @@ class PostController extends Controller
         if($request->hasfile('post_image'))
         {
             $file = $request->file('post_image');
+            $file1 = $request->file('post_image');
             $extention = $file->getClientOriginalExtension();
+
             $filename = time().'.'.$extention;
-            $file->move('backend/images/', $filename);
+            $smallthumbnail = 'small_'.time().'.'.$extention;
+            $mediumthumbnail = 'medium_'.time().'.'.$extention;
+            $largethumbnail = 'large_'.time().'.'.$extention;
+
+            $request->file('post_image')->move('backend/images/', $filename);
+            // $request->file('post_image')->move('backend/images/', $smallthumbnail);
+            // $request->file('post_image')->move('backend/images/', $mediumthumbnail);
+            // $request->file('post_image')->move('backend/images/', $largethumbnail);
+
+            // $smallthumbnailpath = public_path('backend/images/'.$smallthumbnail);
+            // $this->createThumbnail($smallthumbnailpath, 80, 80);
+            // $mediumthumbnailpath = public_path('backend/images/'.$mediumthumbnail);
+            // $this->createThumbnail($mediumthumbnailpath, 100, 100);
+            // $largethumbnailpath = public_path('backend/images/'.$largethumbnail);
+            // $this->createThumbnail($largethumbnailpath, 250, 210);
+            $largethumbnailpath = public_path('backend/images/'.$filename);
+            $this->createThumbnail($largethumbnailpath, 250, 210);
+
             $post->post_image = $filename;
         }
         $post->post_date = $request->input('post_date');
@@ -111,5 +138,10 @@ class PostController extends Controller
         }
         $post->delete();
         return redirect()->back()->with('status','Post Deleted Successfully');
+    }
+
+    public function createThumbnail($path, $width, $height)
+    {
+        $img = Image::make($path)->fit($width, $height)->save($path);
     }
 }
