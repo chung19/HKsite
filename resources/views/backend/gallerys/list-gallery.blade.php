@@ -25,7 +25,7 @@
     @foreach ($gallerys as $gallery)
     <tr>
         <td>{{ $gallery->id }}</td>
-        <td><img src="/images/{{ $gallery->images }}" width="100px"></td>
+        <td><img src="/image/{{ $gallery->image }}" width="100px"></td>
         <td>
             <form action="{{ route('gallerys.destroy',$gallery->id) }}" method="POST">
                 <a class="btn btn-primary" href="{{ route('gallerys.edit',$gallery->id) }}">Edit</a>

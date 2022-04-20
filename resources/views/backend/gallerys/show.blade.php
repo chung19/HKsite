@@ -13,7 +13,7 @@
 </div>
 <div class="wrapper row">
     <div class="preview col-md-3">
-        <img src="/images/{{ $gallery->images }}" class="img-fluid" alt="Responsive image">
+        <img src="/image/{{ $gallery->image }}" class="img-fluid" alt="Responsive image">
     </div>
     <div class="details col-md-9">
         <div class="row">

@@ -183,7 +183,7 @@
                   <div class="popular_posts_content">
                     @foreach ($randPhoto as $item)
                     <div class="popular_galary_content_item">
-                      <img src="./images/{{$item -> images}}" alt="" />
+                      <img src="./image/{{$item -> image}}" alt="" />
                     </div>
                     @endforeach
                     

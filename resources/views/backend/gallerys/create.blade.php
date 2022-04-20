@@ -30,7 +30,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Images:</strong>
-                <input type="file" name="images" class="form-control" placeholder="images">
+                <input type="file" name="image" class="form-control" placeholder="image">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">

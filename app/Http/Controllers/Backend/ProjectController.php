@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-
+use Image;
 class ProjectController extends Controller
 {
     /**
@@ -47,9 +47,11 @@ class ProjectController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
+            $profileImage = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('image/');
+            // thumbnail 
+            $img = Image::make($image->path());
+            $img->fit(570, 279)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
         }
 
@@ -104,8 +106,11 @@ class ProjectController extends Controller
             if (File::exists($destinationPath)) {
                 File::delete($destinationPath);
             }
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move('image/', $profileImage);
+            $profileImage = time().'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('image/');
+            // thumbnail 
+            $img = Image::make($image->path());
+            $img->fit(570, 279)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
         } else {
             unset($input['image']);

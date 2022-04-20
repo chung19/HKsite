@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::dropIfExists('photos');
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->string('images');
+            $table->string('image');
             $table->timestamps();
         });
     }

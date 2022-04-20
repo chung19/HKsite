@@ -31,8 +31,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Images:</strong>
-                <input type="file" name="images" class="form-control" placeholder="image">
-                <img src="/images/{{ $gallery->images }}" width="300px">
+                <input type="file" name="image" class="form-control" placeholder="image">
+                <img src="/image/{{ $gallery->image }}" width="300px">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-3">
