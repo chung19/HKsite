@@ -3,20 +3,20 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel Showcontact  CRUD hksite</h2>
+                <h2>Showcontact List  </h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('showcontacts.create') }}"> Create New Contact</a>
             </div>
         </div>
     </div>
-    
+
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
     @endif
-     
+
     <table class="table table-bordered">
         <tr>
             <th>ID</th>
@@ -37,16 +37,13 @@
             <td>{{ $showcontact->message }}</td>
             <td>
 
-          
+
                 <form action="{{ route('showcontacts.destroy',$showcontact->id) }}" method="POST">
-     
-                    <a class="btn btn-info" href="{{ route('showcontacts.show',$showcontact->id) }}">Show</a>
-      
-                    <a class="btn btn-primary" href="{{ route('showcontacts.edit',$showcontact->id) }}">Edit</a>
-     
+                         <a class="btn btn-primary" href="{{ route('showcontacts.edit',$showcontact->id) }}">Edit</a>
+
                     @csrf
                     @method('DELETE')
-        
+
                     <button type="submit" class="btn btn-danger"onclick="return confirm('Are you sure deteted this Contact ID : {{ $showcontact->id }}?')">Delete</button>
                 </form>
             </td>
@@ -55,5 +52,5 @@
     </table>
 
     {{-- {{$showcontacts->links() }}  --}}
-
+    {{$showcontacts->links() }}
 @endsection

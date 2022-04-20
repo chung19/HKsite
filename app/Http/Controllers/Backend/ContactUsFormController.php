@@ -12,19 +12,26 @@ class ContactUsFormController extends Controller {
     }
 
     // Store Contact Form data
-    public function ContactUsForm(Request $request) {
+    public function ContactUsForm(Request $request)
+    {
         // dd($request->all());die();
         // Form validation
         $this->validate($request, [
             'name' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'email' => 'required',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:10',
             'subject'=>'required',
             'message' => 'required',
 
          ]);
-        //  Store data in database
+        // //  Store data in database
+
         Contact::create($request->all());
+
+        // $input = $request->all();
+        // Contact::create($input);
+        // return redirect()->route('contact')
+        //     ->with('success', 'Contact created successfully.');
         //  Send mail to admin
         \Mail::send('backend.mail', array(
             'name' => $request->get('name'),
@@ -35,8 +42,10 @@ class ContactUsFormController extends Controller {
         ),
          function($message) use ($request){
             $message->from($request->email);
-            $message->to('hoangkhangsuport@gmail.com', 'Admin Support HK site')->subject($request->get('subject'));
+            $message->to('luanpm88@gmail.com', 'Admin Support HK site')->subject($request->get('subject'));
         });
-        return back()->withErrors(['success' => 'We have received your message and would like to thank you for writing to us.']);
+        // return back()->withErrors(['success' => 'We have received your message and would like to thank you for writing to us.']);
+        return redirect()->route('contact.store')
+        ->with('success', 'Contact created successfully.');
     }
 }

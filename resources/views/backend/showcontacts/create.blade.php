@@ -10,7 +10,7 @@
         </div>
     </div>
 </div>
-     
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -21,10 +21,10 @@
         </ul>
     </div>
 @endif
-     
+
 <form action="{{ route('showcontacts.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
-    
+
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
@@ -35,18 +35,21 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Email:</strong>
-                <input type="text" name="email" class="form-control" placeholder="email">
+                <input type="email" name="email" class="form-control" placeholder="email">
             </div>
         </div>
-   
+
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Phone:</strong>
-                <input type="text" name="phone" class="form-control" placeholder="phone">
+                <input type="number" name="phone"  id="phone" class="form-control" placeholder="phone"  pattern="[0-9]{10}"
+                required>
+
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Subject:</strong>
                 <input type="text" name="subject" class="form-control" placeholder="subject">
             </div>
         </div>
@@ -60,6 +63,6 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
-     
+
 </form>
 @endsection

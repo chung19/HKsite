@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Newsletter HKsite CRUD Form </h2>
+                <h2> Newsletter List </h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('newsletters.create') }}"> Create New Newsletter </a>
@@ -31,8 +31,6 @@
             <td>
                 <form action="{{ route('newsletters.destroy',$newsletter->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('newsletters.show',$newsletter->id) }}">Show</a>
-
                     <a class="btn btn-primary" href="{{ route('newsletters.edit',$newsletter->id) }}">Edit</a>
 
                     @csrf
@@ -43,11 +41,12 @@
             </td>
         </tr>
         @endforeach
-        {{-- {{ $newsletters->links() }} --}}
+
     </table>
 
 
 
-
+    {{ $newsletters->links() }}
+    
 
 @endsection

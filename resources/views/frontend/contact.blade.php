@@ -115,18 +115,11 @@
             </p>
             <!-- FORM -->
             <div class="container">
-                <!-- Success message -->
-                {{-- @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-            </div>
-            @endif --}}
-            @if($message =Session::has('success'))
+            @if ($message = Session::get('success'))
             <div class="alert alert-success">
-                {{$message =Session::get('success')}}
-                <p>{{ $message }}</p>
+                {{ $message }}
             </div>
-            @endif
+        @endif
             <!-- Success message end -->
             {{-- Laravel Contact Form Validation  --}}
             <form action="" method="post" action="{{ route('contact.store') }}">
@@ -145,17 +138,13 @@
                                 @endif
                             </div>
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding{{ $errors->has('email') ? 'error' : '' }}" name="email" id="email" placeholder="Your Email" /><br />
-                                @if ($errors->has('email'))
-                                <div class="error">
-                                    {{ $errors->first('email') }}
-                                </div>
-                                @endif
+                                <input type="email" class="form-control setting-padding{{ $errors->has('email') ? 'error' : '' }}" name="email" id="email" placeholder="Your Email" /><br />
+
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <input type="text" class="form-control setting-padding{{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone" placeholder="Phone" /><br />
+                                <input type="tel" class="form-control setting-padding{{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone" placeholder="Phone" /><br />
                                 @if ($errors->has('phone'))
                                 <div class="error">
                                     {{ $errors->first('phone') }}

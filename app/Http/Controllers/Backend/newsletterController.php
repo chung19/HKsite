@@ -13,8 +13,10 @@ class newsletterController extends Controller
      */
     public function index()
     {
-        // $newsletters = Newsletter::latest()->paginate(5);
-        $newsletters = Newsletter::all();
+          $newsletters = Newsletter::select("*")
+        ->paginate(10);
+
+        // $newsletters = Newsletter::all();
         return view('backend/newsletters.list-newsletter',compact('newsletters'));
             // ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -40,7 +42,7 @@ class newsletterController extends Controller
 
         $request->validate([
             // $newsletter_img = new newsletter_img;
-            'email' => 'required|email',
+            'email' => 'required|',
 
         ]);
 
@@ -71,6 +73,7 @@ class newsletterController extends Controller
      */
     public function edit(Newsletter $newsletter)
     {
+
         return view('backend/newsletters.edit',compact('newsletter'));
     }
 
@@ -84,7 +87,7 @@ class newsletterController extends Controller
     public function update(Request $request, Newsletter $newsletter)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => 'required|email',
 
         ]);
 

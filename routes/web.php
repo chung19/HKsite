@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\newsletterController;
 use App\Http\Controllers\Backend\PhotoController;
 use App\Http\Controllers\Backend\ShowcontactController;
+use App\Http\Controllers\Backend\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,8 +73,11 @@ Route::delete('/delete-category/{category_id}', [CategoryController::class, 'des
 Route::resource('showcontacts', ShowcontactController::class);
 // backend contact from  end
 // frontend contact form
+Route::resource('/contact', ContactUsFormController::class);
 Route::get('/contact', [App\Http\Controllers\Backend\ContactUsFormController::class, 'createForm']);
 Route::post('/contact', [ App\Http\Controllers\Backend\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+Route::get('users', [App\Http\Controllers\Backend\UserController::class, 'index'])->name('users.index');
+Route::post('users', [App\Http\Controllers\Backend\UserController::class, 'sendEmail'])->name('ajax.send.email');
 // frontend contact form end
 // back end newsletters form
 Route::resource('newsletters',newsletterController::class);

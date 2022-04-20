@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-     
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -21,18 +21,17 @@
             </ul>
         </div>
     @endif
-    
-    <form action="{{ route('newsletters.update',$newsletter->id) }}" method="POST" enctype="multipart/form-data"> 
+
+    <form action="{{ route('newsletters.update',$newsletter->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-     
+
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email</strong>
-                    {{ $newsletter->email }}
-                    <input type="text" name="email" class="form-control" placeholder="Email">
-                 
+                    <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $newsletter->email }}">
+
                 </div>
             </div>
             {{-- <div class="col-xs-12 col-sm-12 col-md-12">
@@ -46,6 +45,6 @@
               <button type="submit" class="btn btn-primary">Subscribe</button>
             </div>
         </div>
-     
+
     </form>
 @endsection

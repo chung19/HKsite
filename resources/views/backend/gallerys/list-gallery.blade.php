@@ -20,7 +20,7 @@
     <tr>
         <th>Id</th>
         <th>Images</th>
-        <th width="280px">Action</th>
+        <th width="280px" text-center>Action</th>
     </tr>
     @foreach ($gallerys as $gallery)
     <tr>
@@ -28,9 +28,6 @@
         <td><img src="/images/{{ $gallery->images }}" width="100px"></td>
         <td>
             <form action="{{ route('gallerys.destroy',$gallery->id) }}" method="POST">
-
-                <a class="btn btn-info" href="{{ route('gallerys.show',$gallery->id) }}">Show</a>
-
                 <a class="btn btn-primary" href="{{ route('gallerys.edit',$gallery->id) }}">Edit</a>
 
                 @csrf
@@ -41,5 +38,6 @@
     </tr>
     @endforeach
 </table>
+{{ $gallerys-> links()}}
 @endsection
 </button>

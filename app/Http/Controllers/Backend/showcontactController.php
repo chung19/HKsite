@@ -15,7 +15,9 @@ class ShowcontactController extends Controller
      */
     public function index()
     {
-        $showcontacts = Contact::all();
+        $showcontacts= Contact::select("*")
+                        ->paginate(10);
+        // $showcontacts = Contact::all();
         // $showcontacts = Contact::latest()->paginate(5);
         return view('backend/showcontacts.list-show-contact',compact('showcontacts'));
             // ->with('i', (request()->input('page', 1) - 1) *5);
@@ -44,7 +46,8 @@ class ShowcontactController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:10',
+
             'subject'=>'required',
             'message' => 'required',
 
@@ -97,7 +100,7 @@ class ShowcontactController extends Controller
         $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|max:10',
             'subject'=>'required',
             'message' => 'required',
 

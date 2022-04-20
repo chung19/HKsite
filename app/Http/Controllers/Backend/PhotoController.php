@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-
+ use Image;
 class PhotoController extends Controller
 {
     /**
@@ -15,8 +15,10 @@ class PhotoController extends Controller
      */
     public function index()
     {
+        $gallerys = Photo::select("*")
+        ->paginate(10);
         // $photos = Photo::latest()->paginate(5);
-       $gallerys = Photo::all();
+    //    $gallerys = Photo::all();
         return view('backend/gallerys.list-gallery',compact('gallerys'));
             // ->with('i', (request()->input('page', 1) - 1) * 5);
     }

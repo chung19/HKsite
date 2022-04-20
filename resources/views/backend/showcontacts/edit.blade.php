@@ -1,5 +1,5 @@
 @extends('backend.layout')
-     
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-     
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -22,51 +22,55 @@
             </ul>
         </div>
     @endif
-    
-    <form action="{{ route('showcontacts.update', $showcontact ->id) }}" method="POST" enctype="multipart/form-data"> 
+
+    <form action="{{ route('showcontacts.update', $showcontact->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-     
+
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    {{   $showcontact->name }}
-                    <input type="text" name="name" class="form-control" placeholder="Name">
+
+                    <input type="text" name="name" class="form-control" placeholder="Name"
+                        value="{{ $showcontact->name }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email:</strong>
-                    {{   $showcontact->email }}
-                    <input type="text" class="form-control"  name="email" placeholder="Email">
+
+                    <input type="email" class="form-control" name="email" placeholder="Email"
+                        value="{{ $showcontact->email }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Phone:</strong>
-                    {{   $showcontact->phone }}
-                    <input type="text" class="form-control"  name="phone" placeholder="Phone">
+                    <input type="number" class="form-control" name="phone" placeholder="Phone"
+                        value="{{ $showcontact->phone }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Subject:</strong>
-                    {{   $showcontact->subject }}
-                    <input type="text" name="subject" class="form-control" placeholder="subject">
+
+                    <input type="text" name="subject" class="form-control" placeholder="subject"
+                        value="{{ $showcontact->subject }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Message:</strong>
-                    {{   $showcontact->message }}
-                    <textarea class="form-control" style="height:150px" name="message" class="form-control" placeholder="message"></textarea>
+
+                    <textarea class="form-control" style="height:150px" name="message" class="form-control" placeholder="message"
+                        value="{{ $showcontact->message }}"></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                    <button type="submit" class="btn btn-primary" >Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
-     
+
     </form>
 @endsection
