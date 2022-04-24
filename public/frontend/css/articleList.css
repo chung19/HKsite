@@ -433,4 +433,11 @@ html {
     background: #fcfdfe;
 }
 
+.page-item{
+    margin: 0 !important;
+}
 
+.pagination{
+    align-items: center;
+    justify-content: center;
+}

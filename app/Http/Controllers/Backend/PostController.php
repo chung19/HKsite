@@ -53,7 +53,6 @@ class PostController extends Controller
         if($request->hasfile('post_image'))
         {
             $file = $request->file('post_image');
-            $file1 = $request->file('post_image');
             $extention = $file->getClientOriginalExtension();
 
             $filename = time().'.'.$extention;
@@ -61,18 +60,16 @@ class PostController extends Controller
             $mediumthumbnail = 'medium_'.time().'.'.$extention;
             $largethumbnail = 'large_'.time().'.'.$extention;
 
-            $request->file('post_image')->move('backend/images/', $filename);
-            // $request->file('post_image')->move('backend/images/', $smallthumbnail);
-            // $request->file('post_image')->move('backend/images/', $mediumthumbnail);
-            // $request->file('post_image')->move('backend/images/', $largethumbnail);
+            $file->storeAs('public/images', $filename);
+            $file->storeAs('public/images/thumbnail', $smallthumbnail);
+            $file->storeAs('public/images/thumbnail', $mediumthumbnail);
+            $file->storeAs('public/images/thumbnail', $largethumbnail);
 
-            // $smallthumbnailpath = public_path('backend/images/'.$smallthumbnail);
-            // $this->createThumbnail($smallthumbnailpath, 80, 80);
-            // $mediumthumbnailpath = public_path('backend/images/'.$mediumthumbnail);
-            // $this->createThumbnail($mediumthumbnailpath, 100, 100);
-            // $largethumbnailpath = public_path('backend/images/'.$largethumbnail);
-            // $this->createThumbnail($largethumbnailpath, 250, 210);
-            $largethumbnailpath = public_path('backend/images/'.$filename);
+            $smallthumbnailpath = public_path('storage/images/thumbnail/'.$smallthumbnail);
+            $this->createThumbnail($smallthumbnailpath, 80, 80);
+            $mediumthumbnailpath = public_path('storage/images/thumbnail/'.$mediumthumbnail);
+            $this->createThumbnail($mediumthumbnailpath, 100, 100);
+            $largethumbnailpath = public_path('storage/images/thumbnail/'.$largethumbnail);
             $this->createThumbnail($largethumbnailpath, 250, 210);
 
             $post->post_image = $filename;
@@ -107,15 +104,38 @@ class PostController extends Controller
 
         if($request->hasfile('post_image'))
         {
-            $destination = 'backend/images/'.$post->post_image;
+            $destination = 'storage/images/'.$post->post_image;
+            $destination1 = 'storage/images/thumbnail/large_'.$post->post_image;
+            $destination2 = 'storage/images/thumbnail/small_'.$post->post_image;
+            $destination3 = 'storage/images/thumbnail/medium_'.$post->post_image;
             if(File::exists($destination))
             {
                 File::delete($destination);
+                File::delete($destination1);
+                File::delete($destination2);
+                File::delete($destination3);
             }
+
             $file = $request->file('post_image');
             $extention = $file->getClientOriginalExtension();
+
             $filename = time().'.'.$extention;
-            $file->move('backend/images/', $filename);
+            $smallthumbnail = 'small_'.time().'.'.$extention;
+            $mediumthumbnail = 'medium_'.time().'.'.$extention;
+            $largethumbnail = 'large_'.time().'.'.$extention;
+
+            $file->storeAs('public/images', $filename);
+            $file->storeAs('public/images/thumbnail', $smallthumbnail);
+            $file->storeAs('public/images/thumbnail', $mediumthumbnail);
+            $file->storeAs('public/images/thumbnail', $largethumbnail);
+
+            $smallthumbnailpath = public_path('storage/images/thumbnail/'.$smallthumbnail);
+            $this->createThumbnail($smallthumbnailpath, 80, 80);
+            $mediumthumbnailpath = public_path('storage/images/thumbnail/'.$mediumthumbnail);
+            $this->createThumbnail($mediumthumbnailpath, 100, 100);
+            $largethumbnailpath = public_path('storage/images/thumbnail/'.$largethumbnail);
+            $this->createThumbnail($largethumbnailpath, 250, 210);
+
             $post->post_image = $filename;
         }
         $post->post_date = $request->input('post_date');
@@ -131,10 +151,16 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = posts::find($id);
-        $destination = 'backend/images/'.$post->post_image;
+        $destination = 'storage/images/'.$post->post_image;
+        $destination1 = 'storage/images/thumbnail/large_'.$post->post_image;
+        $destination2 = 'storage/images/thumbnail/small_'.$post->post_image;
+        $destination3 = 'storage/images/thumbnail/medium_'.$post->post_image;
         if(File::exists($destination))
         {
             File::delete($destination);
+            File::delete($destination1);
+            File::delete($destination2);
+            File::delete($destination3);
         }
         $post->delete();
         return redirect()->back()->with('status','Post Deleted Successfully');

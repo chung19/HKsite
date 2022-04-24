@@ -5,12 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
- use Image;
-=======
 use Image;
-
->>>>>>> origin
 class PhotoController extends Controller
 {
     /**
