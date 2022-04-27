@@ -1,5 +1,13 @@
 Note *****
 
+Login Admin
+ 
+ Route : http://127.0.0.1:8000/login
+
+Account : hoangkhangsuport@gmail.com
+
+Password : 123456
+
 User manual
 run cmd to create .env configuration file :
 

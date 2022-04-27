@@ -14,7 +14,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\PostController;
 use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\TeamController;
-use App\Http\Controllers\Backend\newsletterController;
+use App\Http\Controllers\Backend\NewsletterController;
 use App\Http\Controllers\Backend\PhotoController;
 use App\Http\Controllers\Backend\ShowcontactController;
 use App\Http\Controllers\Backend\UserController;
@@ -46,6 +46,20 @@ Route::get('partners', function () {
 
 
 // ----------------------------------backend-----------------------------
+//All Admin Routes List
+//--------------------------------------------
+//--------------------------------------------*/
+Route::middleware(['auth', 'user-access:admin'])->group(function () {
+
+    Route::get('/admin/home', [DashboardController::class, 'adminHome'])->name('admin.home');
+});
+Route::middleware(['auth', 'user-access:manager'])->group(function () {
+
+    Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
+});
+//All Admin Routes List
+//--------------------------------------------
+//--------------------------------------------*/
 Route::resource('admin', DashboardController::class);
 Route::resource('projects', ProjectController::class);
 Route::resource('reviews',ReviewController::class);
@@ -85,3 +99,7 @@ Route::resource('newsletters',newsletterController::class);
 Route::resource('services',ServiceController::class);
 Route::resource('service-details',ServiceDetailController::class);
 Route::resource('gallerys', PhotoController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

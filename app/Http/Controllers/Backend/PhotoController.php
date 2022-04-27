@@ -5,12 +5,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-<<<<<<< HEAD
- use Image;
-=======
-use Image;
 
->>>>>>> origin
+ use Image;
+
+
+
+
 class PhotoController extends Controller
 {
     /**
@@ -58,10 +58,11 @@ class PhotoController extends Controller
         if ($image = $request->file('image')) {
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(116,116)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
+            
         }
 
        Photo::create($input);
@@ -116,7 +117,7 @@ class PhotoController extends Controller
             }
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(116,116)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Newsletter;
 use Illuminate\Http\Request;
-class newsletterController extends Controller
+class NewsletterController extends Controller
 {
     /**
      * Display a listing of the resource.

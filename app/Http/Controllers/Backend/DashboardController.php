@@ -8,6 +8,19 @@ use App\Models\Dashboard;
 
 class DashboardController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    public function adminHome()
+    {
+        return view('backend/admin.adminHome');
+    }
+    public function managerHome()
+    {
+        return view('backend/admin.managerHome');
+    }
+
     /**
      * Display a listing of the resource.
      *

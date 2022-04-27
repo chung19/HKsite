@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+   
+
     public function index(){
         $projects = Project ::latest()->paginate(5);
         $teams = Team::latest()->paginate(5);
