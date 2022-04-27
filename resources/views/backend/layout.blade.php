@@ -29,7 +29,7 @@
                          <a href="{{ url('projects')}}" class="nav_link @if (\Request::is('projects')) active  @endif"><i class="fa fa-product-hunt" aria-hidden="true"></i><span class="nav_name">Project</span> </a>
                          <a href="{{ url('team')}}" class="nav_link @if (\Request::is('team')) active  @endif"><i class="fa fa-users" aria-hidden="true"></i> <span class="nav_name">Team</span> </a>
                          <a href="{{ url('reviews')}}" class="nav_link @if (\Request::is('reviews')) active  @endif"><i class="fa fa-renren" aria-hidden="true"></i><span class="nav_name">Review</span> </a>
-                         <a href="{{ url('posts')}}" class="nav_link @if (\Request::is('posts')) active  @endif"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Blog</span> </a>
+                         <a href="{{ url('posts')}}" class="nav_link @if (\Request::is('posts')) active  @endif"><i class="fa fa-rss" aria-hidden="true"></i><span class="nav_name">Post</span> </a>
                          <a href="{{ url('services')}}" class="nav_link @if (\Request::is('services')) active  @endif"><i class="fa fa-server" aria-hidden="true"></i><span class="nav_name">Service</span> </a>
                          <a href="{{ url('category')}}" class="nav_link @if (\Request::is('category')) active  @endif"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Category post</span> </a>
                          <a href="{{ url('showcontacts')}}" class="nav_link @if (\Request::is('showcontacts')) active  @endif"> <i class="fa fa-address-book" aria-hidden="true"></i> <span class="nav_name">Show contacts</span> </a>
