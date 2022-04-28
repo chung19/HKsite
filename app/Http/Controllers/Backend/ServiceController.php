@@ -13,6 +13,10 @@ class ServiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $services = Service::latest()->paginate(10);

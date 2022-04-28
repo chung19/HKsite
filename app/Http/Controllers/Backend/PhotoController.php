@@ -18,6 +18,10 @@ class PhotoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $gallerys = Photo::select("*")
@@ -62,7 +66,7 @@ class PhotoController extends Controller
             $img = Image::make($image->path());
             $img->fit(116,116)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
-            
+
         }
 
        Photo::create($input);

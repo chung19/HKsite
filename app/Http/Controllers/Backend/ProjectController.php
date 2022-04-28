@@ -12,6 +12,10 @@ class ProjectController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $projects = Project::all();
@@ -49,7 +53,7 @@ class ProjectController extends Controller
         if ($image = $request->file('image')) {
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(570, 279)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
@@ -108,7 +112,7 @@ class ProjectController extends Controller
             }
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(570, 279)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";

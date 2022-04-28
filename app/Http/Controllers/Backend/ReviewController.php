@@ -14,6 +14,10 @@ class ReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $reviews = Review::latest()->paginate(5);
@@ -53,7 +57,7 @@ class ReviewController extends Controller
         if ($image = $request->file('image')) {
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(298, 298)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
@@ -105,7 +109,7 @@ class ReviewController extends Controller
         ]);
 
         $input = $request->all();
-        
+
         if ($image = $request->file('image')) {
             $destinationPath = 'image/' . $review->image;
             if (File::exists($destinationPath)) {
@@ -113,7 +117,7 @@ class ReviewController extends Controller
             }
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(298, 298)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";

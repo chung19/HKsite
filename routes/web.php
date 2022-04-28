@@ -49,13 +49,17 @@ Route::get('partners', function () {
 //All Admin Routes List
 //--------------------------------------------
 //--------------------------------------------*/
-Route::middleware(['auth', 'user-access:admin'])->group(function () {
+Route::middleware(['auth', 'user-access:admin',])->group(function () {
 
     Route::get('/admin/home', [DashboardController::class, 'adminHome'])->name('admin.home');
 });
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
+});
+Route::middleware(['auth', 'user-access:team',])->group(function () {
+
+    Route::get('admin/team', [TeamController::class, 'adminTeam'])->name('admin.team');
 });
 //All Admin Routes List
 //--------------------------------------------

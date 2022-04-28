@@ -13,6 +13,10 @@ class TeamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $teams = Team::all();
@@ -50,7 +54,7 @@ class TeamController extends Controller
         if ($image = $request->file('image')) {
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(271, 298)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
@@ -109,7 +113,7 @@ class TeamController extends Controller
             }
             $profileImage = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('image/');
-            // thumbnail 
+            // thumbnail
             $img = Image::make($image->path());
             $img->fit(271, 298)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
