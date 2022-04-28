@@ -5,12 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-
- use Image;
-
-
-
-
+use Image;
 class PhotoController extends Controller
 {
     /**
@@ -66,7 +61,6 @@ class PhotoController extends Controller
             $img = Image::make($image->path());
             $img->fit(116,116)->save(  $destinationPath .'/'.$profileImage);
             $input['image'] = "$profileImage";
-
         }
 
        Photo::create($input);

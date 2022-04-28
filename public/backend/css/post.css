@@ -100,3 +100,8 @@ h2{
     width: 300px !important;
     height: auto !important;
 }
+
+.pagination{
+    align-items: center;
+    justify-content: center;
+}

@@ -40,7 +40,7 @@
                 @foreach($post as $item)
                 <div class="item d-flex ">
                   <div class="image">
-                    <img src="./backend/images/{{ $item -> post_image}}" class="img-fluid" />
+                    <img src="./storage/images/thumbnail/large_{{ $item -> post_image}}" class="img-fluid" />
                   </div>
                   <div class="text">
                     <div class="articles_list_text_title">
@@ -69,12 +69,7 @@
                   </div>
                 </div>
                 @endforeach
-
-                <a href="{{ url('/articleList?page=3')}}">
-                  <button class="button-loadMore btn btn-primary" href="{{ url('/articleList?page=3')}}">
-                    Load More
-                  </button>
-                </a>
+                
               </div>
                 <div>{{$post->onEachSide(1)->links()}}</div>
             </div>
@@ -119,7 +114,7 @@
                     @foreach ($recent as $item)
                       <div class="recent_posts_content_item">
                         <div class="recent_posts_content_img">
-                          <img src="./backend/images/{{ $item -> post_image }}" alt="" />
+                          <img src="./storage/images/thumbnail/medium_{{ $item -> post_image }}" alt="" />
                         </div>
                         <div class="recent_posts_contentinformation">
                           <div class="contentinformation_heading">

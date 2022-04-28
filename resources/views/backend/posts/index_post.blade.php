@@ -30,7 +30,7 @@
             <td>{{ $item -> post_title}}</td>
             <td>{{ $item -> post_content}}</td>
             <td>
-                <img src="{{asset('backend/images/'.$item->post_image) }}" alt="Image">
+                <img src="{{asset('storage/images/thumbnail/medium_'.$item->post_image) }}" alt="Image">
             </td>
             <td>{{ $item -> post_date}}</td>
             <td>

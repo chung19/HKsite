@@ -48,7 +48,7 @@
                 @foreach ($randPost as $item)
                 <div class="popular_posts_content_item">
                   <div class="popular_posts_content_img">
-                    <img src="./backend/images/{{ $item -> post_image}}" alt="" />
+                    <img src="./storage/images/thumbnail/small_{{ $item -> post_image}}" alt="" />
                   </div>
                   <div class="popular_posts_contentinformation">
                     <div class="contentinformation_heading_popular_post fontcolor">

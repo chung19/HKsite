@@ -42,7 +42,7 @@
                 <div class="form-group mb-3">
                     <label for="">Image</label>
                     <input type="file" name="post_image" class="form-control" value="{{$post->post_image}}">
-                    <img src="{{asset('backend/images/'.$post->post_image) }}" alt="Image" style="width: 600px; height: auto;">
+                    <img src="{{asset('storage/images/thumbnail/large_'.$post->post_image) }}" alt="Image">
                 </div>
                 <label for="Category_Id">
                     <div class="nameRow">Category name:</div>
