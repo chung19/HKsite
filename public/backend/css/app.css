@@ -311,3 +311,15 @@ label.col-md-4.col-form-label.text-md-end {
 .active {
     color: var(--white-color)
 }
+.navbar-nav{
+text-decoration: none;
+}
+.navbarDropdown{
+    text-decoration: none;
+}
+li{
+    text-decoration: none!important;
+}
+.navbar-nav {
+    text-decoration: none!important;
+}
