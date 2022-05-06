@@ -16,7 +16,8 @@ mv .env.example .env
 php artisan cache:clear 
 composer dump-autoload 
 php artisan key:generate
-
+php artisan db:seed --class=CreateUsersSeeder
+php artisan migrate
 
 
 
