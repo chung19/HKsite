@@ -20,10 +20,11 @@ class ReviewController extends Controller
     }
     public function index()
     {
-        $reviews = Review::latest()->paginate(5);
+        $reviews = Review::select("*")
+        ->paginate(5);
 
-        return view('backend/reviews.index',compact('reviews'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('backend/reviews.index',compact('reviews'));
+
     }
 
     /**

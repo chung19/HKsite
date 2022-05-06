@@ -18,8 +18,10 @@ class ProjectController extends Controller
     }
     public function index()
     {
-        $projects = Project::all();
 
+        $projects = Project::select("*")
+        ->paginate(5);
+        
         return view('backend/projects.list-project', compact('projects'));
     }
 

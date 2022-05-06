@@ -18,11 +18,8 @@ class NewsletterController extends Controller
     public function index()
     {
           $newsletters = Newsletter::select("*")
-        ->paginate(10);
-
-        // $newsletters = Newsletter::all();
+        ->paginate(5);
         return view('backend/newsletters.list-newsletter',compact('newsletters'));
-            // ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -45,11 +42,8 @@ class NewsletterController extends Controller
     {
 
         $request->validate([
-            // $newsletter_img = new newsletter_img;
             'email' => 'required|',
-
         ]);
-
         $input = $request->all();
         Newsletter::create($input);
         return redirect()->route('newsletters.index')
@@ -77,7 +71,6 @@ class NewsletterController extends Controller
      */
     public function edit(Newsletter $newsletter)
     {
-
         return view('backend/newsletters.edit',compact('newsletter'));
     }
 
@@ -92,7 +85,6 @@ class NewsletterController extends Controller
     {
         $request->validate([
             'email' => 'required|email',
-
         ]);
 
         $input = $request->all();
@@ -104,7 +96,7 @@ class NewsletterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Newsletter  $newslette
+     * @param  \App\Models\Newsletter  $newsletter
      * @return \Illuminate\Http\Response
      */
     public function destroy(Newsletter $newsletter)
@@ -112,6 +104,5 @@ class NewsletterController extends Controller
         $newsletter->delete();
         return redirect()->route('newsletters.index')
         ->with('success','newsletter deleted successfully');
-
     }
 }

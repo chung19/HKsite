@@ -22,27 +22,20 @@
         </div>
     @endif
 
-    <form action="{{ route('newsletters.update',$newsletter->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('newsletters.update', $newsletter->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
-         <div class="row">
+        <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Email</strong>
-                    <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $newsletter->email }}">
-
+                    <input type="email" name="email" class="form-control" placeholder="Email"
+                        value="{{ $newsletter->email }}">
                 </div>
             </div>
-            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Image:</strong>
-                    <input type="file" name="image" class="form-control" placeholder="Image">
-                    <img src="/image/{{ $newsletter->image }}" width="300px">
-                </div>
-            </div> --}}
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-              <button type="submit" class="btn btn-primary">Subscribe</button>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
             </div>
         </div>
 

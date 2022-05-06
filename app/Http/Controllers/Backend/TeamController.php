@@ -19,8 +19,9 @@ class TeamController extends Controller
     }
     public function index()
     {
-        $teams = Team::all();
 
+        $teams = Team::select("*")
+        ->paginate(5);
         return view('backend/team.list-team', compact('teams'));
     }
 

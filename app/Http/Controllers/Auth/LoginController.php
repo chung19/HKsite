@@ -37,6 +37,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    public function logout(Request $request){
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect('/login');
+
+    }
     public function login(Request $request)
     {
         $input = $request->all();
@@ -49,7 +57,7 @@ class LoginController extends Controller
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
         {
             if (auth()->user()->type == 'admin') {
-                return redirect()->route('admin.home');
+                return redirect()->route('admin');
             }else if (auth()->user()->type == 'manager') {
                 return redirect()->route('manager.home');
             }

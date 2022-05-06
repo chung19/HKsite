@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
-
+use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\Dashboard;
+// use App\Models\Dashboard;
 
 class DashboardController extends Controller
 {
@@ -28,7 +28,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('backend/dashboard');
+        $users = User::select("*")
+        ->paginate(5);
+        return view('backend/admin.list-admin',compact('users'));
     }
 
     /**
@@ -38,7 +40,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend/admin.create-admin');
     }
 
     /**
@@ -49,16 +51,28 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $users = new User();
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|',
+            'type'=>'required',
+        ]);
+        $input = $request->all();
+   User::create($input);
+        return redirect()->route('users.index')
+                        ->with('success','Admin Account created successfully.');
+
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  \App\Models\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function show(Dashboard $dashboard)
+    public function show(User $user)
     {
         //
     }
@@ -66,34 +80,46 @@ class DashboardController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  \App\Models\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function edit(Dashboard $dashboard)
+    public function edit(User $user)
     {
-        //
+        return view('backend/admin.edit-admin',compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  \App\Models\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Dashboard $dashboard)
+    public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|',
+            'type'=>'required',
+        ]);
+        $input = $request->all();
+        $user->update($input);
+        return redirect()->route('users.index')
+                        ->with('success','Admin account updated successfully');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Dashboard  $dashboard
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Dashboard $dashboard)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('users.index')
+        ->with('success','Admin Account Deleted Successfully');
     }
 }

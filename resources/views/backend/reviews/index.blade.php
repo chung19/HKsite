@@ -30,7 +30,7 @@
     </tr>
     @foreach ($reviews as $review)
     <tr>
-        <td>{{ ++$i }}</td>
+        <td>{{ $review->id }}</td>
         <td><img src="/image/{{ $review->image }}" width="100px"></td>
         <td>{{ $review->name }}</td>
         <td>@for($i=1; $i<=$review->star; $i++)

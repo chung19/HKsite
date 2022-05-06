@@ -307,9 +307,10 @@ label.col-md-4.col-form-label.text-md-end {
     color: #b2b837;
     background-color: beige;
     font-size: 20px;
+    text-align: center;
 }
-.active {
-    color: var(--white-color)
+.card-body {
+    text-align: center;
 }
 .navbar-nav{
 text-decoration: none;
@@ -322,4 +323,9 @@ li{
 }
 .navbar-nav {
     text-decoration: none!important;
+}
+.custom-welcome
+{
+    transition: margin-right 4s ease-in-out;
+    color: rgb(82, 75, 66)
 }

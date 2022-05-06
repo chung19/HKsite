@@ -68,5 +68,6 @@
     </tr>
     @endforeach
 </table>
+{{ $projects-> links()}}
 @endsection
 </button>

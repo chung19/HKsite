@@ -18,6 +18,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
+    protected $table = "users";
     protected $fillable = [
         'name',
         'email',
@@ -51,8 +53,12 @@ class User extends Authenticatable
      */
     protected function type(): Attribute
     {
+
         return new Attribute(
-            get: fn ($value) =>  ["user", "admin", "manager"][$value],
+            get: fn ($value) =>  ["user", "admin", "manager"][$value]??null,
         );
+    }
+    public function setPasswordAttribute($value){
+        $this->attributes['password'] = bcrypt($value);
     }
 }

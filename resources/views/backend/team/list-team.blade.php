@@ -69,5 +69,6 @@
     </tr>
     @endforeach
 </table>
+{{ $teams-> links()}}
 @endsection
 </button>

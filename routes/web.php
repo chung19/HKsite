@@ -30,6 +30,7 @@ use App\Http\Controllers\Backend\UserController;
 */
 // ----------------------------------frontend-----------------------------
 Route::resource('/', HomeController::class);
+// Route::get('/logout',[App\Http\Controllers\Auth\LoginController::class,'logout']);
 Route::resource('home', HomeController::class);
 Route::get('/service-details', [App\Http\Controllers\Backend\ServiceController::class , 'indexService'] );
 Route::resource('articleList',ArticleListController::class);
@@ -41,7 +42,9 @@ Route::get('partners', function () {
     return view('frontend/partners');
 });
 
-
+Route::get('logout', function () {
+    return view('auth.login');
+});
 
 
 
@@ -51,7 +54,7 @@ Route::get('partners', function () {
 //--------------------------------------------*/
 Route::middleware(['auth', 'user-access:admin',])->group(function () {
 
-    Route::get('/admin/home', [DashboardController::class, 'adminHome'])->name('admin.home');
+    Route::get('/admin', [DashboardController::class, 'adminHome'])->name('admin');
 });
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
@@ -64,7 +67,14 @@ Route::middleware(['auth', 'user-access:team',])->group(function () {
 //All Admin Routes List
 //--------------------------------------------
 //--------------------------------------------*/
-Route::resource('admin', DashboardController::class);
+// Route::resource('admin', DashboardController::class,);
+// Route::get('/admin', [ DashboardController::class, 'index'])->name('users.index');
+// Route::get('/add', [ DashboardController::class, 'create'])->name('users.create');
+// Route::post('/create-users', [ DashboardController::class, 'store'])->name('users.store');
+// Route::delete('/delete-users', [ DashboardController::class, 'destroy'])->name('users.destroy');
+// Route::get('/edit-users', [ DashboardController::class, 'edit'])->name('users.edit');
+// Route::put('/upadate-users', [ DashboardController::class, 'update'])->name('users.update');
+// Route::resource('users', DashboardController::class);
 Route::resource('projects', ProjectController::class);
 Route::resource('reviews',ReviewController::class);
 Route::resource('team',TeamController::class);
@@ -94,8 +104,8 @@ Route::resource('showcontacts', ShowcontactController::class);
 Route::resource('/contact', ContactUsFormController::class);
 Route::get('/contact', [App\Http\Controllers\Backend\ContactUsFormController::class, 'createForm']);
 Route::post('/contact', [ App\Http\Controllers\Backend\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
-Route::get('users', [App\Http\Controllers\Backend\UserController::class, 'index'])->name('users.index');
-Route::post('users', [App\Http\Controllers\Backend\UserController::class, 'sendEmail'])->name('ajax.send.email');
+// Route::get('users', [App\Http\Controllers\Backend\UserController::class, 'index'])->name('users.index');
+// Route::post('users', [App\Http\Controllers\Backend\UserController::class, 'sendEmail'])->name('ajax.send.email');
 // frontend contact form end
 // back end newsletters form
 Route::resource('newsletters',newsletterController::class);
@@ -105,5 +115,5 @@ Route::resource('service-details',ServiceDetailController::class);
 Route::resource('gallerys', PhotoController::class);
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+use App\Http\Controllers\Auth\LoginController;
+Route::get('/log', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('home');

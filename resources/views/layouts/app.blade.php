@@ -48,9 +48,9 @@
                             <!-- Tabs Titles -->
     <h2 class="uiactive">  <a class="nav-link @if (\Request::is('login')) active  @endif " href="{{ url('login') }}">{{ __('Login') }}</a> </h2>
     @endif
-    @if (Route::has('register'))
+    {{-- @if (Route::has('register'))
     <h2 class="uiactive underlineHover">   <a class="nav-link @if (\Request::is('register')) active  @endif " href="{{ url('register') }}">{{ __('Register') }}</a> </h2>
-    @endif
+    @endif --}}
     <!-- Icon -->
     <div class="fadeIn first">
 <h1 class="icon-login-custom">
