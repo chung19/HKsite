@@ -82,9 +82,9 @@
                         <i class="fa fa-solid fa-image" aria-hidden="true"></i> <span
                             class="nav_name">Gallery</span> </a>
                 </div>
-                <a href="{{ url('users ') }}" class="nav_link @if (\Request::is('users')) active @endif">
+                {{-- <a href="{{ url('users ') }}" class="nav_link @if (\Request::is('users')) active @endif">
                     <i class="fa fa-solid fa-image" aria-hidden="true"></i> <span
-                        class="nav_name">Users</span> </a>
+                        class="nav_name">Users</span> </a> --}}
             </div>
             </div>
         </nav>
