@@ -15,17 +15,11 @@
     <link rel="stylesheet" href="{{ asset('backend/css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/post.css') }}">
-    <link rel="stylesheet" href="{{ asset('./backend/css/app.css') }}">
 </head>
 
 <body id="body-pd" class="body-pd">
     <header class="header body-pd" id="header">
         <div class="header_toggle"> <i class='bx bx-menu bx-x' id="header_toggle"></i> </div>
-
-        <marquee>
-                <h1 class="custom-welcome">Welcome to the Admin Panel</h1>
-             </marquee>
-
         <div class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" v-pre>

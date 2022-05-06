@@ -5,7 +5,7 @@
     --white-color: #F7F6FB;
 } */
 html {
-  background-color: #56baed;
+  background-color: #f2edf3;
 }
 
 body {
@@ -48,108 +48,25 @@ h2 {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
   background: #fff;
-  padding: 30px;
-  width: 90%;
-  max-width: 550px;
+  padding: 0rem  3rem 0rem 3rem ;
+  width: 100%;
+  max-width: 432px;
   height: auto;
-  min-height: 650px;
+  min-height: 500px;
   position: relative;
-  padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  text-align: center;
-}
-
-#formFooter {
-  background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
+  text-align: left;
 }
 
 
-
-/* TABS */
-
-h2.inactive {
-  color: #cccccc;
+.fa-brands, .fab {
+  font-size: 34px;
 }
-
-h2.active {
-  color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+a.navbar-brand {
+  font-size: 28px;
+  height: 10px;
 }
-
-
-
-/* FORM TYPOGRAPHY*/
-
-input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
-  border: none;
-  color: white;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  margin: 5px 20px 40px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
-}
-
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-  -moz-transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-}
-
-input[type=text] {
-  background-color: #f6f6f6;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #f6f6f6;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type=text]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-
-input[type=text]:placeholder {
-  color: #cccccc;
-}
-
 
 
 /* ANIMATIONS */
@@ -284,48 +201,23 @@ input[type=text]:placeholder {
 }
 
 button.btn.btn-primary{
-color: #fff;
-background-color: #0b5ed7;
-border-color: #0a58ca;
-}
-button.btn-back {
-    margin-right: -435%;
-    color: #248dc3;
-    background-color: #11c311;
-    border-color: #0a58ca;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 100%;
+  color: #fff;
+  background: linear-gradient(to right, #da8cff, #9a55ff);
+  border:0;
+  width: 100%;
+  font-size: 0.875rem;
+  height: 50px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 .form-control{
-border-radius:2px ;
+  border: 1px solid #ebedf2;
+  font-family: "ubuntu-regular", sans-serif;
+  margin-bottom: 1px;
+  padding: 15px 31px 15px 31px;
+width: 100%;
 }
-label.col-md-4.col-form-label.text-md-end {
-    background-color: rgb(0 0 0 / 19%);
+.form-group {
+  margin-bottom: 1.5rem;
 }
-.card-header {
-    color: #b2b837;
-    background-color: beige;
-    font-size: 20px;
-    text-align: center;
-}
-.card-body {
-    text-align: center;
-}
-.navbar-nav{
-text-decoration: none;
-}
-.navbarDropdown{
-    text-decoration: none;
-}
-li{
-    text-decoration: none!important;
-}
-.navbar-nav {
-    text-decoration: none!important;
-}
-.custom-welcome
-{
-    transition: margin-right 4s ease-in-out;
-    color: rgb(82, 75, 66)
-}
+

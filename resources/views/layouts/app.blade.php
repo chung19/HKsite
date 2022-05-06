@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,75 +22,26 @@
     {{-- <link rel="stylesheet" href="{{ asset('frontend/font/font-awesome-4.7.0/css/font-awesome.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('./backend/css/app.css') }}">
 </head>
+
 <body>
     <div class="wrapper fadeInDown">
-    <div id="formContent" >
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <div class="dashboard">
-                <h2 class="icon-laravel-custom"><i class="fa-brands fa-laravel"></i></h2>
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <h1>{{ config('app.name', 'Laravel') }}</h1>
-                </a>
-                <h2 class="icon-feather-custom"><i class="fa-solid fa-feather-pointed"></i> </h2>
-            </div>
+        <div id="formContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="brand-logo">
+                            <h2 class="icon-laravel-custom"><i class="fa-brands fa-laravel"></i></h2>
+                            <a class="navbar-brand" href="{{ url('/') }}">
+                                <h1>{{ config('app.name', 'Laravel') }}</h1>
+                            </a>
+                        </div>
+                        <h4>Hello! let's get started</h4>
+                        <h6 class="font-weight-light" style="font-weight: 300;margin-top: -10px;">Sign in to continue.</h6>
+                    </div>
+            <main class="py-4">
+                @yield('content')
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                            <!-- Tabs Titles -->
-    <h2 class="uiactive">  <a class="nav-link @if (\Request::is('login')) active  @endif " href="{{ url('login') }}">{{ __('Login') }}</a> </h2>
-    @endif
-    {{-- @if (Route::has('register'))
-    <h2 class="uiactive underlineHover">   <a class="nav-link @if (\Request::is('register')) active  @endif " href="{{ url('register') }}">{{ __('Register') }}</a> </h2>
-    @endif --}}
-    <!-- Icon -->
-    <div class="fadeIn first">
-<h1 class="icon-login-custom">
-    <i class="fa fa-sign-in" aria-hidden="true"></i>
-</h1 >
-    </div>
-
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            @yield('content')
-
-        </main>
-        <a class="navbar-brand nav2" href="{{ url('/') }}">
-            <button class='btn-back' >Back Home</button>
-              </a>
-    </div>
+            </main>
+        </div>
     </div>
 </body>
+
 </html>
