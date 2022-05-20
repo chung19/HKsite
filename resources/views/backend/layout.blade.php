@@ -46,7 +46,7 @@
                 <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
                         class="nav_logo-name">BBBootstrap</span> </a>
                 <div class="nav_list">
-                    <a href="{{ url('admin') }}" class="nav_link @if (\Request::is('admin')) active @endif"><i
+                    <a href="{{ url('admin/home') }}" class="nav_link @if (\Request::is('admin/home')) active @endif"><i
                             class="fa fa-tachometer" aria-hidden="true"></i><span
                             class="nav_name">Dashboard</span> </a>
                     <a href="{{ url('projects') }}"

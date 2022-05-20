@@ -54,7 +54,7 @@ Route::get('logout', function () {
 //--------------------------------------------*/
 Route::middleware(['auth', 'user-access:admin',])->group(function () {
 
-    Route::get('/admin', [DashboardController::class, 'adminHome'])->name('admin');
+    Route::get('/admin/home', [DashboardController::class, 'adminHome'])->name('admin.home');
 });
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
@@ -72,7 +72,7 @@ Route::middleware(['auth', 'user-access:team',])->group(function () {
 // Route::get('/add', [ DashboardController::class, 'create'])->name('users.create');
 // Route::post('/create-users', [ DashboardController::class, 'store'])->name('users.store');
 // Route::delete('/delete-users', [ DashboardController::class, 'destroy'])->name('users.destroy');
-// Route::get('/edit-users', [ DashboardController::class, 'edit'])->name('users.edit');
+// Route::get('/edit-users', [ DashboardController::class, 'edit'])->name('users.index');
 // Route::put('/upadate-users', [ DashboardController::class, 'update'])->name('users.update');
 // Route::resource('users', DashboardController::class);
 Route::resource('projects', ProjectController::class);

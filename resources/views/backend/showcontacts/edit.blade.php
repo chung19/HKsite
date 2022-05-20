@@ -63,8 +63,8 @@
                 <div class="form-group">
                     <strong>Message:</strong>
 
-                    <textarea class="form-control" style="height:150px" name="message" class="form-control" placeholder="message"
-                        value="{{ $showcontact->message }}"></textarea>
+                    <input type="text"class="form-control" style="height:150px" name="message" class="form-control" placeholder="message"
+                        value="{{ $showcontact->message }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

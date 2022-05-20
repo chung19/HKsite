@@ -55,7 +55,7 @@ class User extends Authenticatable
     {
 
         return new Attribute(
-            get: fn ($value) =>  ["user", "admin", "manager"][$value]??null,
+            get: fn ($value) =>  ["user", "admin", "manager"][$value] ??null,
         );
     }
     public function setPasswordAttribute($value){

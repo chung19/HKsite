@@ -40,8 +40,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Password</strong>:</strong>
-                    <input type="password" class="form-control" name="password" placeholder="Enter password"
-                        value="{{ $user->password }}">
+                    <input type="password" class="form-control"  value="{{ $user->password }}" name="password" placeholder="Enter password"
+                        >
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
